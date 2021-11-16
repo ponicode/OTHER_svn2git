@@ -1,5 +1,7 @@
 package fr.yodamad.svn2git.config;
 
+import org.junit.jupiter.api.*;
+
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
 import com.codahale.metrics.servlets.MetricsServlet;
@@ -41,7 +43,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see WebConfigurer
  */
 public class WebConfigurerTest {
-
     private WebConfigurer webConfigurer;
 
     private MockServletContext servletContext;
@@ -196,5 +197,54 @@ public class WebConfigurerTest {
                 .header(HttpHeaders.ORIGIN, "other.domain.com"))
             .andExpect(status().isOk())
             .andExpect(header().doesNotExist(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN));
+    }
+    @Nested
+    @DisplayName("Tests for the method corsFilter")
+    class corsFilterTests {
+        @Test
+        void test1() {
+            WebConfigurer object = new WebConfigurer();
+            object.corsFilter();
+        }
+    }
+    @Nested
+    @DisplayName("Tests for the method customize")
+    class customizeTests {
+        @Test
+        void test1() {
+            int value = -29.45;
+            WebConfigurer object = new WebConfigurer();
+            object.customize(value);
+        }
+        @Test
+        void test2() {
+            String value = "https://accounts.google.com/o/oauth2/revoke?token=%s";
+            WebConfigurer object = new WebConfigurer();
+            object.customize(value);
+        }
+        @Test
+        void test3() {
+            String value = "https://twitter.com/path?abc";
+            WebConfigurer object = new WebConfigurer();
+            object.customize(value);
+        }
+        @Test
+        void test4() {
+            float value = 1.0;
+            WebConfigurer object = new WebConfigurer();
+            object.customize(value);
+        }
+        @Test
+        void test5() {
+            int value = 0.0;
+            WebConfigurer object = new WebConfigurer();
+            object.customize(value);
+        }
+        @Test
+        void test6() {
+            int value = 0;
+            WebConfigurer object = new WebConfigurer();
+            object.customize(value);
+        }
     }
 }

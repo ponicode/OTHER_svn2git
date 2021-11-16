@@ -1,5 +1,7 @@
 package fr.yodamad.svn2git.security.jwt;
 
+import org.junit.jupiter.api.*;
+
 import fr.yodamad.svn2git.security.AuthoritiesConstants;
 import io.github.jhipster.config.JHipsterProperties;
 import io.jsonwebtoken.io.Decoders;
@@ -21,7 +23,6 @@ import java.util.Collections;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JWTFilterTest {
-
     private TokenProvider tokenProvider;
 
     private JWTFilter jwtFilter;
@@ -111,5 +112,56 @@ public class JWTFilterTest {
         assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
         assertThat(SecurityContextHolder.getContext().getAuthentication()).isNull();
     }
-
+    @Nested
+    @DisplayName("Tests for the method doFilter")
+    class doFilterTests {
+        @Test
+        void test1() {
+            float value = 0.5;
+            float value2 = 10.23;
+            String value3 = "Janet Homenick";
+            JWTFilter object = new JWTFilter();
+            object.doFilter(value,value2,value3);
+        }
+        @Test
+        void test2() {
+            float value = 0.0;
+            float value2 = 10.23;
+            String value3 = "Maurice Purdy";
+            JWTFilter object = new JWTFilter();
+            object.doFilter(value,value2,value3);
+        }
+        @Test
+        void test3() {
+            float value = -29.45;
+            float value2 = -0.5;
+            float value3 = 0;
+            JWTFilter object = new JWTFilter();
+            object.doFilter(value,value2,value3);
+        }
+        @Test
+        void test4() {
+            float value = 1.0;
+            float value2 = -1.0;
+            String value3 = "Janet Homenick";
+            JWTFilter object = new JWTFilter();
+            object.doFilter(value,value2,value3);
+        }
+        @Test
+        void test5() {
+            String value = "2019-10-01-preview";
+            float value2 = 10.0;
+            int value3 = -100;
+            JWTFilter object = new JWTFilter();
+            object.doFilter(value,value2,value3);
+        }
+        @Test
+        void test6() {
+            float value = 0;
+            int value2 = 0;
+            float value3 = 0;
+            JWTFilter object = new JWTFilter();
+            object.doFilter(value,value2,value3);
+        }
+    }
 }
