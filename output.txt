@@ -1,0 +1,3442 @@
+[telemetry] Starting Mixpanel telemetry
+[utils] host.createParserProvider(java)
+[utils] host.createParserProvider(go)
+[utils] host.createParserProvider(javascript)
+[utils] host.createParserProvider(typescript)
+[utils] host.createParserProvider(python)
+[gatsby] Core is calling gatsby.init()
+[gatsby] gatsby.init()
+[gatsby] Starting local server: %s %s node /home/baptiste/.nvm/versions/node/v14.5.0/lib/node_modules/@ponicode/cli-public/gatsby/entry.js
+[gatsby] [proc-stdout] Server is starting
+
+[gatsby] [proc-stdout] [utils] host.createParserProvider(java)
+
+[gatsby] [proc-stdout] [utils] host.createParserProvider(go)
+
+[gatsby] [proc-stdout] [utils] host.createParserProvider(javascript)
+
+[gatsby] [proc-stdout] [utils] host.createParserProvider(typescript)
+
+[gatsby] [proc-stdout] [utils] host.createParserProvider(python)
+
+[gatsby] [proc-stdout] Factory initialised in 13 ms
+
+[gatsby] [proc-stdout] Adding method checkVersion
+
+[gatsby] [proc-stdout] Adding method generateRtc
+Adding method readTest
+Adding method functionSupported
+Adding method parseAccess
+
+[gatsby] [proc-stdout] Adding method parseValue
+Adding method generateUt
+Adding method generateBeforeEach
+Adding method readBefore
+
+[gatsby] [proc-stdout] Adding method queryFile
+
+[gatsby] [proc-stdout] Local server main completed.
+
+[gatsby] Detected WSS_LISTENING message
+[gatsby] [proc-stdout] WSS listening
+
+[gatsby] CLI container is calling checkVersion
+[gatsby] new LocalServerConnection()
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'checkVersion',
+  params: {
+    clientVersion: '0.56.7'
+  }
+}
+[gatsby] LocalServerConnection.onOpen is calling checkVersion
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'checkVersion',
+  params: {
+    clientVersion: '0.56.7'
+  }
+}
+[gatsby] [proc-stdout] Method called: checkVersion({ clientVersion: '0.56.7' })
+
+[gatsby] [proc-stdout] checkVersion took 2ms
+
+[telemetry] event cli:gatsby:checkVersion
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'checkVersion',
+  result: {
+    status: 0,
+    clientVersion: '0.56.7',
+    serverVersion: '0.56.14'
+  }
+}
+[gatsby] server version 0.56.14
+[gatsby] client version 0.56.7
+[gatsby] Connected to local server!
+[telemetry] event cli:gatsby:checkVersion
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'checkVersion',
+  result: {
+    status: 0,
+    clientVersion: '0.56.7',
+    serverVersion: '0.56.14'
+  }
+}
+Ponicode CLI version 0.56.14
+
+[telemetry] event cli:command
+[register] readXdgToken success: 37f6ed2e-cf68-455f-b121-c65bfc12d35b
+[requests] {
+  tx: true,
+  endpoint: '/token_info',
+  method: 'post',
+  input: {
+    ext_uuid: '00000000-0000-4000-a000-000000000000'
+  },
+  auth: 'Bearer: 37f6...'
+}
+[gatsby] [proc-stdout] Method called: checkVersion({ clientVersion: '0.56.7' })
+checkVersion took 0ms
+
+[telemetry] event cli:gatsby:checkVersion: success
+[telemetry] event cli:gatsby:checkVersion: success
+[requests] {
+  rx: true,
+  endpoint: '/token_info',
+  method: 'post',
+  output: [
+    200,
+    {
+      validity: 0,
+      userId: '23',
+      email: 'baptiste.bouffaut@gmail.com'
+    }
+  ]
+}
+[register] Found valid token in XDG config folder
+Will write a report to ponicode-report.json
+
+[telemetry] event cli:command: success
+[cli] Constructed Bulk with concurrency=3
+Starting Java language server … [language-service] checking if /usr/lib/jvm/java-11-openjdk-amd64/release exists
+[language-service] java release file:
+IMPLEMENTOR="Ubuntu"
+JAVA_VERSION="11.0.11"
+JAVA_VERSION_DATE="2021-04-20"
+MODULES="java.base java.compiler java.datatransfer java.xml java.prefs java.desktop java.instrument java.logging java.management java.security.sasl java.naming java.rmi java.management.rmi java.net.http java.scripting java.security.jgss java.transaction.xa java.sql java.sql.rowset java.xml.crypto java.se java.smartcardio jdk.accessibility jdk.internal.vm.ci jdk.management jdk.unsupported jdk.internal.vm.compiler jdk.aot jdk.internal.jvmstat jdk.attach jdk.charsets jdk.compiler jdk.crypto.ec jdk.crypto.cryptoki jdk.dynalink jdk.internal.ed jdk.editpad jdk.hotspot.agent jdk.httpserver jdk.internal.le jdk.internal.opt jdk.internal.vm.compiler.management jdk.jartool jdk.javadoc jdk.jcmd jdk.management.agent jdk.jconsole jdk.jdeps jdk.jdwp.agent jdk.jdi jdk.jfr jdk.jlink jdk.jshell jdk.jsobject jdk.jstatd jdk.localedata jdk.management.jfr jdk.naming.dns jdk.naming.ldap jdk.naming.rmi jdk.net jdk.pack jdk.rmic jdk.scripting.nashorn jdk.scripting.nashorn.shell jdk.sctp jdk.security.auth jdk.security.jgss jdk.unsupported.desktop jdk.xml.dom jdk.zipfs"
+OS_ARCH="x86_64"
+OS_NAME="Linux"
+SOURCE=""
+
+[language-service] matches for version: JAVA_VERSION="11.0.11",11.0.11
+[language-service] Java version from release file 11
+[language-service] Starting Java server with: /usr/lib/jvm/java-11-openjdk-amd64/bin/java [
+  '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+  '-Declipse.product=org.eclipse.jdt.ls.core.product',
+  '-Dosgi.bundles.defaultStartLevel=4',
+  '-Dlog.level=ALL',
+  '-Dfile.encoding=utf8',
+  '-XX:+UseParallelGC',
+  '-XX:GCTimeRatio=4',
+  '-XX:AdaptiveSizePolicyWeight=90',
+  '-Dsun.zip.disableMemoryMapping=true',
+  '-noverify',
+  '-Xmx1G',
+  '-Xms100m',
+  '-jar',
+  '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/java/plugins/org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar',
+  '-configuration',
+  '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/java/config_linux',
+  '-data',
+  '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/java/tmp-data',
+  '-Djdt.ls.debug=true',
+  '--add-modules=ALL-SYSTEM',
+  '--add-opens',
+  'java.base/java.util=ALL-UNNAMED',
+  '--add-opens',
+  'java.base/java.lang=ALL-UNNAMED'
+]
+[language-service] started server with PID 1221419
+OK
+Java project root /home/baptiste/workspace/ponicode/OTHER_svn2git
+Initializing Java language server … [language-service] [rpc-req] initialize {
+  processId: 1221399,
+  clientInfo: {
+    name: 'cli',
+    version: '0.56.14'
+  },
+  locale: undefined,
+  rootUri: null,
+  rootPath: undefined,
+  workspaceFolders: [],
+  capabilities: {},
+  initializationOptions: {
+    bundles: [
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/javax.annotation_1.3.5.v20200504-1837.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.apache.commons.codec_1.13.0.v20200108-0001.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.apache.commons.logging_1.2.0.v20180409-1502.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.apache.httpcomponents.httpclient_4.5.10.v20200114-1512.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.apache.httpcomponents.httpcore_4.4.12.v20200108-1212.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.e4.core.contexts_1.8.400.v20191217-1710.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.e4.core.di_1.7.600.v20200428-0912.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.e4.core.di.annotations_1.6.600.v20191216-2352.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.e4.core.services_2.2.300.v20200422-1846.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.ecf_3.9.5.v20200217-1548.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.ecf.filetransfer_5.1.0.v20200217-0016.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.ecf.identity_3.9.300.v20191020-1846.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.ecf.provider.filetransfer_3.2.500.v20191017-1905.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.ecf.provider.filetransfer.httpclient45_1.0.300.v20200522-1203.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.concurrent_1.1.500.v20200106-1437.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.artifact.repository_1.3.500.v20200406-2025.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.core_2.6.300.v20200211-1504.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.director_2.4.700.v20200511-1530.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.director.app_1.1.600.v20200511-1530.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.engine_2.6.700.v20200511-1530.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.garbagecollector_1.1.400.v20200221-1022.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.jarprocessor_1.1.600.v20200217-1130.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.metadata_2.5.0.v20200511-1530.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.metadata.repository_1.3.400.v20191211-1528.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.publisher_1.5.400.v20200511-1530.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.publisher.eclipse_1.3.600.v20200318-1507.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.repository_2.4.700.v20200110-2121.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.repository.tools_2.2.500.v20200110-2121.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.touchpoint.eclipse_2.2.600.v20200114-1339.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.touchpoint.natives_1.3.600.v20200511-1530.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.equinox.p2.transport.ecf_1.2.400.v20200123-2221.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.jdt.junit4.runtime_1.1.1200.v20200214-0716.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.jdt.ls.importer.pde_1.4.2.20210811-0454.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.pde.build_3.10.800.v20200410-1419.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.pde.core_3.13.400.v20200415-0531.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.pde.junit.runtime_3.5.800.v20200310-0710.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.pde.launching_3.8.200.v20200512-0948.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.team.core_3.8.1000.v20200428-1255.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.eclipse.update.configurator_3.4.600.v20200422-1910.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.sat4j.core_2.3.5.v201308161310.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.sat4j.pb_2.3.5.v201404071733.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.sonatype.tycho.m2e_0.8.1.201704211436.jar',
+      '/home/baptiste/.cache/ponicode/java-lsp/0.0.1/pde/org.tukaani.xz_1.8.0.v20180207-1613.jar',
+      '/home/baptiste/.nvm/versions/node/v14.5.0/lib/node_modules/@ponicode/cli-public/assets/com.ponicode.ls-0.2.0.jar'
+    ],
+    workspaceFolders: [
+      'file:///home/baptiste/workspace/ponicode/OTHER_svn2git'
+    ]
+  },
+  trace: 'verbose'
+}
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Main thread is waiting
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM >> initialize
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Initializing Java Language Server 1.2.0.202106301426
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Static Commands: []
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.provideSemanticTokens, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.project.getSemanticTokensLegend, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Static Commands: []
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Non-Static Commands: [java.pde.resolveLaunchArguments, java.pde.reloadTargetPlatform, java.pde.resolveJUnitArguments]
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Static Commands: []
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Non-Static Commands: [ponicode.ls.typesRepresentation, ponicode.ls.ping, ponicode.ls.functionSupported]
+[language-service] [rpc-res] {"capabilities":{"textDocumentSync":{"openClose":true,"change":2,"save":{"includeText":true}},"hoverProvider":true,"completionProvider":{"resolveProvider":true,"triggerCharacters":[".","@","#","*"]},"signatureHelpProvider":{"triggerCharacters":["(",","]},"definitionProvider":true,"typeDefinitionProvider":true,"implementationProvider":true,"referencesProvider":true,"documentHighlightProvider":true,"documentSymbolProvider":true,"workspaceSymbolProvider":true,"codeActionProvider":true,"codeLensProvider":{"resolveProvider":true},"documentFormattingProvider":true,"documentRangeFormattingProvider":true,"documentOnTypeFormattingProvider":{"firstTriggerCharacter":";","moreTriggerCharacter":["\n","}"]},"renameProvider":{"prepareProvider":true},"foldingRangeProvider":true,"executeCommandProvider":{"commands":["java.edit.organizeImports","java.project.refreshDiagnostics","java.project.import","java.navigate.openTypeHierarchy","java.project.removeFromSourcePath","java.project.listSourcePaths","java.project.provideSemanticTokens","java.project.resolveStackTraceLocation","java.project.getAll","java.pde.resolveLaunchArguments","ponicode.ls.ping","java.project.isTestFile","java.pde.reloadTargetPlatform","java.project.getClasspaths","java.navigate.resolveTypeHierarchy","java.project.getSemanticTokensLegend","java.edit.stringFormatting","java.project.getSettings","java.project.updateSourceAttachment","ponicode.ls.typesRepresentation","ponicode.ls.functionSupported","java.pde.resolveJUnitArguments","java.project.resolveSourceAttachment","java.project.addToSourcePath"]},"workspace":{"workspaceFolders":{"supported":true,"changeNotifications":true}},"callHierarchyProvider":true,"selectionRangeProvider":true}}
+[language-service] successful initialization
+[language-service] ponicode commands [
+  'ponicode.ls.ping',
+  'ponicode.ls.typesRepresentation',
+  'ponicode.ls.functionSupported'
+]
+OK
+
+.mvn/wrapper/MavenWrapperDownloader.java
+- Reading file
+[outline] Outline.fetch("/home/baptiste/workspace/ponicode/OTHER_svn2git/.mvn/wrapper/MavenWrapperDownloader.java")
+[language-service] [rpc-req] workspace/executeCommand {
+  command: 'ponicode.ls.functionSupported',
+  arguments: [
+    '{"lang":"java","filePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/.mvn/wrapper/MavenWrapperDownloader.java"}'
+  ]
+}
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM >> workspace/executeCommand ponicode.ls.functionSupported
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: 'Init...'
+}
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: '0% Starting Java Language Server'
+}
+[language-service] [rpc-res] {"reason":{"type":4,"message":"In /home/baptiste/workspace/ponicode/OTHER_svn2git/.mvn/wrapper/MavenWrapperDownloader.java got error: missing package"},"success":false}
+[time] Getting outline + function supported took 217ms 
+[telemetry] event cli:time:show_ponies
+✖ Cannot read file: In /home/baptiste/workspace/ponicode/OTHER_svn2git/.mvn/wrapper/MavenWrapperDownloader.java got error: missing package
+
+ponicode/jest.config.js
+- Reading file
+[outline] Outline.fetch("/home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.js")
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'functionSupported',
+  params: {
+    filePath: {
+      scheme: 'file',
+      absolute: '/home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.js',
+      basename: 'jest.config.js',
+      path: 'posix',
+      asImportedInTest: undefined
+    },
+    lang: 'javascript',
+    source: '/*\n' +
+      ' * For a detailed explanation regarding each configuration property, visit:\n' +
+      ' * https://jestjs.io/docs/configuration\n' +
+      ' */\n' +
+      '\n' +
+      'module.exports = {\n' +
+      '  // All imported modules in your tests should be mocked automatically\n' +
+      '  // automock: false,\n' +
+      '\n' +
+      '  // Stop running tests after `n` failures\n' +
+      '  // bail: 0,\n' +
+      '\n' +
+      '  // The directory where Jest should store its cached dependency information\n' +
+      '  // cacheDirectory: "/tmp/jest_rt",\n' +
+      '\n' +
+      '  // Automatically clear mock calls and instances between every test\n' +
+      '  clearMocks: true,\n' +
+      '\n' +
+      '  // Indicates whether the coverage information should be collected while executing the test\n' +
+      '  collectCoverage: true,\n' +
+      '\n' +
+      '  // An array of glob patterns indicating a set of files for which coverage information should be collected\n' +
+      '  // collectCoverageFrom: undefined,\n' +
+      '\n' +
+      '  // The directory where Jest should output its coverage files\n' +
+      '  coverageDirectory: "ponicode/ponicode_coverage",\n' +
+      '\n' +
+      '  // An array of regexp pattern strings used to skip coverage collection\n' +
+      '  // coveragePathIgnorePatterns: [\n' +
+      '  //   "/node_modules/"\n' +
+      '  // ],\n' +
+      '\n' +
+      '  // Indicates which provider should be used to instrument code for coverage\n' +
+      '  coverageProvider: "v8",\n' +
+      '\n' +
+      '  // A list of reporter names that Jest uses when writing coverage reports\n' +
+      '  coverageReporters: ["json-summary","lcov"],\n' +
+      '\n' +
+      '  // An object that configures minimum threshold enforcement for coverage results\n' +
+      '  // coverageThreshold: undefined,\n' +
+      '\n' +
+      '  // A path to a custom dependency extractor\n' +
+      '  // dependencyExtractor: undefined,\n' +
+      '\n' +
+      '  // Make calling deprecated APIs throw helpful error messages\n' +
+      '  // errorOnDeprecated: false,\n' +
+      '\n' +
+      '  // Force coverage collection from ignored files using an array of glob patterns\n' +
+      '  // forceCoverageMatch: [],\n' +
+      '\n' +
+      '  // A path to a module which exports an async function that is triggered once before all test suites\n' +
+      '  // globalSetup: undefined,\n' +
+      '\n' +
+      '  // A path to a module which exports an async function that is triggered once after all test suites\n' +
+      '  // globalTeardown: undefined,\n' +
+      '\n' +
+      '  // A set of global variables that need to be available in all test environments\n' +
+      '  // globals: {},\n' +
+      '\n' +
+      '  // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.\n' +
+      '  // maxWorkers: "50%",\n' +
+      '\n' +
+      "  // An array of directory names to be searched recursively up from the requiring module's location\n" +
+      '  // moduleDirectories: [\n' +
+      '  //   "node_modules"\n' +
+      '  // ],\n' +
+      '\n' +
+      '  // An array of file extensions your modules use\n' +
+      '  // moduleFileExtensions: [\n' +
+      '  //   "js",\n' +
+      '  //   "jsx",\n' +
+      '  //   "ts",\n' +
+      '  //   "tsx",\n' +
+      '  //   "json",\n' +
+      '  //   "node"\n' +
+      '  // ],\n' +
+      '\n' +
+      '  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module\n' +
+      '  // moduleNameMapper: {},\n' +
+      '\n' +
+      "  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader\n" +
+      '  // modulePathIgnorePatterns: [],\n' +
+      '\n' +
+      '  // Activates notifications for test results\n' +
+      '  // notify: false,\n' +
+      '\n' +
+      '  // An enum that specifies notification mode. Requires { notify: true }\n' +
+      '  // notifyMode: "failure-change",\n' +
+      '\n' +
+      "  // A preset that is used as a base for Jest's configuration\n" +
+      '  // preset: undefined,\n' +
+      '\n' +
+      '  // Run tests from one or more projects\n' +
+      '  // projects: undefined,\n' +
+      '\n' +
+      '  // Use this configuration option to add custom reporters to Jest\n' +
+      '  // reporters: undefined,\n' +
+      '\n' +
+      '  // Automatically reset mock state between every test\n' +
+      '  // resetMocks: false,\n' +
+      '\n' +
+      '  // Reset the module registry before running each individual test\n' +
+      '  // resetModules: false,\n' +
+      '\n' +
+      '  // A path to a custom resolver\n' +
+      '  // resolver: undefined,\n' +
+      '\n' +
+      '  // Automatically restore mock state between every test\n' +
+      '  // restoreMocks: false,\n' +
+      '\n' +
+      '  // The root directory that Jest should scan for tests and modules within\n' +
+      '  rootDir: "..",\n' +
+      '\n' +
+      '  // A list of paths to directories that Jest should use to search for files in\n' +
+      '  // roots: [\n' +
+      '  //   "<rootDir>"\n' +
+      '  // ],\n' +
+      '\n' +
+      "  // Allows you to use a custom runner instead of Jest's default test runner\n" +
+      '  // runner: "jest-runner",\n' +
+      '\n' +
+      '  // The paths to modules that run some code to configure or set up the testing environment before each test\n' +
+      '  // setupFiles: [],\n' +
+      '\n' +
+      '  // A list of paths to modules that run some code to configure or set up the testing framework before each test\n' +
+      '  // setupFilesAfterEnv: [],\n' +
+      '\n' +
+      '  // The number of seconds after which a test is considered as slow and reported as such in the results.\n' +
+      '  // slowTestThreshold: 5,\n' +
+      '\n' +
+      '  // A list of paths to snapshot serializer modules Jest should use for snapshot testing\n' +
+      '  // snapshotSerializers: [],\n' +
+      '\n' +
+      '  // The test environment that will be used for testing\n' +
+      '  // testEnvironment: "jest-environment-node",\n' +
+      '\n' +
+      '  // Options that will be passed to the testEnvironment\n' +
+      '  // testEnvironmentOptions: {},\n' +
+      '\n' +
+      '  // Adds a location field to test results\n' +
+      '  // testLocationInResults: false,\n' +
+      '\n' +
+      '  // The glob patterns Jest uses to detect test files\n' +
+      '  // testMatch: [\n' +
+      '  //   "**/__tests__/**/*.[jt]s?(x)",\n' +
+      '  //   "**/?(*.)+(spec|test).[tj]s?(x)"\n' +
+      '  // ],\n' +
+      '\n' +
+      '  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped\n' +
+      '  // testPathIgnorePatterns: [\n' +
+      '  //   "/node_modules/"\n' +
+      '  // ],\n' +
+      '\n' +
+      '  // The regexp pattern or array of patterns that Jest uses to detect test files\n' +
+      '  // testRegex: [],\n' +
+      '\n' +
+      '  // This option allows the use of a custom results processor\n' +
+      '  // testResultsProcessor: undefined,\n' +
+      '\n' +
+      '  // This option allows use of a custom test runner\n' +
+      '  // testRunner: "jest-circus/runner",\n' +
+      '\n' +
+      '  // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href\n' +
+      '  // testURL: "http://localhost",\n' +
+      '\n' +
+      '  // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"\n' +
+      '  // timers: "real",\n' +
+      '\n' +
+      '  // A map from regular expressions to paths to transformers\n' +
+      '  transform: {"^.+\\\\.(t|j)s$":"ts-jest"},\n' +
+      '\n' +
+      '  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation\n' +
+      '  // transformIgnorePatterns: [\n' +
+      '  //   "/node_modules/",\n' +
+      '  //   "\\.pnp\\.[^\\/]+$"\n' +
+      '  // ],\n' +
+      '\n' +
+      '  // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them\n' +
+      '  // unmockedModulePathPatterns: undefined,\n' +
+      '\n' +
+      '  // Indicates whether each individual test should be reported during the run\n' +
+      '  // verbose: undefined,\n' +
+      '\n' +
+      '  // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode\n' +
+      '  // watchPathIgnorePatterns: [],\n' +
+      '\n' +
+      '  // Whether to use watchman for file crawling\n' +
+      '  // watchman: true,\n' +
+      '};\n',
+    gitInfo: {
+      ownerLogin: 'ponicode',
+      repoName: 'OTHER_svn2git',
+      githubUser: 'Baptiste Bouffaut',
+      filePath: '',
+      remoteUrl: 'git@github.com:ponicode/OTHER_svn2git.git'
+    },
+    isFromLeftPanel: false
+  }
+}
+[gatsby] [proc-stdout] Method called: functionSupported({
+  filePath: [Object],
+  lang: 'javascript',
+  source: '/*\n' +
+    ' * For a detailed explanation regarding each configuration property, visit:\n' +
+    ' * https://jestjs.io/docs/configuration\n' +
+    ' */\n' +
+    '\n' +
+    'module.exports = {\n' +
+    '  // All imported modules in your tests should be mocked automatically\n' +
+    '  // automock: false,\n' +
+    '\n' +
+    '  // Stop running tests after `n` failures\n' +
+    '  // bail: 0,\n' +
+    '\n' +
+    '  // The directory where Jest should store its cached dependency information\n' +
+    '  // cacheDirectory: "/tmp/jest_rt",\n' +
+    '\n' +
+    '  // Automatically clear mock calls and instances between every test\n' +
+    '  clearMocks: true,\n' +
+    '\n' +
+    '  // Indicates whether the coverage information should be collected while executing the test\n' +
+    '  collectCoverage: true,\n' +
+    '\n' +
+    '  // An array of glob patterns indicating a set of files for which coverage information should be collected\n' +
+    '  // collectCoverageFrom: undefined,\n' +
+    '\n' +
+    '  // The directory where Jest should output its coverage files\n' +
+    '  coverageDirectory: "ponicode/ponicode_coverage",\n' +
+    '\n' +
+    '  // An array of regexp pattern strings used to skip coverage collection\n' +
+    '  // coveragePathIgnorePatterns: [\n' +
+    '  //   "/node_modules/"\n' +
+    '  // ],\n' +
+    '\n' +
+    '  // Indicates which provider should be used to instrument code for coverage\n' +
+    '  coverageProvider: "v8",\n' +
+    '\n' +
+    '  // A list of reporter names that Jest uses when writing coverage reports\n' +
+    '  coverageReporters: ["json-summary","lcov"],\n' +
+    '\n' +
+    '  // An object that configures minimum threshold enforcement for coverage results\n' +
+    '  // coverageThreshold: undefined,\n' +
+    '\n' +
+    '  // A path to a custom dependency extractor\n' +
+    '  // dependencyExtractor: undefined,\n' +
+    '\n' +
+    '  // Make calling deprecated APIs throw helpful error messages\n' +
+    '  // errorOnDeprecated: false,\n' +
+    '\n' +
+    '  // Force coverage collection from ignored files using an array of glob patterns\n' +
+    '  // forceCoverageMatch: [],\n' +
+    '\n' +
+    '  // A path to a module which exports an async function that is triggered once before all test suites\n' +
+    '  // globalSetup: undefined,\n' +
+    '\n' +
+    '  // A path to a module which exports an async function that is triggered once after all test suites\n' +
+    '  // globalTeardown: undefined,\n' +
+    '\n' +
+    '  // A set of global variables that need to be available in all test environments\n' +
+    '  // globals: {},\n' +
+    '\n' +
+    '  // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.\n' +
+    '  // maxWorkers: "50%",\n' +
+    '\n' +
+    "  // An array of directory names to be searched recursively up from the requiring module's location\n" +
+    '  // moduleDirectories: [\n' +
+    '  //   "node_modules"\n' +
+    '  // ],\n' +
+    '\n' +
+    '  // An array of file extensions your modules use\n' +
+    '  // moduleFileExtensions: [\n' +
+    '  //   "js",\n' +
+    '  //   "jsx",\n' +
+    '  //   "ts",\n' +
+    '  //   "tsx",\n' +
+    '  //   "json",\n' +
+    '  //   "node"\n' +
+    '  // ],\n' +
+    '\n' +
+    '  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module\n' +
+    '  // moduleNameMapper: {},\n' +
+    '\n' +
+    "  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader\n" +
+    '  // modulePathIgnorePatterns: [],\n' +
+    '\n' +
+    '  // Activates notifications for test results\n' +
+    '  // notify: false,\n' +
+    '\n' +
+    '  // An enum that specifies notification mode. Requires { notify: true }\n' +
+    '  // notifyMode: "failure-change",\n' +
+    '\n' +
+    "  // A preset that is used as a base for Jest's configuration\n" +
+    '  // preset: undefined,\n' +
+    '\n' +
+    '  // Run tests from one or more projects\n' +
+    '  // projects: undefined,\n' +
+    '\n' +
+    '  // Use this configuration option to add custom reporters to Jest\n' +
+    '  // reporters: undefined,\n' +
+    '\n' +
+    '  // Automatically reset mock state between every test\n' +
+    '  // resetMocks: false,\n' +
+    '\n' +
+    '  // Reset the module registry before running each individual test\n' +
+    '  // resetModules: false,\n' +
+    '\n' +
+    '  // A path to a custom resolver\n' +
+    '  // resolver: undefined,\n' +
+    '\n' +
+    '  // Automatically restore mock state between every test\n' +
+    '  // restoreMocks: false,\n' +
+    '\n' +
+    '  // The root directory that Jest should scan for tests and modules within\n' +
+    '  rootDir: "..",\n' +
+    '\n' +
+    '  // A list of paths to directories that Jest should use to search for files in\n' +
+    '  // roots: [\n' +
+    '  //   "<rootDir>"\n' +
+    '  // ],\n' +
+    '\n' +
+    "  // Allows you to use a custom runner instead of Jest's default test runner\n" +
+    '  // runner: "jest-runner",\n' +
+    '\n' +
+    '  // The paths to modules that run some code to configure or set up the testing environment before each test\n' +
+    '  // setupFiles: [],\n' +
+    '\n' +
+    '  // A list of paths to modules that run some code to configure or set up the testing framework before each test\n' +
+    '  // setupFilesAfterEnv: [],\n' +
+    '\n' +
+    '  // The number of seconds after which a test is considered as slow and reported as such in the results.\n' +
+    '  // slowTestThreshold: 5,\n' +
+    '\n' +
+    '  // A list of paths to snapshot serializer modules Jest should use for snapshot testing\n' +
+    '  // snapshotSerializers: [],\n' +
+    '\n' +
+    '  // The test environment that will be used for testing\n' +
+    '  // testEnvironment: "jest-environment-node",\n' +
+    '\n' +
+    '  // Options that will be passed to the testEnvironment\n' +
+    '  // testEnvironmentOptions: {},\n' +
+    '\n' +
+    '  // Adds a location field to test results\n' +
+    '  // testLocationInResults: false,\n' +
+    '\n' +
+    '  // The glob patterns Jest uses to detect test files\n' +
+    '  // testMatch: [\n' +
+    '  //   "**/__tests__/**/*.[jt]s?(x)",\n' +
+    '  //   "**/?(*.)+(spec|test).[tj]s?(x)"\n' +
+    '  // ],\n' +
+    '\n' +
+    '  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped\n' +
+    '  // testPathIgnorePatterns: [\n' +
+    '  //   "/node_modules/"\n' +
+    '  // ],\n' +
+    '\n' +
+    '  // The regexp pattern or array of patterns that Jest uses to detect test files\n' +
+    '  // testRegex: [],\n' +
+    '\n' +
+    '  // This option allows the use of a custom results processor\n' +
+    '  // testResultsProcessor: undefined,\n' +
+    '\n' +
+    '  // This option allows use of a custom test runner\n' +
+    '  // testRunner: "jest-circus/runner",\n' +
+    '\n' +
+    '  // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href\n' +
+    '  // testURL: "http://localhost",\n' +
+    '\n' +
+    '  // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"\n' +
+    '  // timers: "real",\n' +
+    '\n' +
+    '  // A map from regular expressions to paths to transformers\n' +
+    '  transform: {"^.+\\\\.(t|j)s$":"ts-jest"},\n' +
+    '\n' +
+    '  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation\n' +
+    '  // transformIgnorePatterns: [\n' +
+    '  //   "/node_modules/",\n' +
+    '  //   "\\.pnp\\.[^\\/]+$"\n' +
+    '  // ],\n' +
+    '\n' +
+    '  // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them\n' +
+    '  // unmockedModulePathPatterns: undefined,\n' +
+    '\n' +
+    '  // Indicates whether each individual test should be reported during the run\n' +
+    '  // verbose: undefined,\n' +
+    '\n' +
+    '  // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode\n' +
+    '  // watchPathIgnorePatterns: [],\n' +
+    '\n' +
+    '  // Whether to use watchman for file crawling\n' +
+    '  // watchman: true,\n' +
+    '};\n',
+  gitInfo: [Object],
+  isFromLeftPanel: false
+})
+
+[gatsby] [proc-stdout] functionSupported took 12ms
+
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: '30% Starting Java Language Server'
+}
+[telemetry] event cli:time:show_ponies: success
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[telemetry] event cli:gatsby:functionSupported
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'functionSupported',
+  result: {
+    imports: {},
+    functions: [],
+    variables: [],
+    classes: {}
+  }
+}
+[time] Getting outline + function supported took 208ms 	success: true
+[telemetry] event cli:time:show_ponies
+[datastore.global] updateOutline: creating {
+  originalFsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.js',
+  fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.js'
+}
+[datastore.file] creating FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.js
+[datastore.file] created FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.js with test URI: /home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.test.js and original file path: /home/baptiste/workspace/ponicode/OTHER_svn2git/ponicode/jest.config.js
+[language-service] getOrCreateLanguageService using tsconfig: /home/baptiste/workspace/ponicode/OTHER_svn2git/tsconfig-aot.json
+[language-service] Spawn {
+  command: 'node',
+  args: [
+    '/home/baptiste/.nvm/versions/node/v14.5.0/lib/node_modules/@ponicode/cli-public/language-service/entry.js',
+    '{"tsConfigFilePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/tsconfig-aot.json","log":"stderr"}'
+  ],
+  spawnOptions: {
+    cwd: '/home/baptiste/workspace/ponicode/OTHER_svn2git',
+    stdio: [
+      'pipe',
+      'pipe',
+      'pipe',
+      'ipc'
+    ]
+  }
+}
+[datastore.file] resolveReachesInOutlineImports: start
+[datastore.file] resolveReachesInOutlineImports: end after 0 ms
+ℹ 0 supported functions
+
+postcss.config.js
+- Reading file
+[outline] Outline.fetch("/home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.js")
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'functionSupported',
+  params: {
+    filePath: {
+      scheme: 'file',
+      absolute: '/home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.js',
+      basename: 'postcss.config.js',
+      path: 'posix',
+      asImportedInTest: undefined
+    },
+    lang: 'javascript',
+    source: 'module.exports = {\n' +
+      '    plugins: []\n' +
+      '}\n',
+    gitInfo: {
+      ownerLogin: 'ponicode',
+      repoName: 'OTHER_svn2git',
+      githubUser: 'Baptiste Bouffaut',
+      filePath: 'postcss.config.js',
+      remoteUrl: 'git@github.com:ponicode/OTHER_svn2git.git'
+    },
+    isFromLeftPanel: false
+  }
+}
+[gatsby] [proc-stdout] Method called: functionSupported({
+  filePath: [Object],
+  lang: 'javascript',
+  source: 'module.exports = {\n    plugins: []\n}\n',
+  gitInfo: [Object],
+  isFromLeftPanel: false
+})
+
+[gatsby] [proc-stdout] functionSupported took 0ms
+
+[gatsby] [proc-stdout] notice: export default with unknown member
+
+[telemetry] event cli:gatsby:functionSupported
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'functionSupported',
+  result: {
+    imports: {},
+    functions: [],
+    variables: [],
+    classes: {}
+  }
+}
+[time] Getting outline + function supported took 39ms 	success: true
+[telemetry] event cli:time:show_ponies
+[datastore.global] updateOutline: creating {
+  originalFsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.js',
+  fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.js'
+}
+[datastore.file] creating FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.js
+[datastore.file] created FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.js with test URI: /home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.test.js and original file path: /home/baptiste/workspace/ponicode/OTHER_svn2git/postcss.config.js
+[language-service] getOrCreateLanguageService using tsconfig: /home/baptiste/workspace/ponicode/OTHER_svn2git/tsconfig-aot.json
+[datastore.file] resolveReachesInOutlineImports: start
+[datastore.file] resolveReachesInOutlineImports: end after 0 ms
+ℹ 0 supported functions
+
+src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java
+- Reading file
+[outline] Outline.fetch("/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java")
+[language-service] [rpc-req] workspace/executeCommand {
+  command: 'ponicode.ls.functionSupported',
+  arguments: [
+    '{"lang":"java","filePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java"}'
+  ]
+}
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM >> workspace/executeCommand ponicode.ls.functionSupported
+[language-service] [rpc-res] {"value":{"imports":{},"functions":[{"params":[{"type":"simple","name":"application","optional":false,"variadic":false,"static_type":{}}],"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"configure","computed":"configure"},"range":{"start":{"row":14,"column":4},"end":{"row":21,"column":5},"startIndex":507,"endIndex":825},"assignRange":{"start":{"row":14,"column":4},"end":{"row":21,"column":5},"startIndex":507,"endIndex":825},"bodyRange":{"start":{"row":14,"column":4},"end":{"row":21,"column":5},"startIndex":507,"endIndex":825},"reasons":[],"valid":true,"reach":{"reachMethod":"configure","reachClass":{"reachNames":["ApplicationWebXml"],"asImportedInTest":{"type":"java","package":"fr.yodamad.svn2git"},"reach":"package"},"reach":"method"}}],"variables":[],"classes":{}},"success":true}
+[time] Getting outline + function supported took 50ms 	success: true
+[telemetry] event cli:time:show_ponies
+[datastore.global] updateOutline: creating {
+  originalFsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java',
+  fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java'
+}
+[datastore.file] creating FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java
+[datastore.file] created FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java with test URI: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/ApplicationWebXmlTest.java and original file path: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java
+[datastore.file] resolveReachesInOutlineImports: start
+[datastore.file] resolveReachesInOutlineImports: end after 0 ms
+✔ 1 supported methods
+- Looking for test files
+[datastore.file] fetching test file
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'readTest',
+  params: {
+    lang: 'java',
+    testContent: 'package fr.yodamad.svn2git;\n' +
+      '\n' +
+      'import org.junit.jupiter.api.*;\n' +
+      '\n' +
+      'public class ApplicationWebXmlTest {\n' +
+      '    @Nested\n' +
+      '    @DisplayName("Tests for the method configure")\n' +
+      '    class configureTests {\n' +
+      '        @Test\n' +
+      '        void test1() {\n' +
+      '            int value = -1;\n' +
+      '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+      '            object.configure(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test2() {\n' +
+      '            float value = 100;\n' +
+      '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+      '            object.configure(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test3() {\n' +
+      '            String value = "jpeg";\n' +
+      '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+      '            object.configure(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test4() {\n' +
+      '            String value = "pdf";\n' +
+      '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+      '            object.configure(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test5() {\n' +
+      '            int value = 100;\n' +
+      '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+      '            object.configure(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test6() {\n' +
+      '            int value = 0;\n' +
+      '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+      '            object.configure(value);\n' +
+      '        }\n' +
+      '    }\n' +
+      '}\n',
+    functionSelectors: [
+      {
+        by: 'reach',
+        funcReach: {
+          reachMethod: 'configure',
+          reachClass: {
+            reachNames: [
+              'ApplicationWebXml'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          reach: 'method'
+        }
+      }
+    ],
+    gitInfo: {
+      ownerLogin: 'ponicode',
+      repoName: 'OTHER_svn2git',
+      githubUser: 'Baptiste Bouffaut',
+      filePath: 'src/main/java/fr/yodamad/svn2git/ApplicationWebXml.java',
+      remoteUrl: 'git@github.com:ponicode/OTHER_svn2git.git'
+    }
+  }
+}
+[gatsby] [proc-stdout] Method called: readTest({
+  lang: 'java',
+  testContent: 'package fr.yodamad.svn2git;\n' +
+    '\n' +
+    'import org.junit.jupiter.api.*;\n' +
+    '\n' +
+    'public class ApplicationWebXmlTest {\n' +
+    '    @Nested\n' +
+    '    @DisplayName("Tests for the method configure")\n' +
+    '    class configureTests {\n' +
+    '        @Test\n' +
+    '        void test1() {\n' +
+    '            int value = -1;\n' +
+    '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+    '            object.configure(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test2() {\n' +
+    '            float value = 100;\n' +
+    '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+    '            object.configure(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test3() {\n' +
+    '            String value = "jpeg";\n' +
+    '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+    '            object.configure(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test4() {\n' +
+    '            String value = "pdf";\n' +
+    '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+    '            object.configure(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test5() {\n' +
+    '            int value = 100;\n' +
+    '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+    '            object.configure(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test6() {\n' +
+    '            int value = 0;\n' +
+    '            ApplicationWebXml object = new ApplicationWebXml();\n' +
+    '            object.configure(value);\n' +
+    '        }\n' +
+    '    }\n' +
+    '}\n',
+  functionSelectors: [Array],
+  gitInfo: [Object]
+})
+
+[gatsby] [proc-stdout] readTest took 0ms
+
+[telemetry] event cli:gatsby:readTest
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'readTest',
+  result: {
+    lang: 'java',
+    groups: [
+      {
+        method: false,
+        groupSelector: {
+          by: 'reach',
+          funcReach: {
+            reachMethod: 'configure',
+            reachClass: {
+              reachNames: [
+                'ApplicationWebXml'
+              ],
+              asImportedInTest: {
+                type: 'java',
+                package: 'fr.yodamad.svn2git'
+              },
+              reach: 'package'
+            },
+            reach: 'method'
+          }
+        },
+        customValidationFunctions: [],
+        suiteIdentifiers: {},
+        testCases: [
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'configure',
+              reachClass: {
+                reachNames: [
+                  'ApplicationWebXml'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'configure',
+              reachClass: {
+                reachNames: [
+                  'ApplicationWebXml'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'configure',
+              reachClass: {
+                reachNames: [
+                  'ApplicationWebXml'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'configure',
+              reachClass: {
+                reachNames: [
+                  'ApplicationWebXml'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'configure',
+              reachClass: {
+                reachNames: [
+                  'ApplicationWebXml'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'configure',
+              reachClass: {
+                reachNames: [
+                  'ApplicationWebXml'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          }
+        ]
+      }
+    ],
+    imports: [],
+    supportedIdentifiers: {}
+  }
+}
+[datastore.file] resolving testcase 1/6
+[datastore.file] resolving testcase 2/6
+[datastore.file] resolving testcase 3/6
+[datastore.file] resolving testcase 4/6
+[datastore.file] resolving testcase 5/6
+[datastore.file] resolving testcase 6/6
+✔ 1 test file found
+[cli] starting task 1/1
+
+    Function configure
+- Read function prototype
+✔ Read function prototype
+- Find test cases
+[datastore.file] loading test file
+[datastore.file] loading test file /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/ApplicationWebXmlTest.java
+[datastore] diffTestFile:
+    6 additions,
+    0 deletions,
+    0 matches,
+    no moves
+✔ 6 test cases found, skipping function
+
+src/main/java/fr/yodamad/svn2git/Svn2GitApp.java
+- Reading file
+[outline] Outline.fetch("/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java")
+[telemetry] event cli:gatsby:functionSupported: success
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: '31% Starting Java Language Server'
+}
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM Importing Maven project(s)
+[language-service] [rpc-req] workspace/executeCommand {
+  command: 'ponicode.ls.functionSupported',
+  arguments: [
+    '{"lang":"java","filePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java"}'
+  ]
+}
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:30 PM >> workspace/executeCommand ponicode.ls.functionSupported
+[telemetry] event cli:gatsby:functionSupported: success
+[telemetry] event cli:time:show_ponies: success
+[telemetry] event cli:time:show_ponies: success
+[telemetry] event cli:time:show_ponies: success
+[telemetry] event cli:gatsby:readTest: success
+[language-service] [rpc-res] {"value":{"imports":{},"functions":[{"params":[],"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"initApplication","computed":"initApplication"},"range":{"start":{"row":38,"column":4},"end":{"row":56,"column":5},"startIndex":1229,"endIndex":2365},"assignRange":{"start":{"row":38,"column":4},"end":{"row":56,"column":5},"startIndex":1229,"endIndex":2365},"bodyRange":{"start":{"row":38,"column":4},"end":{"row":56,"column":5},"startIndex":1229,"endIndex":2365},"reasons":[],"valid":true,"reach":{"reachMethod":"initApplication","reachClass":{"reachNames":["Svn2GitApp"],"asImportedInTest":{"type":"java","package":"fr.yodamad.svn2git"},"reach":"package"},"reach":"method"}},{"params":[{"type":"simple","name":"args","optional":false,"variadic":false,"static_type":{}}],"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"main","computed":"main"},"range":{"start":{"row":58,"column":4},"end":{"row":68,"column":5},"startIndex":2371,"endIndex":2753},"assignRange":{"start":{"row":58,"column":4},"end":{"row":68,"column":5},"startIndex":2371,"endIndex":2753},"bodyRange":{"start":{"row":58,"column":4},"end":{"row":68,"column":5},"startIndex":2371,"endIndex":2753},"reasons":[],"valid":true,"reach":{"reachNames":["Svn2GitApp","main"],"asImportedInTest":{"type":"java","package":"fr.yodamad.svn2git"},"reach":"package"}},{"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"logApplicationStartup","computed":"logApplicationStartup"},"range":{"start":{"row":70,"column":4},"end":{"row":100,"column":5},"startIndex":2759,"endIndex":4077},"assignRange":{"start":{"row":70,"column":4},"end":{"row":100,"column":5},"startIndex":2759,"endIndex":4077},"bodyRange":{"start":{"row":70,"column":4},"end":{"row":100,"column":5},"startIndex":2759,"endIndex":4077},"reason":11,"reasons":[11],"valid":false}],"variables":[],"classes":{}},"success":true}
+[time] Getting outline + function supported took 213ms 	success: true
+[telemetry] event cli:time:show_ponies
+[datastore.global] updateOutline: creating {
+  originalFsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+  fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java'
+}
+[datastore.file] creating FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java
+[datastore.file] created FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java with test URI: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/Svn2GitAppTest.java and original file path: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java
+[datastore.file] resolveReachesInOutlineImports: start
+[datastore.file] resolveReachesInOutlineImports: end after 0 ms
+✔ 2 supported methods
+- Looking for test files
+[datastore.file] fetching test file
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'readTest',
+  params: {
+    lang: 'java',
+    testContent: 'package fr.yodamad.svn2git;\n' +
+      '\n' +
+      'import org.junit.jupiter.api.*;\n' +
+      '\n' +
+      'public class Svn2GitAppTest {\n' +
+      '    @Nested\n' +
+      '    @DisplayName("Tests for the method initApplication")\n' +
+      '    class initApplicationTests {\n' +
+      '        @Test\n' +
+      '        void test1() {\n' +
+      '            Svn2GitApp object = new Svn2GitApp();\n' +
+      '            object.initApplication();\n' +
+      '        }\n' +
+      '    }\n' +
+      '}\n',
+    functionSelectors: [
+      {
+        by: 'reach',
+        funcReach: {
+          reachMethod: 'initApplication',
+          reachClass: {
+            reachNames: [
+              'Svn2GitApp'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          reach: 'method'
+        }
+      },
+      {
+        by: 'reach',
+        funcReach: {
+          reachNames: [
+            'Svn2GitApp',
+            'main'
+          ],
+          asImportedInTest: {
+            type: 'java',
+            package: 'fr.yodamad.svn2git'
+          },
+          reach: 'package'
+        }
+      }
+    ],
+    gitInfo: {
+      ownerLogin: 'ponicode',
+      repoName: 'OTHER_svn2git',
+      githubUser: 'Baptiste Bouffaut',
+      filePath: 'src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+      remoteUrl: 'git@github.com:ponicode/OTHER_svn2git.git'
+    }
+  }
+}
+[gatsby] [proc-stdout] Method called: readTest({
+  lang: 'java',
+  testContent: 'package fr.yodamad.svn2git;\n' +
+    '\n' +
+    'import org.junit.jupiter.api.*;\n' +
+    '\n' +
+    'public class Svn2GitAppTest {\n' +
+    '    @Nested\n' +
+    '    @DisplayName("Tests for the method initApplication")\n' +
+    '    class initApplicationTests {\n' +
+    '        @Test\n' +
+    '        void test1() {\n' +
+    '            Svn2GitApp object = new Svn2GitApp();\n' +
+    '            object.initApplication();\n' +
+    '        }\n' +
+    '    }\n' +
+    '}\n',
+  functionSelectors: [Array],
+  gitInfo: [Object]
+})
+readTest took 1ms
+
+[telemetry] event cli:gatsby:readTest
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'readTest',
+  result: {
+    lang: 'java',
+    groups: [
+      {
+        method: false,
+        groupSelector: {
+          by: 'reach',
+          funcReach: {
+            reachMethod: 'initApplication',
+            reachClass: {
+              reachNames: [
+                'Svn2GitApp'
+              ],
+              asImportedInTest: {
+                type: 'java',
+                package: 'fr.yodamad.svn2git'
+              },
+              reach: 'package'
+            },
+            reach: 'method'
+          }
+        },
+        customValidationFunctions: [],
+        suiteIdentifiers: {},
+        testCases: [
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'initApplication',
+              reachClass: {
+                reachNames: [
+                  'Svn2GitApp'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          }
+        ]
+      },
+      {
+        method: false,
+        groupSelector: {
+          by: 'reach',
+          funcReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          }
+        },
+        customValidationFunctions: [],
+        suiteIdentifiers: {},
+        testCases: []
+      }
+    ],
+    imports: [],
+    supportedIdentifiers: {}
+  }
+}
+[datastore.file] resolving testcase 1/1
+✔ 1 test file found
+[cli] starting task 1/2
+[cli] starting task 2/2
+
+    Function initApplication
+- Read function prototype
+✔ Read function prototype
+- Find test cases
+[datastore.file] loading test file
+[datastore.file] loading test file /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/Svn2GitAppTest.java
+[datastore] diffTestFile:
+    1 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore.file] loading test file
+[datastore.file] loading test file /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/Svn2GitAppTest.java
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    1 matches,
+    no moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    0 matches,
+    no moves
+✔ 1 test case found, skipping function
+[datastore] getParametersRepresentation: lang=java name=main
+[language-service] [rpc-req] workspace/executeCommand {
+  command: 'ponicode.ls.typesRepresentation',
+  arguments: [
+    '{"filePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java","methodName":"main","methodIsStatic":true}'
+  ]
+}
+
+    Function main
+- Read function prototype
+✔ Read function prototype
+- Find test cases
+✔ 0 test cases found
+- Start language features
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:31 PM >> workspace/executeCommand ponicode.ls.typesRepresentation
+[language-service] [rpc-res] {"parameters":[{"reference":{"filePath":"native","name":"Array"},"typeParameters":[{"reference":{"filePath":"native","name":"String"},"typeParameters":[]}]}],"globals":{}}
+[time] Parameters representation took 32ms 
+[telemetry] event cli:time:language_service
+[datastore] getParametersRepresentation: success after 32 ms: {
+  parameters: [
+    {
+      reference: {
+        filePath: 'native',
+        name: 'Array'
+      },
+      typeParameters: [
+        {
+          reference: {
+            filePath: 'native',
+            name: 'String'
+          },
+          typeParameters: []
+        }
+      ]
+    }
+  ],
+  globals: {}
+}
+✔ Start language features
+- Bootstrap tests
+[datastore] getParametersRepresentation: lang=java name=main
+[language-service] [rpc-req] workspace/executeCommand {
+  command: 'ponicode.ls.typesRepresentation',
+  arguments: [
+    '{"filePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java","methodName":"main","methodIsStatic":true}'
+  ]
+}
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:31 PM >> workspace/executeCommand ponicode.ls.typesRepresentation
+[language-service] [rpc-res] {"parameters":[{"reference":{"filePath":"native","name":"Array"},"typeParameters":[{"reference":{"filePath":"native","name":"String"},"typeParameters":[]}]}],"globals":{}}
+[time] Parameters representation took 21ms 
+[telemetry] event cli:time:language_service
+[datastore] getParametersRepresentation: success after 21 ms: {
+  parameters: [
+    {
+      reference: {
+        filePath: 'native',
+        name: 'Array'
+      },
+      typeParameters: [
+        {
+          reference: {
+            filePath: 'native',
+            name: 'String'
+          },
+          typeParameters: []
+        }
+      ]
+    }
+  ],
+  globals: {}
+}
+[time] Language Service took 24ms 
+[telemetry] event cli:time:language_service
+[datastore] fetching suggestions for 'main'
+[requests] {
+  tx: true,
+  endpoint: '/function/suggestions',
+  method: 'post',
+  input: {
+    func: {
+      params: [
+        {
+          type: 'simple',
+          name: 'args',
+          optional: false,
+          variadic: false,
+          static_type: {
+            ts: {
+              reference: {
+                filePath: 'native',
+                name: 'Array'
+              },
+              typeParameters: [
+                {
+                  reference: {
+                    filePath: 'native',
+                    name: 'String'
+                  },
+                  typeParameters: []
+                }
+              ]
+            }
+          }
+        }
+      ],
+      lang: 'java',
+      mockable: false,
+      async: false,
+      hasReturn: true,
+      hasJSX: false,
+      name: {
+        own: 'main',
+        computed: 'main'
+      },
+      range: {
+        start: {
+          row: 58,
+          column: 4
+        },
+        end: {
+          row: 68,
+          column: 5
+        },
+        startIndex: 2371,
+        endIndex: 2753
+      },
+      assignRange: {
+        start: {
+          row: 58,
+          column: 4
+        },
+        end: {
+          row: 68,
+          column: 5
+        },
+        startIndex: 2371,
+        endIndex: 2753
+      },
+      bodyRange: {
+        start: {
+          row: 58,
+          column: 4
+        },
+        end: {
+          row: 68,
+          column: 5
+        },
+        startIndex: 2371,
+        endIndex: 2753
+      },
+      reasons: [],
+      valid: true,
+      reach: {
+        reachNames: [
+          'Svn2GitApp',
+          'main'
+        ],
+        asImportedInTest: {
+          type: 'java',
+          package: 'fr.yodamad.svn2git'
+        },
+        reach: 'package'
+      },
+      text: '**\n' +
+        '     * Main method, used to run the application.\n' +
+        '     *\n' +
+        '     * @param args the command line arguments\n' +
+        '     */\n' +
+        '    public static void main(String[] args) {\n' +
+        '        SpringApplication app = new SpringApplication(Svn2GitApp.class);\n' +
+        '        DefaultProfileUtil.addDefaultProfile(app);\n' +
+        '        Environment env = app.run(args).getEnvironment();\n' +
+        '        logApplicationStartup(env);\n' +
+        '    }\n',
+      uri: t {
+        scheme: 'file',
+        authority: '',
+        path: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+        query: '',
+        fragment: '',
+        _formatted: null,
+        _fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java'
+      },
+      _constructor: undefined,
+      parametersTypeRepresentation: {
+        parameters: [
+          {
+            reference: {
+              filePath: 'native',
+              name: 'Array'
+            },
+            typeParameters: [
+              {
+                reference: {
+                  filePath: 'native',
+                  name: 'String'
+                },
+                typeParameters: []
+              }
+            ]
+          }
+        ],
+        globals: {}
+      },
+      alfredContext: [],
+      prepareModules: [AsyncFunction: prepareModules],
+      resolvedLS: true
+    },
+    functionCode: '**\n' +
+      '     * Main method, used to run the application.\n' +
+      '     *\n' +
+      '     * @param args the command line arguments\n' +
+      '     */\n' +
+      '    public static void main(String[] args) {\n' +
+      '        SpringApplication app = new SpringApplication(Svn2GitApp.class);\n' +
+      '        DefaultProfileUtil.addDefaultProfile(app);\n' +
+      '        Environment env = app.run(args).getEnvironment();\n' +
+      '        logApplicationStartup(env);\n' +
+      '    }\n',
+    functionLang: 'java',
+    inputColumns: [],
+    testCases: {
+      existing: [],
+      suggestions: [],
+      runtime: [],
+      archive: []
+    },
+    types: {},
+    thisArg: undefined,
+    context: [],
+    expressionsToMock: [],
+    metadata: {
+      gitInfo: {
+        ownerLogin: 'ponicode',
+        repoName: 'OTHER_svn2git',
+        githubUser: 'Baptiste Bouffaut',
+        filePath: 'src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+        remoteUrl: 'git@github.com:ponicode/OTHER_svn2git.git'
+      }
+    }
+  },
+  auth: 'Bearer: 37f6...'
+}
+[telemetry] event cli:time:show_ponies: success
+[telemetry] event cli:time:language_service: success
+[telemetry] event cli:time:language_service: success
+[telemetry] event cli:time:language_service: success
+[telemetry] event cli:gatsby:readTest: success
+[requests] {
+  rx: true,
+  endpoint: '/function/suggestions',
+  method: 'post',
+  output: [
+    200,
+    {
+      testSuggestions: [
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: []
+            }
+          ],
+          expects: [],
+          curriedParams: [],
+          async: false,
+          metadata: {
+            unknowns: {
+              inputValues: [],
+              arranges: []
+            },
+            suggestionType: 'edge_case'
+          }
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"Foo bar"'
+                }
+              ]
+            }
+          ],
+          expects: [],
+          curriedParams: [],
+          async: false,
+          metadata: {
+            unknowns: {
+              inputValues: [],
+              arranges: []
+            },
+            suggestionType: 'normal'
+          }
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"This is a Text"'
+                }
+              ]
+            }
+          ],
+          expects: [],
+          curriedParams: [],
+          async: false,
+          metadata: {
+            unknowns: {
+              inputValues: [],
+              arranges: []
+            },
+            suggestionType: 'normal'
+          }
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"foo bar"'
+                }
+              ]
+            }
+          ],
+          expects: [],
+          curriedParams: [],
+          async: false,
+          metadata: {
+            unknowns: {
+              inputValues: [],
+              arranges: []
+            },
+            suggestionType: 'normal'
+          }
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"Hello, world!"'
+                }
+              ]
+            }
+          ],
+          expects: [],
+          curriedParams: [],
+          async: false,
+          metadata: {
+            unknowns: {
+              inputValues: [],
+              arranges: []
+            },
+            suggestionType: 'normal'
+          }
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"Foo bar"'
+                },
+                {
+                  type: 'string',
+                  value: '"This is a Text"'
+                },
+                {
+                  type: 'string',
+                  value: '"Foo bar"'
+                }
+              ]
+            }
+          ],
+          expects: [],
+          curriedParams: [],
+          async: false,
+          metadata: {
+            unknowns: {
+              inputValues: [],
+              arranges: []
+            },
+            suggestionType: 'normal'
+          }
+        }
+      ],
+      columnSuggestions: {
+        inputs: {
+          functionMocks: [],
+          variableMocks: []
+        },
+        expects: []
+      }
+    }
+  ]
+}
+[time] Fetch suggestions took 277ms 	success: true
+[telemetry] event cli:time:suggestions
+[datastore] [debug] loadSuggestions() has proposed 6 suggestions
+✔ Bootstrap tests
+- Write file
+[datastore] Moving a batch of 6 suggestions in flash test from 'suggestions' to 'unitTests'
+[cli] [writeTests] begin
+[datastore] [writeTests] begin
+[datastore] [writeTests] begin
+[datastore] [writeTests] getting resolved modules map
+[datastore] [writeTests] resolved modules map []
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'generateUt',
+  params: {
+    func: {
+      params: [
+        {
+          type: 'simple',
+          name: 'args',
+          optional: false,
+          variadic: false,
+          static_type: {
+            ts: {
+              reference: {
+                filePath: 'native',
+                name: 'Array'
+              },
+              typeParameters: [
+                {
+                  reference: {
+                    filePath: 'native',
+                    name: 'String'
+                  },
+                  typeParameters: []
+                }
+              ]
+            }
+          }
+        }
+      ],
+      lang: 'java',
+      mockable: false,
+      async: false,
+      hasReturn: true,
+      hasJSX: false,
+      name: {
+        own: 'main',
+        computed: 'main'
+      },
+      range: {
+        start: {
+          row: 58,
+          column: 4
+        },
+        end: {
+          row: 68,
+          column: 5
+        },
+        startIndex: 2371,
+        endIndex: 2753
+      },
+      assignRange: {
+        start: {
+          row: 58,
+          column: 4
+        },
+        end: {
+          row: 68,
+          column: 5
+        },
+        startIndex: 2371,
+        endIndex: 2753
+      },
+      bodyRange: {
+        start: {
+          row: 58,
+          column: 4
+        },
+        end: {
+          row: 68,
+          column: 5
+        },
+        startIndex: 2371,
+        endIndex: 2753
+      },
+      reasons: [],
+      valid: true,
+      reach: {
+        reachNames: [
+          'Svn2GitApp',
+          'main'
+        ],
+        asImportedInTest: {
+          type: 'java',
+          package: 'fr.yodamad.svn2git'
+        },
+        reach: 'package'
+      },
+      text: '**\n' +
+        '     * Main method, used to run the application.\n' +
+        '     *\n' +
+        '     * @param args the command line arguments\n' +
+        '     */\n' +
+        '    public static void main(String[] args) {\n' +
+        '        SpringApplication app = new SpringApplication(Svn2GitApp.class);\n' +
+        '        DefaultProfileUtil.addDefaultProfile(app);\n' +
+        '        Environment env = app.run(args).getEnvironment();\n' +
+        '        logApplicationStartup(env);\n' +
+        '    }\n',
+      uri: t {
+        scheme: 'file',
+        authority: '',
+        path: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+        query: '',
+        fragment: '',
+        _formatted: null,
+        _fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java'
+      },
+      _constructor: undefined,
+      parametersTypeRepresentation: {
+        parameters: [
+          {
+            reference: {
+              filePath: 'native',
+              name: 'Array'
+            },
+            typeParameters: [
+              {
+                reference: {
+                  filePath: 'native',
+                  name: 'String'
+                },
+                typeParameters: []
+              }
+            ]
+          }
+        ],
+        globals: {}
+      },
+      alfredContext: [],
+      prepareModules: [AsyncFunction: prepareModules],
+      resolvedLS: true
+    },
+    functionCode: '**\n' +
+      '     * Main method, used to run the application.\n' +
+      '     *\n' +
+      '     * @param args the command line arguments\n' +
+      '     */\n' +
+      '    public static void main(String[] args) {\n' +
+      '        SpringApplication app = new SpringApplication(Svn2GitApp.class);\n' +
+      '        DefaultProfileUtil.addDefaultProfile(app);\n' +
+      '        Environment env = app.run(args).getEnvironment();\n' +
+      '        logApplicationStartup(env);\n' +
+      '    }\n',
+    filePath: {
+      fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+      fsPathWithForwardSlashes: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+      asImportedInTest: {
+        type: 'java',
+        package: 'fr.yodamad.svn2git'
+      }
+    },
+    lang: 'java',
+    testCases: {
+      existing: [
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"Foo bar"'
+                }
+              ]
+            }
+          ],
+          expects: [
+            {
+              lhs: {
+                type: 'sourcecallreturn'
+              },
+              rhs: {
+                not: false,
+                type: 'toMatchSnapshot'
+              }
+            }
+          ],
+          curriedParams: [],
+          async: false
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"This is a Text"'
+                }
+              ]
+            }
+          ],
+          expects: [
+            {
+              lhs: {
+                type: 'sourcecallreturn'
+              },
+              rhs: {
+                not: false,
+                type: 'toMatchSnapshot'
+              }
+            }
+          ],
+          curriedParams: [],
+          async: false
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"foo bar"'
+                }
+              ]
+            }
+          ],
+          expects: [
+            {
+              lhs: {
+                type: 'sourcecallreturn'
+              },
+              rhs: {
+                not: false,
+                type: 'toMatchSnapshot'
+              }
+            }
+          ],
+          curriedParams: [],
+          async: false
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"Hello, world!"'
+                }
+              ]
+            }
+          ],
+          expects: [
+            {
+              lhs: {
+                type: 'sourcecallreturn'
+              },
+              rhs: {
+                not: false,
+                type: 'toMatchSnapshot'
+              }
+            }
+          ],
+          curriedParams: [],
+          async: false
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: [
+                {
+                  type: 'string',
+                  value: '"Foo bar"'
+                },
+                {
+                  type: 'string',
+                  value: '"This is a Text"'
+                },
+                {
+                  type: 'string',
+                  value: '"Foo bar"'
+                }
+              ]
+            }
+          ],
+          expects: [
+            {
+              lhs: {
+                type: 'sourcecallreturn'
+              },
+              rhs: {
+                not: false,
+                type: 'toMatchSnapshot'
+              }
+            }
+          ],
+          curriedParams: [],
+          async: false
+        },
+        {
+          lang: 'java',
+          description: '',
+          sourceCallReach: {
+            reachNames: [
+              'Svn2GitApp',
+              'main'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git'
+            },
+            reach: 'package'
+          },
+          arranges: [],
+          inputValues: [
+            {
+              type: 'array',
+              value: []
+            }
+          ],
+          expects: [
+            {
+              lhs: {
+                type: 'sourcecallreturn'
+              },
+              rhs: {
+                not: false,
+                type: 'toMatchSnapshot'
+              }
+            }
+          ],
+          curriedParams: [],
+          async: false
+        }
+      ]
+    },
+    existingTestFile: {
+      contents: 'package fr.yodamad.svn2git;\n' +
+        '\n' +
+        'import org.junit.jupiter.api.*;\n' +
+        '\n' +
+        'public class Svn2GitAppTest {\n' +
+        '    @Nested\n' +
+        '    @DisplayName("Tests for the method initApplication")\n' +
+        '    class initApplicationTests {\n' +
+        '        @Test\n' +
+        '        void test1() {\n' +
+        '            Svn2GitApp object = new Svn2GitApp();\n' +
+        '            object.initApplication();\n' +
+        '        }\n' +
+        '    }\n' +
+        '}\n',
+      resolvedModules: []
+    },
+    beforeData: undefined,
+    gitInfo: {
+      ownerLogin: 'ponicode',
+      repoName: 'OTHER_svn2git',
+      githubUser: 'Baptiste Bouffaut',
+      filePath: 'src/main/java/fr/yodamad/svn2git/Svn2GitApp.java',
+      remoteUrl: 'git@github.com:ponicode/OTHER_svn2git.git'
+    },
+    customValidationFunctions: []
+  }
+}
+[gatsby] [proc-stdout] Method called: generateUt({
+  func: [Object],
+  functionCode: '**\n' +
+    '     * Main method, used to run the application.\n' +
+    '     *\n' +
+    '     * @param args the command line arguments\n' +
+    '     */\n' +
+    '    public static void main(String[] args) {\n' +
+    '        SpringApplication app = new SpringApplication(Svn2GitApp.class);\n' +
+    '        DefaultProfileUtil.addDefaultProfile(app);\n' +
+    '        Environment env = app.run(args).getEnvironment();\n' +
+    '        logApplicationStartup(env);\n' +
+    '    }\n',
+  filePath: [Object],
+  lang: 'java',
+  testCases: [Object],
+  existingTestFile: [Object],
+  gitInfo: [Object],
+  customValidationFunctions: []
+})
+generateUt took 0ms
+
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'generateUt',
+  e: {
+    code: 0,
+    message: 'arrayToStatements: java arrays must have a typeRef',
+    data: {
+      PonicodeJSONRPCError: {
+        message: 'arrayToStatements: java arrays must have a typeRef',
+        stack: [
+          'Error: arrayToStatements: java arrays must have a typeRef',
+          '    at EF.arrayToStatements (/home/baptiste/.nvm/versions/node/v14.5.0/lib/node_modules/@ponicode/cli-public/gatsby/entry.js:114:21730)',
+          '    at EF._inputValueToStatements (/home/baptiste/.nvm/versions/node/v14.5.0/lib/node_modules/@ponicode/cli-public/gatsby/entry.js:114:20854)'
+        ]
+      }
+    }
+  }
+}
+[cli] [writeTests] end
+✖ Write file
+
+src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java
+- Reading file
+[outline] Outline.fetch("/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java")
+[language-service] [rpc-req] workspace/executeCommand {
+  command: 'ponicode.ls.functionSupported',
+  arguments: [
+    '{"lang":"java","filePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java"}'
+  ]
+}
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:31 PM >> workspace/executeCommand ponicode.ls.functionSupported
+[language-service] [rpc-res] {"value":{"imports":{},"functions":[{"params":[],"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"springBeanPointcut","computed":"springBeanPointcut"},"range":{"start":{"row":34,"column":4},"end":{"row":42,"column":5},"startIndex":856,"endIndex":1305},"assignRange":{"start":{"row":34,"column":4},"end":{"row":42,"column":5},"startIndex":856,"endIndex":1305},"bodyRange":{"start":{"row":34,"column":4},"end":{"row":42,"column":5},"startIndex":856,"endIndex":1305},"reasons":[],"valid":true,"reach":{"reachMethod":"springBeanPointcut","reachClass":{"reachNames":["LoggingAspect"],"asImportedInTest":{"type":"java","package":"fr.yodamad.svn2git.aop.logging"},"reach":"package"},"reach":"method"}},{"params":[],"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"applicationPackagePointcut","computed":"applicationPackagePointcut"},"range":{"start":{"row":44,"column":4},"end":{"row":52,"column":5},"startIndex":1311,"endIndex":1717},"assignRange":{"start":{"row":44,"column":4},"end":{"row":52,"column":5},"startIndex":1311,"endIndex":1717},"bodyRange":{"start":{"row":44,"column":4},"end":{"row":52,"column":5},"startIndex":1311,"endIndex":1717},"reasons":[],"valid":true,"reach":{"reachMethod":"applicationPackagePointcut","reachClass":{"reachNames":["LoggingAspect"],"asImportedInTest":{"type":"java","package":"fr.yodamad.svn2git.aop.logging"},"reach":"package"},"reach":"method"}},{"params":[{"type":"simple","name":"joinPoint","optional":false,"variadic":false,"static_type":{}},{"type":"simple","name":"e","optional":false,"variadic":false,"static_type":{}}],"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"logAfterThrowing","computed":"logAfterThrowing"},"range":{"start":{"row":54,"column":4},"end":{"row":70,"column":5},"startIndex":1723,"endIndex":2616},"assignRange":{"start":{"row":54,"column":4},"end":{"row":70,"column":5},"startIndex":1723,"endIndex":2616},"bodyRange":{"start":{"row":54,"column":4},"end":{"row":70,"column":5},"startIndex":1723,"endIndex":2616},"reasons":[],"valid":true,"reach":{"reachMethod":"logAfterThrowing","reachClass":{"reachNames":["LoggingAspect"],"asImportedInTest":{"type":"java","package":"fr.yodamad.svn2git.aop.logging"},"reach":"package"},"reach":"method"}},{"params":[{"type":"simple","name":"joinPoint","optional":false,"variadic":false,"static_type":{}}],"lang":"java","mockable":false,"async":false,"hasReturn":true,"hasJSX":false,"name":{"own":"logAround","computed":"logAround"},"range":{"start":{"row":72,"column":4},"end":{"row":98,"column":5},"startIndex":2622,"endIndex":3820},"assignRange":{"start":{"row":72,"column":4},"end":{"row":98,"column":5},"startIndex":2622,"endIndex":3820},"bodyRange":{"start":{"row":72,"column":4},"end":{"row":98,"column":5},"startIndex":2622,"endIndex":3820},"reasons":[],"valid":true,"reach":{"reachMethod":"logAround","reachClass":{"reachNames":["LoggingAspect"],"asImportedInTest":{"type":"java","package":"fr.yodamad.svn2git.aop.logging"},"reach":"package"},"reach":"method"}}],"variables":[],"classes":{}},"success":true}
+[time] Getting outline + function supported took 100ms 	success: true
+[telemetry] event cli:time:show_ponies
+[datastore.global] updateOutline: creating {
+  originalFsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java',
+  fsPath: '/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java'
+}
+[datastore.file] creating FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java
+[datastore.file] created FileEntry for file: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java with test URI: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/aop/logging/LoggingAspectTest.java and original file path: /home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java
+[datastore.file] resolveReachesInOutlineImports: start
+[datastore.file] resolveReachesInOutlineImports: end after 0 ms
+✔ 4 supported methods
+- Looking for test files
+[datastore.file] fetching test file
+[gatsby] gatsby-requests {
+  tx: true,
+  method: 'readTest',
+  params: {
+    lang: 'java',
+    testContent: 'package fr.yodamad.svn2git.aop.logging;\n' +
+      '\n' +
+      'import org.junit.jupiter.api.*;\n' +
+      '\n' +
+      'public class LoggingAspectTest {\n' +
+      '    @Nested\n' +
+      '    @DisplayName("Tests for the method applicationPackagePointcut")\n' +
+      '    class applicationPackagePointcutTests {\n' +
+      '        @Test\n' +
+      '        void test1() {\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.applicationPackagePointcut();\n' +
+      '        }\n' +
+      '    }\n' +
+      '    @Nested\n' +
+      '    @DisplayName("Tests for the method logAfterThrowing")\n' +
+      '    class logAfterThrowingTests {\n' +
+      '        @Test\n' +
+      '        void test1() {\n' +
+      '            float value = 0.0;\n' +
+      '            float value2 = 100;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAfterThrowing(value,value2);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test2() {\n' +
+      '            float value = -29.45;\n' +
+      '            String value2 = "something@example.com";\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAfterThrowing(value,value2);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test3() {\n' +
+      '            float value = 1.0;\n' +
+      '            float value2 = 100;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAfterThrowing(value,value2);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test4() {\n' +
+      '            String value = "Pierre Edouard";\n' +
+      '            int value2 = -100;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAfterThrowing(value,value2);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test5() {\n' +
+      '            String value = "George";\n' +
+      '            float value2 = 1;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAfterThrowing(value,value2);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test6() {\n' +
+      '            float value = 0;\n' +
+      '            int value2 = 0;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAfterThrowing(value,value2);\n' +
+      '        }\n' +
+      '    }\n' +
+      '    @Nested\n' +
+      '    @DisplayName("Tests for the method logAround")\n' +
+      '    class logAroundTests {\n' +
+      '        @Test\n' +
+      '        void test1() {\n' +
+      '            int value = -0.5;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAround(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test2() {\n' +
+      '            int value = 1.0;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAround(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test3() {\n' +
+      '            int value = 0.0;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAround(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test4() {\n' +
+      '            float value = 0.0;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAround(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test5() {\n' +
+      '            String value = "Edmond";\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAround(value);\n' +
+      '        }\n' +
+      '        @Test\n' +
+      '        void test6() {\n' +
+      '            int value = 0;\n' +
+      '            LoggingAspect object = new LoggingAspect();\n' +
+      '            object.logAround(value);\n' +
+      '        }\n' +
+      '    }\n' +
+      '}\n',
+    functionSelectors: [
+      {
+        by: 'reach',
+        funcReach: {
+          reachMethod: 'springBeanPointcut',
+          reachClass: {
+            reachNames: [
+              'LoggingAspect'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git.aop.logging'
+            },
+            reach: 'package'
+          },
+          reach: 'method'
+        }
+      },
+      {
+        by: 'reach',
+        funcReach: {
+          reachMethod: 'applicationPackagePointcut',
+          reachClass: {
+            reachNames: [
+              'LoggingAspect'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git.aop.logging'
+            },
+            reach: 'package'
+          },
+          reach: 'method'
+        }
+      },
+      {
+        by: 'reach',
+        funcReach: {
+          reachMethod: 'logAfterThrowing',
+          reachClass: {
+            reachNames: [
+              'LoggingAspect'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git.aop.logging'
+            },
+            reach: 'package'
+          },
+          reach: 'method'
+        }
+      },
+      {
+        by: 'reach',
+        funcReach: {
+          reachMethod: 'logAround',
+          reachClass: {
+            reachNames: [
+              'LoggingAspect'
+            ],
+            asImportedInTest: {
+              type: 'java',
+              package: 'fr.yodamad.svn2git.aop.logging'
+            },
+            reach: 'package'
+          },
+          reach: 'method'
+        }
+      }
+    ],
+    gitInfo: {
+      ownerLogin: 'ponicode',
+      repoName: 'OTHER_svn2git',
+      githubUser: 'Baptiste Bouffaut',
+      filePath: 'src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java',
+      remoteUrl: 'git@github.com:ponicode/OTHER_svn2git.git'
+    }
+  }
+}
+[gatsby] [proc-stdout] Method called: readTest({
+  lang: 'java',
+  testContent: 'package fr.yodamad.svn2git.aop.logging;\n' +
+    '\n' +
+    'import org.junit.jupiter.api.*;\n' +
+    '\n' +
+    'public class LoggingAspectTest {\n' +
+    '    @Nested\n' +
+    '    @DisplayName("Tests for the method applicationPackagePointcut")\n' +
+    '    class applicationPackagePointcutTests {\n' +
+    '        @Test\n' +
+    '        void test1() {\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.applicationPackagePointcut();\n' +
+    '        }\n' +
+    '    }\n' +
+    '    @Nested\n' +
+    '    @DisplayName("Tests for the method logAfterThrowing")\n' +
+    '    class logAfterThrowingTests {\n' +
+    '        @Test\n' +
+    '        void test1() {\n' +
+    '            float value = 0.0;\n' +
+    '            float value2 = 100;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAfterThrowing(value,value2);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test2() {\n' +
+    '            float value = -29.45;\n' +
+    '            String value2 = "something@example.com";\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAfterThrowing(value,value2);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test3() {\n' +
+    '            float value = 1.0;\n' +
+    '            float value2 = 100;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAfterThrowing(value,value2);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test4() {\n' +
+    '            String value = "Pierre Edouard";\n' +
+    '            int value2 = -100;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAfterThrowing(value,value2);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test5() {\n' +
+    '            String value = "George";\n' +
+    '            float value2 = 1;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAfterThrowing(value,value2);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test6() {\n' +
+    '            float value = 0;\n' +
+    '            int value2 = 0;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAfterThrowing(value,value2);\n' +
+    '        }\n' +
+    '    }\n' +
+    '    @Nested\n' +
+    '    @DisplayName("Tests for the method logAround")\n' +
+    '    class logAroundTests {\n' +
+    '        @Test\n' +
+    '        void test1() {\n' +
+    '            int value = -0.5;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAround(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test2() {\n' +
+    '            int value = 1.0;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAround(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test3() {\n' +
+    '            int value = 0.0;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAround(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test4() {\n' +
+    '            float value = 0.0;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAround(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test5() {\n' +
+    '            String value = "Edmond";\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAround(value);\n' +
+    '        }\n' +
+    '        @Test\n' +
+    '        void test6() {\n' +
+    '            int value = 0;\n' +
+    '            LoggingAspect object = new LoggingAspect();\n' +
+    '            object.logAround(value);\n' +
+    '        }\n' +
+    '    }\n' +
+    '}\n',
+  functionSelectors: [Array],
+  gitInfo: [Object]
+})
+readTest took 0ms
+
+[telemetry] event cli:gatsby:readTest
+[gatsby] gatsby-requests {
+  rx: true,
+  method: 'readTest',
+  result: {
+    lang: 'java',
+    groups: [
+      {
+        method: false,
+        groupSelector: {
+          by: 'reach',
+          funcReach: {
+            reachMethod: 'springBeanPointcut',
+            reachClass: {
+              reachNames: [
+                'LoggingAspect'
+              ],
+              asImportedInTest: {
+                type: 'java',
+                package: 'fr.yodamad.svn2git.aop.logging'
+              },
+              reach: 'package'
+            },
+            reach: 'method'
+          }
+        },
+        customValidationFunctions: [],
+        suiteIdentifiers: {},
+        testCases: []
+      },
+      {
+        method: false,
+        groupSelector: {
+          by: 'reach',
+          funcReach: {
+            reachMethod: 'applicationPackagePointcut',
+            reachClass: {
+              reachNames: [
+                'LoggingAspect'
+              ],
+              asImportedInTest: {
+                type: 'java',
+                package: 'fr.yodamad.svn2git.aop.logging'
+              },
+              reach: 'package'
+            },
+            reach: 'method'
+          }
+        },
+        customValidationFunctions: [],
+        suiteIdentifiers: {},
+        testCases: [
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'applicationPackagePointcut',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          }
+        ]
+      },
+      {
+        method: false,
+        groupSelector: {
+          by: 'reach',
+          funcReach: {
+            reachMethod: 'logAfterThrowing',
+            reachClass: {
+              reachNames: [
+                'LoggingAspect'
+              ],
+              asImportedInTest: {
+                type: 'java',
+                package: 'fr.yodamad.svn2git.aop.logging'
+              },
+              reach: 'package'
+            },
+            reach: 'method'
+          }
+        },
+        customValidationFunctions: [],
+        suiteIdentifiers: {},
+        testCases: [
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAfterThrowing',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAfterThrowing',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAfterThrowing',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAfterThrowing',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAfterThrowing',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAfterThrowing',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          }
+        ]
+      },
+      {
+        method: false,
+        groupSelector: {
+          by: 'reach',
+          funcReach: {
+            reachMethod: 'logAround',
+            reachClass: {
+              reachNames: [
+                'LoggingAspect'
+              ],
+              asImportedInTest: {
+                type: 'java',
+                package: 'fr.yodamad.svn2git.aop.logging'
+              },
+              reach: 'package'
+            },
+            reach: 'method'
+          }
+        },
+        customValidationFunctions: [],
+        suiteIdentifiers: {},
+        testCases: [
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAround',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAround',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAround',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAround',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAround',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          },
+          {
+            lang: 'java',
+            arranges: [],
+            async: false,
+            curriedParams: [],
+            description: '',
+            expects: [],
+            inputValues: [],
+            sourceCallReach: {
+              reachMethod: 'logAround',
+              reachClass: {
+                reachNames: [
+                  'LoggingAspect'
+                ],
+                asImportedInTest: {
+                  type: 'java',
+                  package: 'fr.yodamad.svn2git.aop.logging'
+                },
+                reach: 'package'
+              },
+              reach: 'method'
+            },
+            metadata: {
+              isShallow: true
+            }
+          }
+        ]
+      }
+    ],
+    imports: [],
+    supportedIdentifiers: {}
+  }
+}
+[datastore.file] resolving testcase 1/1
+[datastore.file] resolving testcase 1/6
+[datastore.file] resolving testcase 2/6
+[datastore.file] resolving testcase 3/6
+[datastore.file] resolving testcase 4/6
+[datastore.file] resolving testcase 5/6
+[datastore.file] resolving testcase 6/6
+[datastore.file] resolving testcase 1/6
+[datastore.file] resolving testcase 2/6
+[datastore.file] resolving testcase 3/6
+[datastore.file] resolving testcase 4/6
+[datastore.file] resolving testcase 5/6
+[datastore.file] resolving testcase 6/6
+✔ 1 test file found
+[cli] starting task 1/4
+[cli] starting task 2/4
+[cli] starting task 3/4
+
+    Function springBeanPointcut
+- Read function prototype
+✔ Read function prototype
+- Find test cases
+[datastore.file] loading test file
+[datastore.file] loading test file /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/aop/logging/LoggingAspectTest.java
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore] diffTestFile:
+    1 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore] diffTestFile:
+    6 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore] diffTestFile:
+    6 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore.file] loading test file
+[datastore.file] loading test file /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/aop/logging/LoggingAspectTest.java
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    1 matches,
+    no moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] diffTestFile:
+    0 additions,
+    5 deletions,
+    6 matches,
+    at least one moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] diffTestFile:
+    0 additions,
+    5 deletions,
+    6 matches,
+    at least one moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore.file] loading test file
+[datastore.file] loading test file /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/aop/logging/LoggingAspectTest.java
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    1 matches,
+    no moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] diffTestFile:
+    0 additions,
+    5 deletions,
+    6 matches,
+    at least one moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] diffTestFile:
+    0 additions,
+    5 deletions,
+    6 matches,
+    at least one moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+✔ 0 test cases found
+- Start language features
+[datastore] getParametersRepresentation: lang=java name=springBeanPointcut
+[language-service] [rpc-req] workspace/executeCommand {
+  command: 'ponicode.ls.typesRepresentation',
+  arguments: [
+    '{"filePath":"/home/baptiste/workspace/ponicode/OTHER_svn2git/src/main/java/fr/yodamad/svn2git/aop/logging/LoggingAspect.java","methodName":"springBeanPointcut","methodIsStatic":false}'
+  ]
+}
+[cli] starting task 4/4
+[datastore.file] loading test file
+[datastore.file] loading test file /home/baptiste/workspace/ponicode/OTHER_svn2git/src/test/java/fr/yodamad/svn2git/aop/logging/LoggingAspectTest.java
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    0 matches,
+    no moves
+[datastore] diffTestFile:
+    0 additions,
+    0 deletions,
+    1 matches,
+    no moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] diffTestFile:
+    0 additions,
+    5 deletions,
+    6 matches,
+    at least one moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] diffTestFile:
+    0 additions,
+    5 deletions,
+    6 matches,
+    at least one moves
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: matched test case 0
+[datastore]     incoming description ''
+[datastore]     existing description ''
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[datastore] read-test: deleted test case
+[telemetry] event cli:time:suggestions: success
+[language-service] [rpc-notif] Nov 17, 2021, 4:30:31 PM >> workspace/executeCommand ponicode.ls.typesRepresentation
+[telemetry] event cli:time:show_ponies: success
+[telemetry] event cli:gatsby:readTest: success
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: '34% Starting Java Language Server - /home/baptiste/workspace/ponicode/OTHER_svn2git'
+}
+[datastore] LanguageService successfully added source file jest.config.js
+[datastore] LanguageService successfully added source file postcss.config.js
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: '38% Starting Java Language Server - Refreshing projects'
+}
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: '60% Starting Java Language Server - project svn-2-git'
+}
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: '69% Starting Java Language Server - Updating configuration for svn-2-git'
+}
+[language-service] connection event: notification: method=language/status: {
+  type: 'Starting',
+  message: "69% Starting Java Language Server - Refreshing '/svn-2-git/src/main/java'."
+}
