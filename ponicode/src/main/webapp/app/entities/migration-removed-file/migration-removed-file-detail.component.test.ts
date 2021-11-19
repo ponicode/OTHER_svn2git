@@ -1,15 +1,17 @@
 import * as migration_removed_file_detail_component from "app/entities/migration-removed-file/migration-removed-file-detail.component"
+import * as router from "@angular/router"
 
-// @ponicode
 describe("previousState", () => {
     let inst: any
+    let inst2: any
 
     beforeEach(() => {
-        inst = new migration_removed_file_detail_component.MigrationRemovedFileDetailComponent("https://accounts.google.com/o/oauth2/revoke?token=%s")
+        inst = new router.ActivatedRoute()
+        inst2 = new migration_removed_file_detail_component.MigrationRemovedFileDetailComponent(inst)
     })
 
     test("0", () => {
-        let result: any = inst.previousState()
+        let result: any = inst2.previousState()
         expect(result).toMatchSnapshot()
     })
 })
@@ -17,13 +19,15 @@ describe("previousState", () => {
 // @ponicode
 describe("ngOnInit", () => {
     let inst: any
+    let inst2: any
 
     beforeEach(() => {
-        inst = new migration_removed_file_detail_component.MigrationRemovedFileDetailComponent("http://www.example.com/route/123?foo=bar")
+        inst = new router.ActivatedRoute()
+        inst2 = new migration_removed_file_detail_component.MigrationRemovedFileDetailComponent(inst)
     })
 
     test("0", () => {
-        let result: any = inst.ngOnInit()
+        let result: any = inst2.ngOnInit()
         expect(result).toMatchSnapshot()
     })
 })

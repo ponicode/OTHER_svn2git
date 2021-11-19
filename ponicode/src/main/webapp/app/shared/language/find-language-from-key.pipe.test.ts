@@ -8,27 +8,27 @@ describe("transform", () => {
     })
 
     test("0", () => {
-        let result: any = inst.transform("cn")
+        let result: any = inst.transform("en")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.transform("ru")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
         let result: any = inst.transform("ar")
         expect(result).toMatchSnapshot()
     })
 
+    test("2", () => {
+        let result: any = inst.transform("cn")
+        expect(result).toMatchSnapshot()
+    })
+
     test("3", () => {
-        let result: any = inst.transform("fr")
+        let result: any = inst.transform("ru")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.transform("en")
+        let result: any = inst.transform("fr")
         expect(result).toMatchSnapshot()
     })
 

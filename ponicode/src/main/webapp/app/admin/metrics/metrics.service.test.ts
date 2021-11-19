@@ -1,29 +1,38 @@
 import * as metrics_service from "app/admin/metrics/metrics.service"
+import * as http from "@angular/common/http"
+import * as backend from "@angular/common/http/src/backend"
 
-// @ponicode
-describe("threadDump", () => {
+describe("getMetrics", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new metrics_service.JhiMetricsService("POST")
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new metrics_service.JhiMetricsService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.threadDump()
+        let result: any = inst3.getMetrics()
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
-describe("getMetrics", () => {
+describe("threadDump", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new metrics_service.JhiMetricsService("DELETE")
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new metrics_service.JhiMetricsService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.getMetrics()
+        let result: any = inst3.threadDump()
         expect(result).toMatchSnapshot()
     })
 })

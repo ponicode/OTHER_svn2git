@@ -1,15 +1,17 @@
 import * as static_mapping_detail_component from "app/entities/static-mapping/static-mapping-detail.component"
+import * as router from "@angular/router"
 
-// @ponicode
 describe("ngOnInit", () => {
     let inst: any
+    let inst2: any
 
     beforeEach(() => {
-        inst = new static_mapping_detail_component.StaticMappingDetailComponent("https://accounts.google.com/o/oauth2/revoke?token=%s")
+        inst = new router.ActivatedRoute()
+        inst2 = new static_mapping_detail_component.StaticMappingDetailComponent(inst)
     })
 
     test("0", () => {
-        let result: any = inst.ngOnInit()
+        let result: any = inst2.ngOnInit()
         expect(result).toMatchSnapshot()
     })
 })
@@ -17,13 +19,15 @@ describe("ngOnInit", () => {
 // @ponicode
 describe("previousState", () => {
     let inst: any
+    let inst2: any
 
     beforeEach(() => {
-        inst = new static_mapping_detail_component.StaticMappingDetailComponent("ponicode.com")
+        inst = new router.ActivatedRoute()
+        inst2 = new static_mapping_detail_component.StaticMappingDetailComponent(inst)
     })
 
     test("0", () => {
-        let result: any = inst.previousState()
+        let result: any = inst2.previousState()
         expect(result).toMatchSnapshot()
     })
 })

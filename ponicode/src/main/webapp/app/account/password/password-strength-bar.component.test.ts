@@ -1,79 +1,82 @@
 import * as password_strength_bar_component from "app/account/password/password-strength-bar.component"
+import * as core from "@angular/core"
 
-// @ponicode
-describe("getColor", () => {
+describe("measureStrength", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new password_strength_bar_component.PasswordStrengthBarComponent(true, "Michael")
+        inst = new core.Renderer()
+        inst2 = new core.ElementRef("a1969970175")
+        inst3 = new password_strength_bar_component.PasswordStrengthBarComponent(inst, inst2)
     })
 
     test("0", () => {
-        let result: any = inst.getColor(15)
+        let result: any = inst3.measureStrength("rgb(0,100,200)")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.getColor(9)
+        let result: any = inst3.measureStrength("hsl(10%,20%,40%)")
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.getColor(25)
+        let result: any = inst3.measureStrength("rgb(0.1,0.2,0.3)")
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.getColor(30)
+        let result: any = inst3.measureStrength("rgb(20%,10%,30%)")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.getColor(20)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst.getColor(Infinity)
+        let result: any = inst3.measureStrength("")
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
-describe("measureStrength", () => {
+describe("getColor", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new password_strength_bar_component.PasswordStrengthBarComponent(false, "Edmond")
+        inst = new core.Renderer()
+        inst2 = new core.ElementRef("a1969970175")
+        inst3 = new password_strength_bar_component.PasswordStrengthBarComponent(inst, inst2)
     })
 
     test("0", () => {
-        let result: any = inst.measureStrength("rgb(20%,10%,30%)")
+        let result: any = inst3.getColor(41.0)
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.measureStrength("rgb(0.1,0.2,0.3)")
+        let result: any = inst3.getColor(10.0)
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.measureStrength("black")
+        let result: any = inst3.getColor(30)
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.measureStrength("red")
+        let result: any = inst3.getColor(40)
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.measureStrength("green")
+        let result: any = inst3.getColor(20)
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.measureStrength("")
+        let result: any = inst3.getColor(-Infinity)
         expect(result).toMatchSnapshot()
     })
 })

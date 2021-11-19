@@ -1,250 +1,272 @@
 import * as migration_process_service from "app/migration/migration-process.service"
+import * as http from "@angular/common/http"
 
 import * as migration_filter_model from "app/shared/model/migration-filter.model"
-// @ponicode
 describe("currentUserFromToken", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("DELETE")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.currentUserFromToken("ponicode.com", "%a")
+        let result: any = inst3.currentUserFromToken("https://", "~")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.currentUserFromToken("http://base.com", "÷")
+        let result: any = inst3.currentUserFromToken("Www.GooGle.com", undefined)
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.currentUserFromToken("www.google.com", "")
+        let result: any = inst3.currentUserFromToken("https://", undefined)
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.currentUserFromToken("ponicode.com", "~@")
+        let result: any = inst3.currentUserFromToken("http://base.com", ">")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.currentUserFromToken("https://", undefined)
+        let result: any = inst3.currentUserFromToken("https://twitter.com/path?abc", "}}")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.currentUserFromToken("", "")
+        let result: any = inst3.currentUserFromToken("", undefined)
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
-describe("checkProject", () => {
-    let inst: any
-
-    beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("POST")
-    })
-
-    test("0", () => {
-        let result: any = inst.checkProject("www.google.com", "https://twitter.com/path?abc", undefined)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst.checkProject("https://croplands.org/app/a/confirm?t=", "www.google.com", undefined)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst.checkProject("https://twitter.com/path?abc", "ponicode.com", ",")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst.checkProject("https://", "www.google.com", "new")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst.checkProject("Www.GooGle.com", "http://base.com", "not in")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst.checkProject("", "", "")
-        expect(result).toMatchSnapshot()
-    })
-})
-
-// @ponicode
 describe("checkUser", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("POST")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.checkUser("Edmond", "https://twitter.com/path?abc", undefined)
+        let result: any = inst3.checkUser("Michael", "http://base.com", " ")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.checkUser("Jean-Philippe", "https://", undefined)
+        let result: any = inst3.checkUser("Michael", "https://twitter.com/path?abc", ",")
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.checkUser("Anas", "https://twitter.com/path?abc", "package")
+        let result: any = inst3.checkUser("Pierre Edouard", "https://", "package")
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.checkUser("Pierre Edouard", "https://twitter.com/path?abc", "\\")
+        let result: any = inst3.checkUser("Pierre Edouard", "http://base.com", undefined)
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.checkUser("George", "Www.GooGle.com", "{")
+        let result: any = inst3.checkUser("George", "http://www.example.com/route/123?foo=bar", ",")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.checkUser("", "", "")
+        let result: any = inst3.checkUser("", "", "")
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
-describe("createGroup", () => {
-    let inst: any
-
-    beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("POST")
-    })
-
-    test("0", () => {
-        let result: any = inst.createGroup("Edmond", "http://base.com", "'")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst.createGroup("Michael", "www.google.com", "")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst.createGroup("Anas", "http://base.com", "/*")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst.createGroup("Edmond", "Www.GooGle.com", "\n")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst.createGroup("Pierre Edouard", "ponicode.com", "{{")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst.createGroup("", "", "")
-        expect(result).toMatchSnapshot()
-    })
-})
-
-// @ponicode
 describe("checkGroup", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("POST")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.checkGroup("Pierre Edouard", "user-name", "http://www.example.com/route/123?foo=bar", "#")
+        let result: any = inst3.checkGroup("Anas", "user123", "https://twitter.com/path?abc", undefined)
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.checkGroup("Pierre Edouard", "user-name", "www.google.com", undefined)
+        let result: any = inst3.checkGroup("Anas", "user123", "http://base.com", undefined)
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.checkGroup("Edmond", "123", "http://www.example.com/route/123?foo=bar", "=")
+        let result: any = inst3.checkGroup("Edmond", "123", "http://base.com", undefined)
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.checkGroup("George", "user_name", "https://twitter.com/path?abc", undefined)
+        let result: any = inst3.checkGroup("Pierre Edouard", "username", "http://www.example.com/route/123?foo=bar", undefined)
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.checkGroup("Pierre Edouard", "123", "ponicode.com", undefined)
+        let result: any = inst3.checkGroup("Jean-Philippe", "123", "https://", "/*")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.checkGroup("", "", "", undefined)
+        let result: any = inst3.checkGroup("", "", "", undefined)
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
-describe("findActiveMigrations", () => {
+describe("checkProject", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("POST")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.findActiveMigrations()
+        let result: any = inst3.checkProject("http://www.croplands.org/account/confirm?t=", "https://twitter.com/path?abc", "not")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.checkProject("http://base.com", "Www.GooGle.com", undefined)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.checkProject("http://www.example.com/route/123?foo=bar", "http://www.example.com/route/123?foo=bar", undefined)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.checkProject("https://twitter.com/path?abc", "ponicode.com", "data")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.checkProject("www.google.com", "https://twitter.com/path?abc", undefined)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.checkProject("", "", undefined)
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
+describe("createGroup", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.createGroup("Anas", "https://twitter.com/path?abc", undefined)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.createGroup("Pierre Edouard", "http://www.example.com/route/123?foo=bar", "~@")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.createGroup("Edmond", "Www.GooGle.com", "<")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.createGroup("Edmond", "http://base.com", "*")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.createGroup("George", "https://twitter.com/path?abc", undefined)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.createGroup("", "", "")
+        expect(result).toMatchSnapshot()
+    })
+})
+
 describe("checkSvn", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("DELETE")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.checkSvn("George", "http://base.com", "Jean-Philippe", "accessdenied4u", 1)
+        let result: any = inst3.checkSvn("Jean-Philippe", "https://twitter.com/path?abc", "Michael", "YouarenotAllowed2Use", 1)
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.checkSvn("Pierre Edouard", "http://base.com", "Jean-Philippe", "accessdenied4u", 0)
+        let result: any = inst3.checkSvn("Michael", "ponicode.com", "Edmond", "YouarenotAllowed2Use", 100)
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.checkSvn("Jean-Philippe", "www.google.com", "George", "accessdenied4u", -100)
+        let result: any = inst3.checkSvn("George", "ponicode.com", "Michael", "$p3onyycat", 1)
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.checkSvn("Jean-Philippe", "http://base.com", "George", "accessdenied4u", 0)
+        let result: any = inst3.checkSvn("Edmond", "http://www.example.com/route/123?foo=bar", "George", "!Lov3MyPianoPony", 1)
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.checkSvn("Pierre Edouard", "http://www.example.com/route/123?foo=bar", "George", "accessdenied4u", 1)
+        let result: any = inst3.checkSvn("Jean-Philippe", "www.google.com", "Pierre Edouard", "accessdenied4u", 0)
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.checkSvn("", "", "", "", -Infinity)
+        let result: any = inst3.checkSvn("", "", "", "", Infinity)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("findActiveMigrations", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.findActiveMigrations()
         expect(result).toMatchSnapshot()
     })
 })
@@ -252,44 +274,48 @@ describe("checkSvn", () => {
 // @ponicode
 describe("findMigrations", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new migration_process_service.MigrationProcessService("POST")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_process_service.MigrationProcessService(inst2)
     })
 
     test("0", () => {
-        let param1: any = new migration_filter_model.MigrationFilter(undefined, 1, undefined, undefined, undefined)
-        let result: any = inst.findMigrations(param1)
+        let param1: any = new migration_filter_model.MigrationFilter(1, undefined, undefined, undefined, "Gail Hoppe")
+        let result: any = inst3.findMigrations(param1)
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let param1: any = new migration_filter_model.MigrationFilter(undefined, 1000, undefined, undefined, undefined)
-        let result: any = inst.findMigrations(param1)
+        let param1: any = new migration_filter_model.MigrationFilter(undefined, undefined, undefined, undefined, "Maurice Purdy")
+        let result: any = inst3.findMigrations(param1)
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let param1: any = new migration_filter_model.MigrationFilter(1, undefined, undefined, undefined, "Janet Homenick")
-        let result: any = inst.findMigrations(param1)
+        let param1: any = new migration_filter_model.MigrationFilter(undefined, undefined, "Gail Hoppe", undefined, undefined)
+        let result: any = inst3.findMigrations(param1)
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let param1: any = new migration_filter_model.MigrationFilter(1, 1000, undefined, "Becky Bednar", "Janet Homenick")
-        let result: any = inst.findMigrations(param1)
+        let param1: any = new migration_filter_model.MigrationFilter(1, 1, "Maurice Purdy", undefined, undefined)
+        let result: any = inst3.findMigrations(param1)
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let param1: any = new migration_filter_model.MigrationFilter(1000, 1000, undefined, "Ronald Keeling", "Gail Hoppe")
-        let result: any = inst.findMigrations(param1)
+        let param1: any = new migration_filter_model.MigrationFilter(undefined, undefined, "Ronald Keeling", undefined, undefined)
+        let result: any = inst3.findMigrations(param1)
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let param1: any = new migration_filter_model.MigrationFilter(undefined, -Infinity, undefined, undefined, undefined)
-        let result: any = inst.findMigrations(param1)
+        let param1: any = new migration_filter_model.MigrationFilter(NaN, undefined, undefined, "", "")
+        let result: any = inst3.findMigrations(param1)
         expect(result).toMatchSnapshot()
     })
 })

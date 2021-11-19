@@ -1,15 +1,17 @@
 import * as mapping_detail_component from "app/entities/mapping/mapping-detail.component"
+import * as router from "@angular/router"
 
-// @ponicode
 describe("previousState", () => {
     let inst: any
+    let inst2: any
 
     beforeEach(() => {
-        inst = new mapping_detail_component.MappingDetailComponent("https://croplands.org/app/a/reset?token=")
+        inst = new router.ActivatedRoute()
+        inst2 = new mapping_detail_component.MappingDetailComponent(inst)
     })
 
     test("0", () => {
-        let result: any = inst.previousState()
+        let result: any = inst2.previousState()
         expect(result).toMatchSnapshot()
     })
 })
@@ -17,13 +19,15 @@ describe("previousState", () => {
 // @ponicode
 describe("ngOnInit", () => {
     let inst: any
+    let inst2: any
 
     beforeEach(() => {
-        inst = new mapping_detail_component.MappingDetailComponent("http://www.croplands.org/account/confirm?t=")
+        inst = new router.ActivatedRoute()
+        inst2 = new mapping_detail_component.MappingDetailComponent(inst)
     })
 
     test("0", () => {
-        let result: any = inst.ngOnInit()
+        let result: any = inst2.ngOnInit()
         expect(result).toMatchSnapshot()
     })
 })

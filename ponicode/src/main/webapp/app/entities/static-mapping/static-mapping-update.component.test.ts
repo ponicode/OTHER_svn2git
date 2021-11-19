@@ -1,32 +1,26 @@
 import * as static_mapping_update_component from "app/entities/static-mapping/static-mapping-update.component"
 import * as static_mapping_service from "app/entities/static-mapping/static-mapping.service"
+import * as http from "@angular/common/http"
+import * as router from "@angular/router"
 
-describe("save", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new static_mapping_service.StaticMappingService(12)
-        inst2 = new static_mapping_update_component.StaticMappingUpdateComponent(inst, "https://api.telegram.org/bot")
-    })
-
-    test("0", () => {
-        let result: any = inst2.save()
-        expect(result).toMatchSnapshot()
-    })
-})
-
+import * as rxjs from "rxjs"
 describe("ngOnInit", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new static_mapping_service.StaticMappingService(12345)
-        inst2 = new static_mapping_update_component.StaticMappingUpdateComponent(inst, "ponicode.com")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new static_mapping_update_component.StaticMappingUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.ngOnInit()
+        let result: any = inst5.ngOnInit()
         expect(result).toMatchSnapshot()
     })
 })
@@ -34,14 +28,41 @@ describe("ngOnInit", () => {
 describe("previousState", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new static_mapping_service.StaticMappingService(987650)
-        inst2 = new static_mapping_update_component.StaticMappingUpdateComponent(inst, "https://api.telegram.org/bot")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new static_mapping_update_component.StaticMappingUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.previousState()
+        let result: any = inst5.previousState()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("save", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new static_mapping_update_component.StaticMappingUpdateComponent(inst3, inst4)
+    })
+
+    test("0", () => {
+        let result: any = inst5.save()
         expect(result).toMatchSnapshot()
     })
 })
@@ -49,70 +70,69 @@ describe("previousState", () => {
 describe("onSaveSuccess", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new static_mapping_service.StaticMappingService(56784)
-        inst2 = new static_mapping_update_component.StaticMappingUpdateComponent(inst, "https://twitter.com/path?abc")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new static_mapping_update_component.StaticMappingUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.onSaveSuccess()
+        let result: any = inst5.onSaveSuccess()
         expect(result).toMatchSnapshot()
     })
 })
 
-describe("subscribeToSaveResponse", () => {
+describe("onSaveError", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new static_mapping_service.StaticMappingService(56784)
-        inst2 = new static_mapping_update_component.StaticMappingUpdateComponent(inst, "http://www.croplands.org/account/confirm?t=")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new static_mapping_update_component.StaticMappingUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.subscribeToSaveResponse("www.google.com")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst2.subscribeToSaveResponse("https://")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst2.subscribeToSaveResponse("https://twitter.com/path?abc")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst2.subscribeToSaveResponse("Www.GooGle.com")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst2.subscribeToSaveResponse("http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst2.subscribeToSaveResponse("")
+        let result: any = inst5.onSaveError()
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
-describe("onSaveError", () => {
+describe("subscribeToSaveResponse", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new static_mapping_service.StaticMappingService(56784)
-        inst2 = new static_mapping_update_component.StaticMappingUpdateComponent(inst, "Www.GooGle.com")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new static_mapping_update_component.StaticMappingUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.onSaveError()
+        let param1: any = new rxjs.Observable(undefined)
+        let result: any = inst5.subscribeToSaveResponse(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst5.subscribeToSaveResponse(null)
         expect(result).toMatchSnapshot()
     })
 })

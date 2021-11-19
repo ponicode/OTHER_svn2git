@@ -1,17 +1,47 @@
 import * as migration_update_component from "app/entities/migration/migration-update.component"
 import * as migration_service from "app/entities/migration/migration.service"
+import * as http from "@angular/common/http"
+import * as router from "@angular/router"
+
+import * as rxjs from "rxjs"
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new migration_update_component.MigrationUpdateComponent(inst3, inst4)
+    })
+
+    test("0", () => {
+        let result: any = inst5.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})
 
 describe("previousState", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(987650)
-        inst2 = new migration_update_component.MigrationUpdateComponent(inst, "https://twitter.com/path?abc")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new migration_update_component.MigrationUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.previousState()
+        let result: any = inst5.previousState()
         expect(result).toMatchSnapshot()
     })
 })
@@ -19,69 +49,41 @@ describe("previousState", () => {
 describe("save", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(56784)
-        inst2 = new migration_update_component.MigrationUpdateComponent(inst, "https://twitter.com/path?abc")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new migration_update_component.MigrationUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.save()
+        let result: any = inst5.save()
         expect(result).toMatchSnapshot()
     })
 })
 
-describe("ngOnInit", () => {
+describe("onSaveError", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(56784)
-        inst2 = new migration_update_component.MigrationUpdateComponent(inst, "Www.GooGle.com")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new migration_update_component.MigrationUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.ngOnInit()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("subscribeToSaveResponse", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new migration_service.MigrationService("bc23a9d531064583ace8f67dad60f6bb")
-        inst2 = new migration_update_component.MigrationUpdateComponent(inst, "http://www.croplands.org/account/confirm?t=")
-    })
-
-    test("0", () => {
-        let result: any = inst2.subscribeToSaveResponse("Www.GooGle.com")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst2.subscribeToSaveResponse("https://api.telegram.org/bot")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst2.subscribeToSaveResponse("http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst2.subscribeToSaveResponse("http://www.example.com/route/123?foo=bar")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst2.subscribeToSaveResponse("http://base.com")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst2.subscribeToSaveResponse("")
+        let result: any = inst5.onSaveError()
         expect(result).toMatchSnapshot()
     })
 })
@@ -89,30 +91,48 @@ describe("subscribeToSaveResponse", () => {
 describe("onSaveSuccess", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService("a1969970175")
-        inst2 = new migration_update_component.MigrationUpdateComponent(inst, "ponicode.com")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new migration_update_component.MigrationUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.onSaveSuccess()
+        let result: any = inst5.onSaveSuccess()
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
-describe("onSaveError", () => {
+describe("subscribeToSaveResponse", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(56784)
-        inst2 = new migration_update_component.MigrationUpdateComponent(inst, "Www.GooGle.com")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new migration_update_component.MigrationUpdateComponent(inst3, inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.onSaveError()
+        let param1: any = new rxjs.Observable(undefined)
+        let result: any = inst5.subscribeToSaveResponse(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst5.subscribeToSaveResponse(null)
         expect(result).toMatchSnapshot()
     })
 })

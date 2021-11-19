@@ -1,174 +1,216 @@
 import * as state_storage_service from "app/core/auth/state-storage.service"
+import * as ngx_webstorage from "ngx-webstorage"
+import * as rxjs from "rxjs"
 
-// @ponicode
-describe("resetPreviousState", () => {
-    let inst: any
-
-    beforeEach(() => {
-        inst = new state_storage_service.StateStorageService("https://croplands.org/app/a/confirm?t=")
-    })
-
-    test("0", () => {
-        let result: any = inst.resetPreviousState()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-// @ponicode
 describe("getPreviousState", () => {
+    let inst4: any
+    let inst3: any
+    let inst2: any
     let inst: any
+    let inst5: any
+    let inst6: any
 
     beforeEach(() => {
-        inst = new state_storage_service.StateStorageService("http://www.croplands.org/account/confirm?t=")
+        inst4 = new rxjs.Observable(undefined)
+        inst3 = new rxjs.Observable(undefined)
+        inst2 = new rxjs.Observable(undefined)
+        inst = new rxjs.Subject()
+        inst5 = new ngx_webstorage.SessionStorageService({ keyChanges: inst, isAvailable: false, name: "Anas", get: () => inst2, set: () => inst3, del: () => null, clear: () => inst4 })
+        inst6 = new state_storage_service.StateStorageService(inst5)
     })
 
     test("0", () => {
-        let result: any = inst.getPreviousState()
+        let result: any = inst6.getPreviousState()
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
+describe("resetPreviousState", () => {
+    let inst2: any
+    let inst: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst2 = new rxjs.Observable(undefined)
+        inst = new rxjs.Subject()
+        inst3 = new ngx_webstorage.SessionStorageService({ keyChanges: inst, isAvailable: false, name: "George", get: () => inst2, set: () => null, del: () => null, clear: () => null })
+        inst4 = new state_storage_service.StateStorageService(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.resetPreviousState()
+        expect(result).toMatchSnapshot()
+    })
+})
+
 describe("storePreviousState", () => {
+    let inst2: any
     let inst: any
+    let inst3: any
+    let inst4: any
 
     beforeEach(() => {
-        inst = new state_storage_service.StateStorageService("https://accounts.google.com/o/oauth2/revoke?token=%s")
+        inst2 = new rxjs.Observable(undefined)
+        inst = new rxjs.Subject()
+        inst3 = new ngx_webstorage.SessionStorageService({ keyChanges: inst, isAvailable: false, name: "Michael", get: () => inst2, set: () => null, del: () => null, clear: () => null })
+        inst4 = new state_storage_service.StateStorageService(inst3)
     })
 
     test("0", () => {
-        let result: any = inst.storePreviousState("Île-de-France", "Alabama")
+        let result: any = inst4.storePreviousState("Île-de-France", "Abruzzo")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.storePreviousState("Abruzzo", "Île-de-France")
+        let result: any = inst4.storePreviousState("Abruzzo", "Florida")
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.storePreviousState("Florida", "Alabama")
+        let result: any = inst4.storePreviousState("Île-de-France", "Alabama")
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.storePreviousState("Alabama", "Abruzzo")
+        let result: any = inst4.storePreviousState("Abruzzo", "Alabama")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.storePreviousState("Alabama", "Île-de-France")
+        let result: any = inst4.storePreviousState("Alabama", "Florida")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.storePreviousState("", "")
+        let result: any = inst4.storePreviousState("", "")
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
 describe("getDestinationState", () => {
+    let inst2: any
     let inst: any
+    let inst3: any
+    let inst4: any
 
     beforeEach(() => {
-        inst = new state_storage_service.StateStorageService("ponicode.com")
+        inst2 = new rxjs.Observable(undefined)
+        inst = new rxjs.Subject()
+        inst3 = new ngx_webstorage.SessionStorageService({ keyChanges: inst, isAvailable: false, name: "Anas", get: () => inst2, set: () => null, del: () => null, clear: () => null })
+        inst4 = new state_storage_service.StateStorageService(inst3)
     })
 
     test("0", () => {
-        let result: any = inst.getDestinationState()
+        let result: any = inst4.getDestinationState()
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
 describe("storeUrl", () => {
+    let inst2: any
     let inst: any
+    let inst3: any
+    let inst4: any
 
     beforeEach(() => {
-        inst = new state_storage_service.StateStorageService("http://base.com")
+        inst2 = new rxjs.Observable(undefined)
+        inst = new rxjs.Subject()
+        inst3 = new ngx_webstorage.SessionStorageService({ keyChanges: inst, isAvailable: false, name: "Anas", get: () => inst2, set: () => null, del: () => null, clear: () => null })
+        inst4 = new state_storage_service.StateStorageService(inst3)
     })
 
     test("0", () => {
-        let result: any = inst.storeUrl("Www.GooGle.com")
+        let result: any = inst4.storeUrl("http://www.example.com/route/123?foo=bar")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.storeUrl("https://twitter.com/path?abc")
+        let result: any = inst4.storeUrl("https://")
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.storeUrl("www.google.com")
+        let result: any = inst4.storeUrl("Www.GooGle.com")
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.storeUrl("ponicode.com")
+        let result: any = inst4.storeUrl("https://twitter.com/path?abc")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.storeUrl("http://base.com")
+        let result: any = inst4.storeUrl("ponicode.com")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.storeUrl("")
+        let result: any = inst4.storeUrl("")
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
 describe("getUrl", () => {
+    let inst2: any
     let inst: any
+    let inst3: any
+    let inst4: any
 
     beforeEach(() => {
-        inst = new state_storage_service.StateStorageService("https://accounts.google.com/o/oauth2/revoke?token=%s")
+        inst2 = new rxjs.Observable(undefined)
+        inst = new rxjs.Subject()
+        inst3 = new ngx_webstorage.SessionStorageService({ keyChanges: inst, isAvailable: false, name: "Michael", get: () => inst2, set: () => null, del: () => null, clear: () => null })
+        inst4 = new state_storage_service.StateStorageService(inst3)
     })
 
     test("0", () => {
-        let result: any = inst.getUrl()
+        let result: any = inst4.getUrl()
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
 describe("storeDestinationState", () => {
+    let inst2: any
     let inst: any
+    let inst3: any
+    let inst4: any
 
     beforeEach(() => {
-        inst = new state_storage_service.StateStorageService("https://")
+        inst2 = new rxjs.Observable(undefined)
+        inst = new rxjs.Subject()
+        inst3 = new ngx_webstorage.SessionStorageService({ keyChanges: inst, isAvailable: true, name: "George", get: () => inst2, set: () => null, del: () => null, clear: () => null })
+        inst4 = new state_storage_service.StateStorageService(inst3)
     })
 
     test("0", () => {
-        let result: any = inst.storeDestinationState("{}", "Île-de-France", "Île-de-France")
+        let result: any = inst4.storeDestinationState("{}", "Île-de-France", "Alabama")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.storeDestinationState("{}", "Abruzzo", "Abruzzo")
+        let result: any = inst4.storeDestinationState("{}", "Florida", "Alabama")
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.storeDestinationState("{}", "Florida", "Alabama")
+        let result: any = inst4.storeDestinationState("{}", "Alabama", "Alabama")
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.storeDestinationState("{}", "Île-de-France", "Alabama")
+        let result: any = inst4.storeDestinationState("{}", "Alabama", "Florida")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.storeDestinationState("{}", "Île-de-France", "Florida")
+        let result: any = inst4.storeDestinationState("{}", "Alabama", "Abruzzo")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.storeDestinationState("", "", "")
+        let result: any = inst4.storeDestinationState("", "", "")
         expect(result).toMatchSnapshot()
     })
 })

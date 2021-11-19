@@ -1,17 +1,83 @@
 import * as audits_component from "app/admin/audits/audits.component"
 import * as audits_service from "app/admin/audits/audits.service"
+import * as http from "@angular/common/http"
+import * as backend from "@angular/common/http/src/backend"
+import * as ng_jhipster from "ng-jhipster"
+import * as security from "@angular/core/src/sanitization/security"
+import * as config_service from "ng-jhipster/config.service"
+import * as core from "@ngx-translate/core"
+import * as translate_store from "@ngx-translate/core/lib/translate.store"
+import * as translate_loader from "@ngx-translate/core/lib/translate.loader"
+import * as translate_compiler from "@ngx-translate/core/lib/translate.compiler"
+import * as translate_parser from "@ngx-translate/core/lib/translate.parser"
+import * as missing_translation_handler from "@ngx-translate/core/lib/missing-translation-handler"
+import * as router from "@angular/router"
+import * as common from "@angular/common"
+import * as url_tree from "@angular/router/src/url_tree"
+import * as router_outlet_context from "@angular/router/src/router_outlet_context"
+import * as location from "@angular/common/src/location/location"
+import * as location_strategy from "@angular/common/src/location/location_strategy"
+import * as injector from "@angular/core/src/di/injector"
+import * as ng_module_factory_loader from "@angular/core/src/linker/ng_module_factory_loader"
+import * as compiler from "@angular/core/src/linker/compiler"
 
 describe("previousMonth", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let object2: any
+    let inst22: any
+    let inst23: any
 
     beforeEach(() => {
-        inst = new audits_service.AuditsService("a1969970175")
-        inst2 = new audits_component.AuditsComponent(inst, "https://croplands.org/app/a/reset?token=", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "www.google.com", "01-01-2030", "http://base.com")
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new audits_service.AuditsService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiParseLinks()
+        inst14 = new router.ActivatedRoute()
+        inst15 = new common.DatePipe("Maurice Purdy")
+        inst16 = new url_tree.UrlSerializer()
+        inst17 = new router_outlet_context.ChildrenOutletContexts()
+        inst18 = new location_strategy.LocationStrategy()
+        inst19 = new location.Location(inst18)
+        object = [{ provide: true, multi: true, useValue: true }, null, null, null]
+        inst20 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst21 = new compiler.Compiler()
+        object2 = [{ path: undefined, pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Refined Frozen Pizza", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }]
+        inst22 = new router.Router(null, inst16, inst17, inst19, injector.Injector.create(object,undefined), inst20, inst21, object2)
+        inst23 = new audits_component.AuditsComponent(inst3, inst12, inst13, inst14, inst15, inst22)
     })
 
     test("0", () => {
-        let result: any = inst2.previousMonth()
+        let result: any = inst23.previousMonth()
         expect(result).toMatchSnapshot()
     })
 })
@@ -19,210 +85,122 @@ describe("previousMonth", () => {
 describe("ngOnDestroy", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let object2: any
+    let inst22: any
+    let inst23: any
 
     beforeEach(() => {
-        inst = new audits_service.AuditsService(12345)
-        inst2 = new audits_component.AuditsComponent(inst, "https://twitter.com/path?abc", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "https://api.telegram.org/bot", "32-01-2020", "www.google.com")
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new audits_service.AuditsService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiParseLinks()
+        inst14 = new router.ActivatedRoute()
+        inst15 = new common.DatePipe("Janet Homenick")
+        inst16 = new url_tree.UrlSerializer()
+        inst17 = new router_outlet_context.ChildrenOutletContexts()
+        inst18 = new location_strategy.LocationStrategy()
+        inst19 = new location.Location(inst18)
+        object = [["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[-1, 0.5, 1, 2, 3, 4, 5]", "[\"foo bar\",  -0.353, \"**text**\", 4653]"]]
+        inst20 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst21 = new compiler.Compiler()
+        object2 = [{ path: ".", pathMatch: "path/to/folder/", matcher: undefined, component: undefined, redirectTo: "https://accounts.google.com/o/oauth2/revoke?token=%s", outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "paramsChange" }, null, null, null]
+        inst22 = new router.Router(null, inst16, inst17, inst19, injector.Injector.create(object,undefined), inst20, inst21, object2)
+        inst23 = new audits_component.AuditsComponent(inst3, inst12, inst13, inst14, inst15, inst22)
     })
 
     test("0", () => {
-        let result: any = inst2.ngOnDestroy()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("ngOnInit", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new audits_service.AuditsService(12)
-        inst2 = new audits_component.AuditsComponent(inst, "ponicode.com", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "Www.GooGle.com", "01-01-2020", "https://twitter.com/path?abc")
-    })
-
-    test("0", () => {
-        let result: any = inst2.ngOnInit()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("today", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new audits_service.AuditsService(12345)
-        inst2 = new audits_component.AuditsComponent(inst, "ponicode.com", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "http://www.croplands.org/account/confirm?t=", "01-01-2030", "www.google.com")
-    })
-
-    test("0", () => {
-        let result: any = inst2.today()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("loadAll", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new audits_service.AuditsService("a1969970175")
-        inst2 = new audits_component.AuditsComponent(inst, "Www.GooGle.com", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "ponicode.com", "01-01-2020", "ponicode.com")
-    })
-
-    test("0", () => {
-        let result: any = inst2.loadAll()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("sort", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new audits_service.AuditsService(12345)
-        inst2 = new audits_component.AuditsComponent(inst, "http://base.com", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "ponicode.com", "01-13-2020", "https://croplands.org/app/a/confirm?t=")
-    })
-
-    test("0", () => {
-        let result: any = inst2.sort()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("loadPage", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new audits_service.AuditsService(56784)
-        inst2 = new audits_component.AuditsComponent(inst, "www.google.com", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "Www.GooGle.com", "01-01-2020", "www.google.com")
-    })
-
-    test("0", () => {
-        let result: any = inst2.loadPage(16)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst2.loadPage(32)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst2.loadPage(0)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst2.loadPage(10)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst2.loadPage(64)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst2.loadPage(-Infinity)
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("transition", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new audits_service.AuditsService(12345)
-        inst2 = new audits_component.AuditsComponent(inst, "http://www.croplands.org/account/confirm?t=", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "https://api.telegram.org/bot", "01-01-2020", "https://twitter.com/path?abc")
-    })
-
-    test("0", () => {
-        let result: any = inst2.transition()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("onError", () => {
-    let inst: any
-    let inst2: any
-
-    beforeEach(() => {
-        inst = new audits_service.AuditsService("bc23a9d531064583ace8f67dad60f6bb")
-        inst2 = new audits_component.AuditsComponent(inst, "https://api.telegram.org/bot", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "https://croplands.org/app/a/confirm?t=", "01-01-2030", "https://croplands.org/app/a/reset?token=")
-    })
-
-    test("0", () => {
-        let result: any = inst2.onError("Message box: foo; bar\n")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst2.onError("multiple errors occurred")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst2.onError("error")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst2.onError("error\n")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst2.onError("invalid choice")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst2.onError("")
+        let result: any = inst23.ngOnDestroy()
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
-describe("onSuccess", () => {
+describe("sort", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let object2: any
+    let inst22: any
+    let inst23: any
 
     beforeEach(() => {
-        inst = new audits_service.AuditsService(12)
-        inst2 = new audits_component.AuditsComponent(inst, "ponicode.com", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg", "01-13-2020", "Www.GooGle.com")
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new audits_service.AuditsService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiParseLinks()
+        inst14 = new router.ActivatedRoute()
+        inst15 = new common.DatePipe("Janet Homenick")
+        inst16 = new url_tree.UrlSerializer()
+        inst17 = new router_outlet_context.ChildrenOutletContexts()
+        inst18 = new location_strategy.LocationStrategy()
+        inst19 = new location.Location(inst18)
+        object = [{ provide: true, multi: false, useValue: false }, null]
+        inst20 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst21 = new compiler.Compiler()
+        object2 = [{ path: undefined, pathMatch: "C:\\\\path\\to\\folder\\", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Awesome Frozen Computer", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "pathParamsChange" }, null, null]
+        inst22 = new router.Router(null, inst16, inst17, inst19, injector.Injector.create({ providers: object, parent: undefined, name: undefined }), inst20, inst21, object2)
+        inst23 = new audits_component.AuditsComponent(inst3, inst12, inst13, inst14, inst15, inst22)
     })
 
     test("0", () => {
-        let result: any = inst2.onSuccess("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "https://")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst2.onSuccess("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "https://twitter.com/path?abc")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst2.onSuccess("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "https://accounts.google.com/o/oauth2/revoke?token=%s")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst2.onSuccess("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst2.onSuccess("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", "http://base.com")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst2.onSuccess("", "")
+        let result: any = inst23.sort()
         expect(result).toMatchSnapshot()
     })
 })

@@ -1,23 +1,61 @@
 import * as mapping_component from "app/entities/mapping/mapping.component"
 import * as mapping_service from "app/entities/mapping/mapping.service"
+import * as http from "@angular/common/http"
+import * as ng_jhipster from "ng-jhipster"
+import * as security from "@angular/core/src/sanitization/security"
+import * as config_service from "ng-jhipster/config.service"
+import * as core from "@ngx-translate/core"
+import * as translate_store from "@ngx-translate/core/lib/translate.store"
+import * as translate_loader from "@ngx-translate/core/lib/translate.loader"
+import * as translate_compiler from "@ngx-translate/core/lib/translate.compiler"
+import * as translate_parser from "@ngx-translate/core/lib/translate.parser"
+import * as missing_translation_handler from "@ngx-translate/core/lib/missing-translation-handler"
 import * as principal_service from "app/core/auth/principal.service"
 import * as account_service from "app/core/auth/account.service"
 
-describe("ngOnInit", () => {
+describe("loadAll", () => {
     let inst: any
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService(987650)
-        inst2 = new account_service.AccountService("bc23a9d531064583ace8f67dad60f6bb")
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new mapping_component.MappingComponent(inst, "bc23a9d531064583ace8f67dad60f6bb", "bc23a9d531064583ace8f67dad60f6bb", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new http.HttpHandler()
+        inst15 = new http.HttpClient(inst14)
+        inst16 = new account_service.AccountService(inst15)
+        inst17 = new principal_service.Principal(inst16)
+        inst18 = new mapping_component.MappingComponent(inst3, inst12, inst13, inst17)
     })
 
     test("0", () => {
-        let result: any = inst4.ngOnInit()
+        let result: any = inst18.loadAll()
         expect(result).toMatchSnapshot()
     })
 })
@@ -27,54 +65,91 @@ describe("ngOnDestroy", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService("bc23a9d531064583ace8f67dad60f6bb")
-        inst2 = new account_service.AccountService("a1969970175")
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new mapping_component.MappingComponent(inst, 987650, "bc23a9d531064583ace8f67dad60f6bb", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new http.HttpHandler()
+        inst15 = new http.HttpClient(inst14)
+        inst16 = new account_service.AccountService(inst15)
+        inst17 = new principal_service.Principal(inst16)
+        inst18 = new mapping_component.MappingComponent(inst3, inst12, inst13, inst17)
     })
 
     test("0", () => {
-        let result: any = inst4.ngOnDestroy()
+        let result: any = inst18.ngOnDestroy()
         expect(result).toMatchSnapshot()
     })
 })
 
-describe("loadAll", () => {
+describe("ngOnInit", () => {
     let inst: any
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService("a1969970175")
-        inst2 = new account_service.AccountService(56784)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new mapping_component.MappingComponent(inst, "bc23a9d531064583ace8f67dad60f6bb", "9876", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new http.HttpHandler()
+        inst15 = new http.HttpClient(inst14)
+        inst16 = new account_service.AccountService(inst15)
+        inst17 = new principal_service.Principal(inst16)
+        inst18 = new mapping_component.MappingComponent(inst3, inst12, inst13, inst17)
     })
 
     test("0", () => {
-        let result: any = inst4.loadAll()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("registerChangeInMappings", () => {
-    let inst: any
-    let inst2: any
-    let inst3: any
-    let inst4: any
-
-    beforeEach(() => {
-        inst = new mapping_service.MappingService(12345)
-        inst2 = new account_service.AccountService(12345)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new mapping_component.MappingComponent(inst, 12, "c466a48309794261b64a4f02cfcc3d64", inst3)
-    })
-
-    test("0", () => {
-        let result: any = inst4.registerChangeInMappings()
+        let result: any = inst18.ngOnInit()
         expect(result).toMatchSnapshot()
     })
 })
@@ -84,41 +159,116 @@ describe("trackId", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService(987650)
-        inst2 = new account_service.AccountService("bc23a9d531064583ace8f67dad60f6bb")
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new mapping_component.MappingComponent(inst, 56784, "12345", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new http.HttpHandler()
+        inst15 = new http.HttpClient(inst14)
+        inst16 = new account_service.AccountService(inst15)
+        inst17 = new principal_service.Principal(inst16)
+        inst18 = new mapping_component.MappingComponent(inst3, inst12, inst13, inst17)
     })
 
     test("0", () => {
-        let result: any = inst4.trackId(-100, { id: 100, svnDirectory: "^5.0.0", regex: undefined, gitDirectory: undefined, migration: 18, isStatic: undefined, svnDirectoryDelete: undefined })
+        let result: any = inst18.trackId(-1, { id: 1, svnDirectory: "^5.0.0", regex: undefined, gitDirectory: undefined, migration: 75, isStatic: undefined, svnDirectoryDelete: true })
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst4.trackId(1, { id: 100, svnDirectory: undefined, regex: undefined, gitDirectory: "/usr/ports", migration: undefined, isStatic: false, svnDirectoryDelete: undefined })
+        let result: any = inst18.trackId(-1, { id: undefined, svnDirectory: "4.0.0-beta1\t", regex: "\\\\\\^\\$\\.\\|\\?\\*\\+\\(\\)\\[", gitDirectory: undefined, migration: undefined, isStatic: undefined, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst4.trackId(1, { id: 100, svnDirectory: "v4.0.0-rc.4", regex: "^(?P<key>(Product|Build|Sequence|BaseBuild|Edition|Date|Built|Changelist|JobID))\\:(?P<value>.*)", gitDirectory: undefined, migration: 25, isStatic: true, svnDirectoryDelete: true })
+        let result: any = inst18.trackId(0, { id: undefined, svnDirectory: "4.0.0-beta1\t", regex: undefined, gitDirectory: "/opt/share", migration: undefined, isStatic: false, svnDirectoryDelete: false })
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst4.trackId(100, { id: undefined, svnDirectory: undefined, regex: undefined, gitDirectory: undefined, migration: undefined, isStatic: true, svnDirectoryDelete: undefined })
+        let result: any = inst18.trackId(-1, { id: 1, svnDirectory: undefined, regex: "(definition-(checksum|signature)\\s[\\w=\\/+]+)", gitDirectory: "/opt/share", migration: undefined, isStatic: true, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst4.trackId(0, { id: -100, svnDirectory: "4.0.0-beta1\t", regex: undefined, gitDirectory: undefined, migration: undefined, isStatic: false, svnDirectoryDelete: undefined })
+        let result: any = inst18.trackId(0, { id: -100, svnDirectory: undefined, regex: "(file format) ([a-zA-Z0-9_\\-]+)", gitDirectory: "/usr/ports", migration: 75, isStatic: false, svnDirectoryDelete: true })
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst4.trackId(NaN, { id: NaN, svnDirectory: "", regex: undefined, gitDirectory: undefined, migration: NaN, isStatic: undefined, svnDirectoryDelete: undefined })
+        let result: any = inst18.trackId(NaN, { id: undefined, svnDirectory: "", regex: undefined, gitDirectory: "", migration: undefined, isStatic: false, svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("registerChangeInMappings", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new http.HttpHandler()
+        inst15 = new http.HttpClient(inst14)
+        inst16 = new account_service.AccountService(inst15)
+        inst17 = new principal_service.Principal(inst16)
+        inst18 = new mapping_component.MappingComponent(inst3, inst12, inst13, inst17)
+    })
+
+    test("0", () => {
+        let result: any = inst18.registerChangeInMappings()
         expect(result).toMatchSnapshot()
     })
 })
@@ -129,41 +279,69 @@ describe("onError", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService(12)
-        inst2 = new account_service.AccountService(987650)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new mapping_component.MappingComponent(inst, 56784, "c466a48309794261b64a4f02cfcc3d64", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new http.HttpHandler()
+        inst15 = new http.HttpClient(inst14)
+        inst16 = new account_service.AccountService(inst15)
+        inst17 = new principal_service.Principal(inst16)
+        inst18 = new mapping_component.MappingComponent(inst3, inst12, inst13, inst17)
     })
 
     test("0", () => {
-        let result: any = inst4.onError("No response")
+        let result: any = inst18.onError("To force deletion of the LAG use delete_force: True")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst4.onError("Error selecting from database")
+        let result: any = inst18.onError("No updates are to be performed.")
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst4.onError("Invalid [%s] value. %s")
+        let result: any = inst18.onError("Error:")
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst4.onError("Message originator is not the grader, or the person being graded")
+        let result: any = inst18.onError("Message recipient is the same as originator")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst4.onError("An error occurred processing your request.")
+        let result: any = inst18.onError("Counterparty sent error: %s")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst4.onError("")
+        let result: any = inst18.onError("")
         expect(result).toMatchSnapshot()
     })
 })

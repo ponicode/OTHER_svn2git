@@ -1,43 +1,113 @@
 import * as migration_component from "app/entities/migration/migration.component"
 import * as migration_service from "app/entities/migration/migration.service"
+import * as http from "@angular/common/http"
+import * as ng_jhipster from "ng-jhipster"
+import * as security from "@angular/core/src/sanitization/security"
+import * as config_service from "ng-jhipster/config.service"
+import * as core from "@ngx-translate/core"
+import * as translate_store from "@ngx-translate/core/lib/translate.store"
+import * as translate_loader from "@ngx-translate/core/lib/translate.loader"
+import * as translate_compiler from "@ngx-translate/core/lib/translate.compiler"
+import * as translate_parser from "@ngx-translate/core/lib/translate.parser"
+import * as missing_translation_handler from "@ngx-translate/core/lib/missing-translation-handler"
 import * as principal_service from "app/core/auth/principal.service"
 import * as account_service from "app/core/auth/account.service"
 
 import * as migration_model from "app/shared/model/migration.model"
-describe("reset", () => {
-    let inst: any
-    let inst2: any
-    let inst3: any
-    let inst4: any
-
-    beforeEach(() => {
-        inst = new migration_service.MigrationService(56784)
-        inst2 = new account_service.AccountService(12)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 12345, "bc23a9d531064583ace8f67dad60f6bb", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
-    })
-
-    test("0", () => {
-        let result: any = inst4.reset()
-        expect(result).toMatchSnapshot()
-    })
-})
-
 describe("loadAll", () => {
     let inst: any
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(987650)
-        inst2 = new account_service.AccountService(12)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 12345, "bc23a9d531064583ace8f67dad60f6bb", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
     })
 
     test("0", () => {
-        let result: any = inst4.loadAll()
+        let result: any = inst19.loadAll()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("reset", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.reset()
         expect(result).toMatchSnapshot()
     })
 })
@@ -47,41 +117,120 @@ describe("loadPage", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(12345)
-        inst2 = new account_service.AccountService(56784)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, "a1969970175", "c466a48309794261b64a4f02cfcc3d64", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
     })
 
     test("0", () => {
-        let result: any = inst4.loadPage("http://www.example.com/route/123?foo=bar")
+        let result: any = inst19.loadPage("http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg")
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst4.loadPage("www.google.com")
+        let result: any = inst19.loadPage("http://www.example.com/route/123?foo=bar")
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst4.loadPage("https://croplands.org/app/a/reset?token=")
+        let result: any = inst19.loadPage("https://api.telegram.org/bot")
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst4.loadPage("http://base.com")
+        let result: any = inst19.loadPage("https://api.telegram.org/")
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst4.loadPage("https://twitter.com/path?abc")
+        let result: any = inst19.loadPage("www.google.com")
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst4.loadPage("")
+        let result: any = inst19.loadPage("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.ngOnInit()
         expect(result).toMatchSnapshot()
     })
 })
@@ -91,16 +240,46 @@ describe("ngOnDestroy", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(987650)
-        inst2 = new account_service.AccountService(12)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, "a1969970175", "9876", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
     })
 
     test("0", () => {
-        let result: any = inst4.ngOnDestroy()
+        let result: any = inst19.ngOnDestroy()
         expect(result).toMatchSnapshot()
     })
 })
@@ -110,16 +289,46 @@ describe("registerChangeInMigrations", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService("a1969970175")
-        inst2 = new account_service.AccountService("a1969970175")
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 987650, "c466a48309794261b64a4f02cfcc3d64", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
     })
 
     test("0", () => {
-        let result: any = inst4.registerChangeInMigrations()
+        let result: any = inst19.registerChangeInMigrations()
         expect(result).toMatchSnapshot()
     })
 })
@@ -129,138 +338,46 @@ describe("sort", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService("a1969970175")
-        inst2 = new account_service.AccountService(12)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 987650, "9876", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
     })
 
     test("0", () => {
-        let result: any = inst4.sort()
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("cssClass", () => {
-    let inst: any
-    let inst2: any
-    let inst3: any
-    let inst4: any
-
-    beforeEach(() => {
-        inst = new migration_service.MigrationService(56784)
-        inst2 = new account_service.AccountService(56784)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 56784, "bc23a9d531064583ace8f67dad60f6bb", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
-    })
-
-    test("0", () => {
-        let result: any = inst4.cssClass(migration_model.StatusEnum.RUNNING)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst4.cssClass(migration_model.StatusEnum.DONE)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst4.cssClass(null)
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("paginateMigrations", () => {
-    let inst: any
-    let inst2: any
-    let inst3: any
-    let inst4: any
-
-    beforeEach(() => {
-        inst = new migration_service.MigrationService(56784)
-        inst2 = new account_service.AccountService("a1969970175")
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 12345, "c466a48309794261b64a4f02cfcc3d64", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
-    })
-
-    test("0", () => {
-        let param1: any = [{ id: 1, svnGroup: "9876", svnProject: "path/to/folder/", user: undefined, date: "01-01-2020", gitlabGroup: undefined, gitlabProject: undefined, status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: "https://", gitlabToken: "u7djsl186ksk99-DsklLk89", svnUrl: undefined, svnUser: undefined, svnPassword: "v4.0.0-rc.4", svnRevision: "LKinAN1FRfbjJXYAEWCbx1H443wbjHip", trunk: undefined, branches: undefined, tags: "Clement Cliffs", svnHistory: "da7588892", tagsToMigrate: undefined, branchesToMigrate: "v1.2.4", createdTimestamp: true, workingDirectory: undefined, emptyDirs: false, histories: undefined, mappings: undefined, flat: undefined, uploadType: "Producer" }, null, null, null]
-        let result: any = inst4.paginateMigrations(param1, "https://api.telegram.org/bot")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let param1: any = [{ id: 0, svnGroup: "da7588892", svnProject: undefined, user: undefined, date: "01-01-2020", gitlabGroup: undefined, gitlabProject: ".", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: "https://accounts.google.com/o/oauth2/revoke?token=%s", gitlabToken: undefined, svnUrl: "https://accounts.google.com/o/oauth2/revoke?token=%s", svnUser: undefined, svnPassword: "1.0.0", svnRevision: "LKinAN1FRfbjJXYAEWCbx1H443wbjHip", trunk: "mpe", branches: "sensor-copy", tags: "Corrine Square", svnHistory: undefined, tagsToMigrate: "v4.0.0-rc.4", branchesToMigrate: undefined, createdTimestamp: true, workingDirectory: "/usr/sbin", emptyDirs: true, histories: undefined, mappings: undefined, flat: true, uploadType: undefined }, null, null]
-        let result: any = inst4.paginateMigrations(param1, "https://croplands.org/app/a/confirm?t=")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let param1: any = [{ id: 0, svnGroup: undefined, svnProject: "C:\\\\path\\to\\folder\\", user: "George", date: "32-01-2020", gitlabGroup: "bc23a9d531064583ace8f67dad60f6bb", gitlabProject: "./path/to/file", status: undefined, maxFileSize: "44074", forbiddenFileExtensions: "jpeg", gitlabUrl: undefined, gitlabToken: undefined, svnUrl: "https://twitter.com/path?abc", svnUser: undefined, svnPassword: "4.0.0-beta1\t", svnRevision: "LKinAN1FRfbjJXYAEWCbx1H443wbjHip", trunk: undefined, branches: undefined, tags: "Kailey Bypass", svnHistory: undefined, tagsToMigrate: "4.0.0-beta1\t", branchesToMigrate: "4.0.0-beta1\t", createdTimestamp: true, workingDirectory: "/usr/share", emptyDirs: false, histories: undefined, mappings: undefined, flat: false, uploadType: undefined }, null]
-        let result: any = inst4.paginateMigrations(param1, "https://accounts.google.com/o/oauth2/revoke?token=%s")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let param1: any = [{ id: 100, svnGroup: undefined, svnProject: "C:\\\\path\\to\\file.ext", user: "Edmond", date: "32-01-2020", gitlabGroup: "da7588892", gitlabProject: ".", status: undefined, maxFileSize: "44074", forbiddenFileExtensions: "m2v", gitlabUrl: undefined, gitlabToken: undefined, svnUrl: "http://base.com", svnUser: undefined, svnPassword: "v1.2.4", svnRevision: "3cBk3sCzB58vfDGAznLJK9KPSnW1", trunk: undefined, branches: undefined, tags: "Clement Cliffs", svnHistory: undefined, tagsToMigrate: "v1.2.4", branchesToMigrate: "4.0.0-beta1\t", createdTimestamp: true, workingDirectory: "/selinux", emptyDirs: false, histories: undefined, mappings: undefined, flat: false, uploadType: undefined }, null]
-        let result: any = inst4.paginateMigrations(param1, "http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let param1: any = [{ id: -5.48, svnGroup: undefined, svnProject: "path/to/folder/", user: "Michael", date: "32-01-2020", gitlabGroup: "c466a48309794261b64a4f02cfcc3d64", gitlabProject: "./path/to/file", status: undefined, maxFileSize: "64832", forbiddenFileExtensions: "pdf", gitlabUrl: undefined, gitlabToken: undefined, svnUrl: "http://www.example.com/route/123?foo=bar", svnUser: undefined, svnPassword: "v1.2.4", svnRevision: "MPZf3hhgRxurYDDVsHhDc23nDi", trunk: undefined, branches: undefined, tags: "Renner Circle", svnHistory: undefined, tagsToMigrate: "v4.0.0-rc.4", branchesToMigrate: "1.0.0", createdTimestamp: true, workingDirectory: "/usr/share", emptyDirs: false, histories: undefined, mappings: undefined, flat: false, uploadType: undefined }, null]
-        let result: any = inst4.paginateMigrations(param1, "http://www.example.com/route/123?foo=bar")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst4.paginateMigrations([], "")
-        expect(result).toMatchSnapshot()
-    })
-})
-
-describe("onError", () => {
-    let inst: any
-    let inst2: any
-    let inst3: any
-    let inst4: any
-
-    beforeEach(() => {
-        inst = new migration_service.MigrationService("bc23a9d531064583ace8f67dad60f6bb")
-        inst2 = new account_service.AccountService(56784)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 56784, "da7588892", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
-    })
-
-    test("0", () => {
-        let result: any = inst4.onError("Message recipient is the same as originator")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst4.onError("Could not find a grader object for message from xqueue")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst4.onError("Unable to allocate address")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst4.onError("TrainerCourseDetailError: Either not an ajax call or not a GET request!!!")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst4.onError("To force deletion of the LAG use delete_force: True")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst4.onError("")
+        let result: any = inst19.sort()
         expect(result).toMatchSnapshot()
     })
 })
@@ -270,61 +387,295 @@ describe("trackId", () => {
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService("bc23a9d531064583ace8f67dad60f6bb")
-        inst2 = new account_service.AccountService(56784)
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, "a1969970175", "da7588892", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
     })
 
     test("0", () => {
-        let result: any = inst4.trackId(-100, { id: 1, svnGroup: "9876", svnProject: undefined, user: undefined, date: "01-01-2030", gitlabGroup: "9876", gitlabProject: "path/to/folder/", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: "https://croplands.org/app/a/reset?token=", gitlabToken: "oAuthToken", svnUrl: "http://www.example.com/route/123?foo=bar", svnUser: "Jean-Philippe", svnPassword: undefined, svnRevision: "3pxicLBUuEs8qDUKmTABBcWrxzf", trunk: "jpeg", branches: "microchip-bypass", tags: "Renner Circle", svnHistory: undefined, tagsToMigrate: undefined, branchesToMigrate: "4.0.0-beta1\t", createdTimestamp: true, workingDirectory: "/usr/ports", emptyDirs: true, histories: undefined, mappings: undefined, flat: undefined, uploadType: "Producer" })
+        let result: any = inst19.trackId(-1, { id: undefined, svnGroup: undefined, svnProject: "C:\\\\path\\to\\file.ext", user: undefined, date: undefined, gitlabGroup: "9876", gitlabProject: "path/to/folder/", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: "m2v", gitlabUrl: "http://www.example.com/route/123?foo=bar", gitlabToken: undefined, svnUrl: "ponicode.com", svnUser: "Edmond", svnPassword: undefined, svnRevision: "3cBk3sCzB58vfDGAznLJK9KPSnW1", trunk: "m2v", branches: "protocol-reboot", tags: "Renner Circle", svnHistory: "9876", tagsToMigrate: undefined, branchesToMigrate: "1.0.0", createdTimestamp: undefined, workingDirectory: "/opt/share", emptyDirs: true, histories: undefined, mappings: undefined, flat: false, uploadType: "Producer" })
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst4.trackId(-1, { id: 100, svnGroup: "9876", svnProject: ".", user: undefined, date: "01-13-2020", gitlabGroup: undefined, gitlabProject: "/path/to/file", status: undefined, maxFileSize: "59089", forbiddenFileExtensions: undefined, gitlabUrl: undefined, gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: "v4.0.0-rc.4", svnRevision: "3cBk3sCzB58vfDGAznLJK9KPSnW1", trunk: "pdf", branches: "microchip-bypass", tags: "Renner Circle", svnHistory: "da7588892", tagsToMigrate: "1.0.0", branchesToMigrate: undefined, createdTimestamp: true, workingDirectory: undefined, emptyDirs: undefined, histories: undefined, mappings: undefined, flat: true, uploadType: "Developer" })
+        let result: any = inst19.trackId(100, { id: undefined, svnGroup: undefined, svnProject: "/path/to/file", user: undefined, date: undefined, gitlabGroup: "da7588892", gitlabProject: "./path/to/file", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: "jpeg", gitlabUrl: "https://croplands.org/app/a/confirm?t=", gitlabToken: undefined, svnUrl: "www.google.com", svnUser: "Jean-Philippe", svnPassword: undefined, svnRevision: "MPZf3hhgRxurYDDVsHhDc23nDi", trunk: "jpeg", branches: "port-generate", tags: "Corrine Square", svnHistory: "bc23a9d531064583ace8f67dad60f6bb", tagsToMigrate: undefined, branchesToMigrate: "4.0.0-beta1\t", createdTimestamp: undefined, workingDirectory: "/opt/share", emptyDirs: true, histories: undefined, mappings: undefined, flat: false, uploadType: "Architect" })
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst4.trackId(100, { id: 100, svnGroup: "12345", svnProject: undefined, user: undefined, date: "32-01-2020", gitlabGroup: "c466a48309794261b64a4f02cfcc3d64", gitlabProject: ".", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: "http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg", gitlabToken: "u7djsl186ksk99-DsklLk89", svnUrl: "ponicode.com", svnUser: "Michael", svnPassword: undefined, svnRevision: "Lq8wLspXaJraZSs3CwiCTF85mkvp", trunk: "pdf", branches: "matrix-input", tags: "Corrine Square", svnHistory: undefined, tagsToMigrate: undefined, branchesToMigrate: "v1.2.4", createdTimestamp: false, workingDirectory: "/usr/share", emptyDirs: true, histories: undefined, mappings: undefined, flat: undefined, uploadType: "Architect" })
+        let result: any = inst19.trackId(0, { id: undefined, svnGroup: "12345", svnProject: ".", user: undefined, date: undefined, gitlabGroup: "c466a48309794261b64a4f02cfcc3d64", gitlabProject: "/path/to/file", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: "pdf", gitlabUrl: "https://api.telegram.org/", gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: undefined, svnRevision: "3pxicLBUuEs8qDUKmTABBcWrxzf", trunk: "m2v", branches: "microchip-bypass", tags: undefined, svnHistory: undefined, tagsToMigrate: "4.0.0-beta1\t", branchesToMigrate: "1.0.0", createdTimestamp: undefined, workingDirectory: "/usr/sbin", emptyDirs: false, histories: undefined, mappings: undefined, flat: true, uploadType: "Producer" })
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst4.trackId(100, { id: 1, svnGroup: "bc23a9d531064583ace8f67dad60f6bb", svnProject: undefined, user: undefined, date: "01-13-2020", gitlabGroup: "9876", gitlabProject: "/path/to/file", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: "https://croplands.org/app/a/reset?token=", gitlabToken: "oAuthToken", svnUrl: "http://www.example.com/route/123?foo=bar", svnUser: "Michael", svnPassword: undefined, svnRevision: "3pxicLBUuEs8qDUKmTABBcWrxzf", trunk: "pdf", branches: "matrix-input", tags: "Renner Circle", svnHistory: undefined, tagsToMigrate: undefined, branchesToMigrate: "^5.0.0", createdTimestamp: true, workingDirectory: "/usr/ports", emptyDirs: true, histories: undefined, mappings: undefined, flat: undefined, uploadType: "Developer" })
+        let result: any = inst19.trackId(0, { id: undefined, svnGroup: "c466a48309794261b64a4f02cfcc3d64", svnProject: ".", user: undefined, date: undefined, gitlabGroup: "da7588892", gitlabProject: "C:\\\\path\\to\\folder\\", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: "pdf", gitlabUrl: "http://www.example.com/route/123?foo=bar", gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: undefined, svnRevision: "3pxicLBUuEs8qDUKmTABBcWrxzf", trunk: "mpe", branches: "microchip-bypass", tags: undefined, svnHistory: undefined, tagsToMigrate: "1.0.0", branchesToMigrate: "4.0.0-beta1\t", createdTimestamp: undefined, workingDirectory: "/usr/sbin", emptyDirs: false, histories: undefined, mappings: undefined, flat: true, uploadType: "Producer" })
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst4.trackId(-100, { id: undefined, svnGroup: undefined, svnProject: undefined, user: "Anas", date: "01-13-2020", gitlabGroup: "bc23a9d531064583ace8f67dad60f6bb", gitlabProject: "./path/to/file", status: undefined, maxFileSize: "43083", forbiddenFileExtensions: undefined, gitlabUrl: undefined, gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: undefined, svnRevision: undefined, trunk: undefined, branches: "port-generate", tags: undefined, svnHistory: "12345", tagsToMigrate: undefined, branchesToMigrate: "^5.0.0", createdTimestamp: false, workingDirectory: "/selinux", emptyDirs: undefined, histories: undefined, mappings: undefined, flat: undefined, uploadType: undefined })
+        let result: any = inst19.trackId(1, { id: 1, svnGroup: undefined, svnProject: undefined, user: undefined, date: undefined, gitlabGroup: "da7588892", gitlabProject: undefined, status: undefined, maxFileSize: undefined, forbiddenFileExtensions: "m2v", gitlabUrl: undefined, gitlabToken: "u7djsl186ksk99-DsklLk89", svnUrl: undefined, svnUser: undefined, svnPassword: "4.0.0-beta1\t", svnRevision: undefined, trunk: undefined, branches: undefined, tags: "Beryl Coves", svnHistory: undefined, tagsToMigrate: undefined, branchesToMigrate: "4.0.0-beta1\t", createdTimestamp: undefined, workingDirectory: "/opt/share", emptyDirs: true, histories: undefined, mappings: undefined, flat: undefined, uploadType: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst4.trackId(NaN, { id: undefined, svnGroup: undefined, svnProject: "", user: undefined, date: "", gitlabGroup: "", gitlabProject: undefined, status: undefined, maxFileSize: "", forbiddenFileExtensions: undefined, gitlabUrl: undefined, gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: undefined, svnRevision: undefined, trunk: undefined, branches: undefined, tags: undefined, svnHistory: "", tagsToMigrate: "", branchesToMigrate: undefined, createdTimestamp: true, workingDirectory: "", emptyDirs: undefined, histories: undefined, mappings: undefined, flat: undefined, uploadType: undefined })
+        let result: any = inst19.trackId(-Infinity, { id: -Infinity, svnGroup: undefined, svnProject: "", user: undefined, date: undefined, gitlabGroup: "", gitlabProject: "", status: undefined, maxFileSize: "", forbiddenFileExtensions: "", gitlabUrl: undefined, gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: "", svnRevision: undefined, trunk: "", branches: "", tags: undefined, svnHistory: undefined, tagsToMigrate: undefined, branchesToMigrate: "", createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: undefined, histories: undefined, mappings: undefined, flat: true, uploadType: "" })
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("cssClass", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.cssClass(migration_model.StatusEnum.DONE_WITH_WARNINGS)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst19.cssClass(migration_model.StatusEnum.DONE)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst19.cssClass(migration_model.StatusEnum.IGNORED)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst19.cssClass(null)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("onError", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.onError("Message recipient is not the grader, the person being graded, or the controller")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst19.onError("invalid option")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst19.onError("the specified credentials were rejected by the server")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst19.onError("Sorry, The video you are looking for does not exist.")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst19.onError("No response")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst19.onError("")
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
-describe("ngOnInit", () => {
+describe("paginateMigrations", () => {
     let inst: any
     let inst2: any
     let inst3: any
     let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
 
     beforeEach(() => {
-        inst = new migration_service.MigrationService(987650)
-        inst2 = new account_service.AccountService("a1969970175")
-        inst3 = new principal_service.Principal(inst2)
-        inst4 = new migration_component.MigrationComponent(inst, 12, "bc23a9d531064583ace8f67dad60f6bb", "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E", inst3)
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
     })
 
     test("0", () => {
-        let result: any = inst4.ngOnInit()
+        let param1: any = [{ id: undefined, svnGroup: undefined, svnProject: "C:\\\\path\\to\\folder\\", user: "Jean-Philippe", date: undefined, gitlabGroup: "9876", gitlabProject: undefined, status: undefined, maxFileSize: "43083", forbiddenFileExtensions: "jpeg", gitlabUrl: "https://twitter.com/path?abc", gitlabToken: undefined, svnUrl: "https://twitter.com/path?abc", svnUser: "Michael", svnPassword: undefined, svnRevision: undefined, trunk: undefined, branches: "microchip-bypass", tags: undefined, svnHistory: undefined, tagsToMigrate: undefined, branchesToMigrate: undefined, createdTimestamp: undefined, workingDirectory: "/usr/sbin", emptyDirs: undefined, histories: undefined, mappings: undefined, flat: true, uploadType: "Producer" }]
+        let param2: any = new http.HttpHeaders(undefined)
+        let result: any = inst19.paginateMigrations(param1, param2)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let param1: any = [{ id: -100, svnGroup: "12345", svnProject: "C:\\\\path\\to\\file.ext", user: "Michael", date: undefined, gitlabGroup: "9876", gitlabProject: "path/to/file.ext", status: undefined, maxFileSize: "64832", forbiddenFileExtensions: undefined, gitlabUrl: "http://www.croplands.org/account/confirm?t=", gitlabToken: "u7djsl186ksk99-DsklLk89", svnUrl: "https://api.telegram.org/", svnUser: "George", svnPassword: "4.0.0-beta1\t", svnRevision: "MPZf3hhgRxurYDDVsHhDc23nDi", trunk: undefined, branches: undefined, tags: "Beryl Coves", svnHistory: "da7588892", tagsToMigrate: "v1.2.4", branchesToMigrate: undefined, createdTimestamp: undefined, workingDirectory: "/usr/sbin", emptyDirs: false, histories: undefined, mappings: undefined, flat: true, uploadType: "Producer" }, { id: undefined, svnGroup: undefined, svnProject: "/path/to/file", user: "Anas", date: undefined, gitlabGroup: undefined, gitlabProject: undefined, status: undefined, maxFileSize: undefined, forbiddenFileExtensions: "m2v", gitlabUrl: undefined, gitlabToken: undefined, svnUrl: "https://api.telegram.org/", svnUser: undefined, svnPassword: "^5.0.0", svnRevision: undefined, trunk: "pdf", branches: "protocol-reboot", tags: undefined, svnHistory: "da7588892", tagsToMigrate: "4.0.0-beta1\t", branchesToMigrate: "v4.0.0-rc.4", createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: undefined, histories: undefined, mappings: undefined, flat: true, uploadType: undefined }, null]
+        let param2: any = new http.HttpHeaders(undefined)
+        let result: any = inst19.paginateMigrations(param1, param2)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let param1: any = [{ id: 0, svnGroup: undefined, svnProject: "path/to/folder/", user: undefined, date: undefined, gitlabGroup: "9876", gitlabProject: "path/to/file.ext", status: undefined, maxFileSize: "69660", forbiddenFileExtensions: "mpe", gitlabUrl: "http://www.example.com/route/123?foo=bar", gitlabToken: "oAuthToken", svnUrl: undefined, svnUser: "Edmond", svnPassword: undefined, svnRevision: undefined, trunk: "m2v", branches: undefined, tags: "Beryl Coves", svnHistory: undefined, tagsToMigrate: "v4.0.0-rc.4", branchesToMigrate: "4.0.0-beta1\t", createdTimestamp: undefined, workingDirectory: "/selinux", emptyDirs: true, histories: undefined, mappings: undefined, flat: true, uploadType: "Developer" }, null]
+        let param2: any = new http.HttpHeaders(undefined)
+        let result: any = inst19.paginateMigrations(param1, param2)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let param1: any = [{ id: -5.48, svnGroup: "12345", svnProject: "path/to/file.ext", user: "Anas", date: undefined, gitlabGroup: "bc23a9d531064583ace8f67dad60f6bb", gitlabProject: "path/to/file.ext", status: undefined, maxFileSize: "59089", forbiddenFileExtensions: undefined, gitlabUrl: "https://api.telegram.org/", gitlabToken: "u7djsl186ksk99-DsklLk89", svnUrl: "https://api.telegram.org/", svnUser: "George", svnPassword: "1.0.0", svnRevision: "Lq8wLspXaJraZSs3CwiCTF85mkvp", trunk: undefined, branches: undefined, tags: "Kailey Bypass", svnHistory: "9876", tagsToMigrate: "^5.0.0", branchesToMigrate: undefined, createdTimestamp: undefined, workingDirectory: "/usr/share", emptyDirs: false, histories: undefined, mappings: undefined, flat: true, uploadType: "Producer" }, { id: undefined, svnGroup: undefined, svnProject: "C:\\\\path\\to\\folder\\", user: "George", date: undefined, gitlabGroup: undefined, gitlabProject: undefined, status: undefined, maxFileSize: undefined, forbiddenFileExtensions: "pdf", gitlabUrl: undefined, gitlabToken: undefined, svnUrl: "http://www.croplands.org/account/confirm?t=", svnUser: undefined, svnPassword: "v4.0.0-rc.4", svnRevision: undefined, trunk: "m2v", branches: "matrix-input", tags: undefined, svnHistory: "c466a48309794261b64a4f02cfcc3d64", tagsToMigrate: "v4.0.0-rc.4", branchesToMigrate: "v4.0.0-rc.4", createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: undefined, histories: undefined, mappings: undefined, flat: true, uploadType: undefined }, null]
+        let param2: any = new http.HttpHeaders(undefined)
+        let result: any = inst19.paginateMigrations(param1, param2)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let param1: any = [{ id: undefined, svnGroup: "12345", svnProject: undefined, user: "Michael", date: undefined, gitlabGroup: "c466a48309794261b64a4f02cfcc3d64", gitlabProject: undefined, status: undefined, maxFileSize: "43083", forbiddenFileExtensions: undefined, gitlabUrl: undefined, gitlabToken: "oAuthToken", svnUrl: undefined, svnUser: undefined, svnPassword: undefined, svnRevision: "3pxicLBUuEs8qDUKmTABBcWrxzf", trunk: "m2v", branches: "sensor-copy", tags: undefined, svnHistory: "c466a48309794261b64a4f02cfcc3d64", tagsToMigrate: "v1.2.4", branchesToMigrate: undefined, createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: false, histories: undefined, mappings: undefined, flat: true, uploadType: undefined }]
+        let param2: any = new http.HttpHeaders("Ronald Keeling")
+        let result: any = inst19.paginateMigrations(param1, param2)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let param2: any = new http.HttpHeaders("")
+        let result: any = inst19.paginateMigrations([], param2)
         expect(result).toMatchSnapshot()
     })
 })

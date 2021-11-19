@@ -1,40 +1,56 @@
 import * as notification_interceptor from "app/blocks/interceptor/notification.interceptor"
+import * as core from "@angular/core"
 
+import * as http from "@angular/common/http"
 // @ponicode
 describe("intercept", () => {
+    let object: any
     let inst: any
 
     beforeEach(() => {
-        inst = new notification_interceptor.NotificationInterceptor("invoice transaction at Larkin Inc using card ending with ***8987 for GHS 889.84 in account ***54986018")
+        object = { 0: { provide: false, multi: undefined, useFactory: () => "Chief Product Officer", deps: undefined }, 1: null }
+        inst = new notification_interceptor.NotificationInterceptor(core.Injector.create({ providers: object, parent: undefined, name: "Michael" }))
     })
 
     test("0", () => {
-        let result: any = inst.intercept("POST", true)
+        let param1: any = new http.HttpRequest("OPTIONS", "Gail Hoppe", undefined)
+        let param2: any = new http.HttpHandler()
+        let result: any = inst.intercept(param1, param2)
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.intercept("PUT", false)
+        let param1: any = new http.HttpRequest("OPTIONS", "Janet Homenick", undefined)
+        let param2: any = new http.HttpHandler()
+        let result: any = inst.intercept(param1, param2)
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.intercept("GET", true)
+        let param1: any = new http.HttpRequest("OPTIONS", "Maurice Purdy", undefined)
+        let param2: any = new http.HttpHandler()
+        let result: any = inst.intercept(param1, param2)
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.intercept("GET", false)
+        let param1: any = new http.HttpRequest("PUT", "Becky Bednar", null, undefined)
+        let param2: any = new http.HttpHandler()
+        let result: any = inst.intercept(param1, param2)
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.intercept("DELETE", false)
+        let param1: any = new http.HttpRequest("PUT", "Gail Hoppe", null, undefined)
+        let param2: any = new http.HttpHandler()
+        let result: any = inst.intercept(param1, param2)
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.intercept("", false)
+        let param1: any = new http.HttpRequest("PUT", "", null, undefined)
+        let param2: any = new http.HttpHandler()
+        let result: any = inst.intercept(param1, param2)
         expect(result).toMatchSnapshot()
     })
 })

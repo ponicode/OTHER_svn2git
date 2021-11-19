@@ -1,152 +1,160 @@
 import * as mapping_service from "app/entities/mapping/mapping.service"
+import * as http from "@angular/common/http"
 
-// @ponicode
-describe("find", () => {
-    let inst: any
-
-    beforeEach(() => {
-        inst = new mapping_service.MappingService("DELETE")
-    })
-
-    test("0", () => {
-        let result: any = inst.find(1)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst.find(-100)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst.find(100)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst.find(0)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst.find(-Infinity)
-        expect(result).toMatchSnapshot()
-    })
-})
-
-// @ponicode
-describe("update", () => {
-    let inst: any
-
-    beforeEach(() => {
-        inst = new mapping_service.MappingService("POST")
-    })
-
-    test("0", () => {
-        let result: any = inst.update({ id: undefined, svnDirectory: "4.0.0-beta1\t", regex: undefined, gitDirectory: "/opt/share", migration: 35, isStatic: false, svnDirectoryDelete: undefined })
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst.update({ id: undefined, svnDirectory: "4.0.0-beta1\t", regex: undefined, gitDirectory: "/usr/sbin", migration: 18, isStatic: false, svnDirectoryDelete: undefined })
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst.update({ id: undefined, svnDirectory: "v1.2.4", regex: undefined, gitDirectory: "/opt/share", migration: 18, isStatic: false, svnDirectoryDelete: undefined })
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst.update({ id: undefined, svnDirectory: undefined, regex: "definition-checksum\\s(?P<checksum>\\w+)", gitDirectory: "/usr/ports", migration: undefined, isStatic: true, svnDirectoryDelete: true })
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst.update({ id: undefined, svnDirectory: "v1.2.4", regex: "^(?P<key>(Product|Build|Sequence|BaseBuild|Edition|Date|Built|Changelist|JobID))\\:(?P<value>.*)", gitDirectory: undefined, migration: undefined, isStatic: undefined, svnDirectoryDelete: true })
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst.update({ id: Infinity, svnDirectory: "", regex: undefined, gitDirectory: undefined, migration: undefined, isStatic: undefined, svnDirectoryDelete: false })
-        expect(result).toMatchSnapshot()
-    })
-})
-
-// @ponicode
 describe("create", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService("POST")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.create({ id: -100, svnDirectory: undefined, regex: undefined, gitDirectory: "/opt/share", migration: 35, isStatic: false, svnDirectoryDelete: true })
+        let result: any = inst3.create({ id: 0, svnDirectory: undefined, regex: undefined, gitDirectory: "/usr/share", migration: undefined, isStatic: undefined, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.create({ id: -5.48, svnDirectory: "v1.2.4", regex: undefined, gitDirectory: undefined, migration: 5, isStatic: undefined, svnDirectoryDelete: false })
+        let result: any = inst3.create({ id: 0, svnDirectory: undefined, regex: undefined, gitDirectory: undefined, migration: 18, isStatic: false, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.create({ id: 0, svnDirectory: undefined, regex: "(?P<first_group_name>.*)-(?P=first_group_name)", gitDirectory: undefined, migration: 25, isStatic: true, svnDirectoryDelete: false })
+        let result: any = inst3.create({ id: 0, svnDirectory: undefined, regex: undefined, gitDirectory: undefined, migration: 75, isStatic: false, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.create({ id: 1, svnDirectory: undefined, regex: "(?:non-capturing)", gitDirectory: undefined, migration: 25, isStatic: true, svnDirectoryDelete: false })
+        let result: any = inst3.create({ id: 1, svnDirectory: undefined, regex: undefined, gitDirectory: undefined, migration: 75, isStatic: false, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.create({ id: 0, svnDirectory: undefined, regex: "(?P<first_group_name>.*)-(?P=first_group_name)", gitDirectory: undefined, migration: 75, isStatic: true, svnDirectoryDelete: false })
+        let result: any = inst3.create({ id: 1, svnDirectory: "1.0.0", regex: undefined, gitDirectory: undefined, migration: undefined, isStatic: false, svnDirectoryDelete: true })
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.create({ id: Infinity, svnDirectory: undefined, regex: undefined, gitDirectory: "", migration: undefined, isStatic: true, svnDirectoryDelete: undefined })
+        let result: any = inst3.create({ id: NaN, svnDirectory: undefined, regex: undefined, gitDirectory: "", migration: undefined, isStatic: undefined, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 })
 
-// @ponicode
-describe("query", () => {
+describe("update", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService("POST")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.query(404)
+        let result: any = inst3.update({ id: undefined, svnDirectory: "v4.0.0-rc.4", regex: undefined, gitDirectory: "/selinux", migration: undefined, isStatic: undefined, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.query(500)
+        let result: any = inst3.update({ id: undefined, svnDirectory: undefined, regex: "min\\s+\\d+\\s+of", gitDirectory: undefined, migration: undefined, isStatic: false, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.query(400)
+        let result: any = inst3.update({ id: undefined, svnDirectory: undefined, regex: "definition-checksum\\s(?P<checksum>\\w+)", gitDirectory: undefined, migration: undefined, isStatic: false, svnDirectoryDelete: undefined })
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.query(200)
+        let result: any = inst3.update({ id: 1, svnDirectory: "v4.0.0-rc.4", regex: "(?P<ip>[^%]+)%(?P<route_domain>[0-9]+)[:.](?P<port>[0-9]+|any)", gitDirectory: undefined, migration: 75, isStatic: undefined, svnDirectoryDelete: false })
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.query(429)
+        let result: any = inst3.update({ id: 1, svnDirectory: "1.0.0", regex: "^(?P<key>(Product|Build|Sequence|BaseBuild|Edition|Date|Built|Changelist|JobID))\\:(?P<value>.*)", gitDirectory: undefined, migration: 25, isStatic: undefined, svnDirectoryDelete: false })
         expect(result).toMatchSnapshot()
     })
 
     test("5", () => {
-        let result: any = inst.query(NaN)
+        let result: any = inst3.update({ id: undefined, svnDirectory: undefined, regex: "", gitDirectory: undefined, migration: undefined, isStatic: false, svnDirectoryDelete: undefined })
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("find", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.find(1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.find(0)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.find(100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.find(-100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.find(Infinity)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("query", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.query(200)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.query(404)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.query(500)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.query(400)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.query(Infinity)
         expect(result).toMatchSnapshot()
     })
 })
@@ -154,38 +162,37 @@ describe("query", () => {
 // @ponicode
 describe("delete", () => {
     let inst: any
+    let inst2: any
+    let inst3: any
 
     beforeEach(() => {
-        inst = new mapping_service.MappingService("DELETE")
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new mapping_service.MappingService(inst2)
     })
 
     test("0", () => {
-        let result: any = inst.delete(-5.48)
+        let result: any = inst3.delete(0)
         expect(result).toMatchSnapshot()
     })
 
     test("1", () => {
-        let result: any = inst.delete(100)
+        let result: any = inst3.delete(100)
         expect(result).toMatchSnapshot()
     })
 
     test("2", () => {
-        let result: any = inst.delete(0)
+        let result: any = inst3.delete(-100)
         expect(result).toMatchSnapshot()
     })
 
     test("3", () => {
-        let result: any = inst.delete(-100)
+        let result: any = inst3.delete(1)
         expect(result).toMatchSnapshot()
     })
 
     test("4", () => {
-        let result: any = inst.delete(1)
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst.delete(-Infinity)
+        let result: any = inst3.delete(Infinity)
         expect(result).toMatchSnapshot()
     })
 })

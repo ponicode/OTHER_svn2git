@@ -1,62 +1,52 @@
 import * as user_management_route from "app/admin/user-management/user-management.route"
-import * as user_service from "app/core/user/user.service"
-
 import * as principal_service from "app/core/auth/principal.service"
 import * as account_service from "app/core/auth/account.service"
-describe("resolve", () => {
+import * as http from "@angular/common/http"
+import * as backend from "@angular/common/http/src/backend"
+
+import * as user_service from "app/core/user/user.service"
+import * as router from "@angular/router"
+import * as tree from "@angular/router/src/utils/tree"
+describe("canActivate", () => {
     let inst: any
     let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
 
     beforeEach(() => {
-        inst = new user_service.UserService(56784)
-        inst2 = new user_management_route.UserMgmtResolve(inst)
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+        inst5 = new user_management_route.UserResolve(inst4)
     })
 
     test("0", () => {
-        let result: any = inst2.resolve("http://www.croplands.org/account/confirm?t=", "{}")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("1", () => {
-        let result: any = inst2.resolve("Www.GooGle.com", "{}")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("2", () => {
-        let result: any = inst2.resolve("http://www.example.com/route/123?foo=bar", "{}")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("3", () => {
-        let result: any = inst2.resolve("www.google.com", "{}")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("4", () => {
-        let result: any = inst2.resolve("https://api.telegram.org/bot", "{}")
-        expect(result).toMatchSnapshot()
-    })
-
-    test("5", () => {
-        let result: any = inst2.resolve("", "")
+        let result: any = inst5.canActivate()
         expect(result).toMatchSnapshot()
     })
 })
 
 // @ponicode
-describe("canActivate", () => {
+describe("resolve", () => {
     let inst: any
     let inst2: any
     let inst3: any
+    let inst4: any
 
     beforeEach(() => {
-        inst = new account_service.AccountService(12345)
-        inst2 = new principal_service.Principal(inst)
-        inst3 = new user_management_route.UserResolve(inst2)
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new user_service.UserService(inst2)
+        inst4 = new user_management_route.UserMgmtResolve(inst3)
     })
 
     test("0", () => {
-        let result: any = inst3.canActivate()
+        let param1: any = new router.ActivatedRouteSnapshot()
+        let inst5: any = new tree.TreeNode(undefined, [])
+        let param2: any = new router.RouterStateSnapshot(inst5)
+        let result: any = inst4.resolve(param1, param2)
         expect(result).toMatchSnapshot()
     })
 })
