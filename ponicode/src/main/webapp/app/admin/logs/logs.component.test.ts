@@ -66,3 +66,23 @@ describe("changeLevel", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new logs_service.LogsService(inst2)
+        inst4 = new logs_component.LogsComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})

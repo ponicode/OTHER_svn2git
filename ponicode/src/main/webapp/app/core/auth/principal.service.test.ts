@@ -288,3 +288,178 @@ describe("getAuthenticationState", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("authenticate", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.authenticate("http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst4.authenticate("https://croplands.org/app/a/reset?token=")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst4.authenticate("Www.GooGle.com")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst4.authenticate("http://www.example.com/route/123?foo=bar")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst4.authenticate("ponicode.com")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst4.authenticate("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("hasAnyAuthority", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.hasAnyAuthority(["9876", "bc23a9d531064583ace8f67dad60f6bb", "bc23a9d531064583ace8f67dad60f6bb", "da7588892", "9876"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst4.hasAnyAuthority(["12345", "c466a48309794261b64a4f02cfcc3d64", "da7588892", "c466a48309794261b64a4f02cfcc3d64", "da7588892"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst4.hasAnyAuthority(["12345", "9876", "12345", "9876"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst4.hasAnyAuthority(["c466a48309794261b64a4f02cfcc3d64", "bc23a9d531064583ace8f67dad60f6bb", "bc23a9d531064583ace8f67dad60f6bb", "bc23a9d531064583ace8f67dad60f6bb", "da7588892"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst4.hasAnyAuthority(["c466a48309794261b64a4f02cfcc3d64", "9876", "da7588892", "9876", "c466a48309794261b64a4f02cfcc3d64"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst4.hasAnyAuthority([])
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("hasAuthority", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.hasAuthority("http://example.com/foo?bar")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst4.hasAuthority("b'https://example.com:1234/foo?bar'")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst4.hasAuthority("http://backend.userland.com/rss")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst4.hasAuthority("b'http://example.com:1234/foo?bar'")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst4.hasAuthority("http://another.example.com/")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst4.hasAuthority("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("isIdentityResolved", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.isIdentityResolved()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("getImageUrl", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.getImageUrl()
+        expect(result).toMatchSnapshot()
+    })
+})

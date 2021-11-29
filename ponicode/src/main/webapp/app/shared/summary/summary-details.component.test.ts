@@ -118,3 +118,83 @@ describe("cssClass", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new summary_details_component.DetailsCardComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("ngOnDestroy", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new summary_details_component.DetailsCardComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.ngOnDestroy()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("loadHistory", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new summary_details_component.DetailsCardComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.loadHistory()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("stopHistoryRefresh", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new summary_details_component.DetailsCardComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.stopHistoryRefresh()
+        expect(result).toMatchSnapshot()
+    })
+})

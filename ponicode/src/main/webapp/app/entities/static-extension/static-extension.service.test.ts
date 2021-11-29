@@ -206,3 +206,132 @@ describe("delete", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("create", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_extension_service.StaticExtensionService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.create({ id: undefined, value: undefined, description: undefined, enabled: false, name: "Edmond" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.create({ id: undefined, value: undefined, description: undefined, enabled: false, name: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.create({ id: undefined, value: undefined, description: undefined, enabled: false, name: "Michael" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.create({ id: undefined, value: undefined, description: undefined, enabled: false, name: "George" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.create({ id: -5.48, value: undefined, description: undefined, enabled: false, name: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.create({ id: -Infinity, value: "", description: undefined, enabled: true, name: undefined })
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("find", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_extension_service.StaticExtensionService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.find(0)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.find(-5.48)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.find(1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.find(100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.find(-100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.find(Infinity)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("query", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_extension_service.StaticExtensionService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.query({ name: "Michael" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.query({ name: "Anas" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.query({ name: "George" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.query({ name: "Edmond" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.query({ name: "Jean-Philippe" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.query({ name: "" })
+        expect(result).toMatchSnapshot()
+    })
+})

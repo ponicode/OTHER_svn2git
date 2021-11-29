@@ -68,3 +68,52 @@ describe("findAll", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("changeLevel", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new logs_service.LogsService(inst2)
+    })
+
+    test("0", () => {
+        let param1: any = new log_model.Log("Becky Bednar", "Janet Homenick")
+        let result: any = inst3.changeLevel(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let param1: any = new log_model.Log("Janet Homenick", "Maurice Purdy")
+        let result: any = inst3.changeLevel(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let param1: any = new log_model.Log("Janet Homenick", "Janet Homenick")
+        let result: any = inst3.changeLevel(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let param1: any = new log_model.Log("Gail Hoppe", "Gail Hoppe")
+        let result: any = inst3.changeLevel(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let param1: any = new log_model.Log("Becky Bednar", "Gail Hoppe")
+        let result: any = inst3.changeLevel(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let param1: any = new log_model.Log("", "")
+        let result: any = inst3.changeLevel(param1)
+        expect(result).toMatchSnapshot()
+    })
+})

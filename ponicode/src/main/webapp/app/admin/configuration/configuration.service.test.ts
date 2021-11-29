@@ -78,3 +78,39 @@ describe("getConfigPropertiesObjects", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("get", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.JhiConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.get()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("getEnv", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.JhiConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.getEnv()
+        expect(result).toMatchSnapshot()
+    })
+})

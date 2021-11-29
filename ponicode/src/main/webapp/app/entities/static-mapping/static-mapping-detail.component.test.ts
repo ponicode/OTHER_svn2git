@@ -31,3 +31,19 @@ describe("previousState", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new static_mapping_detail_component.StaticMappingDetailComponent(inst)
+    })
+
+    test("0", () => {
+        let result: any = inst2.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})

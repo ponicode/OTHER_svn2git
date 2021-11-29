@@ -222,3 +222,219 @@ describe("init", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("svn", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.svn()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("svnCredsOption", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.svnCredsOption()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("svnDepthOption", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.svnDepthOption()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("svnUrlModifiable", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.svnUrlModifiable()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("gitlabCredsOption", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.gitlabCredsOption()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("gitlab", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.gitlab()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("overrideStaticExtensions", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.overrideStaticExtensions()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("overrideStaticMappings", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.overrideStaticMappings()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("flagProjectCleaning", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.flagProjectCleaning()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("artifactory", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.artifactory()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("flagGitlabGroupCreation", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.flagGitlabGroupCreation()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("nexus", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.ConfigurationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.nexus()
+        expect(result).toMatchSnapshot()
+    })
+})

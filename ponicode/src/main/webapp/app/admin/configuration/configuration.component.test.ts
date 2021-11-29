@@ -61,3 +61,28 @@ describe("ngOnInit", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("keys", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new configuration_service.JhiConfigurationService(inst2)
+        inst4 = new configuration_component.JhiConfigurationComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.keys({})
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst4.keys(null)
+        expect(result).toMatchSnapshot()
+    })
+})

@@ -204,3 +204,65 @@ describe("sort", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("today", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let object2: any
+    let inst22: any
+    let inst23: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new audits_service.AuditsService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiParseLinks()
+        inst14 = new router.ActivatedRoute()
+        inst15 = new common.DatePipe("Ronald Keeling")
+        inst16 = new url_tree.UrlSerializer()
+        inst17 = new router_outlet_context.ChildrenOutletContexts()
+        inst18 = new location_strategy.LocationStrategy()
+        inst19 = new location.Location(inst18)
+        object = [{ provide: false, multi: false, useExisting: "bc23a9d531064583ace8f67dad60f6bb" }]
+        inst20 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst21 = new compiler.Compiler()
+        object2 = [{ path: undefined, pathMatch: "path/to/folder/", matcher: undefined, component: undefined, redirectTo: "https://", outlet: "Handmade Fresh Chicken", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "c466a48309794261b64a4f02cfcc3d64", runGuardsAndResolvers: "paramsChange" }, { path: undefined, pathMatch: "C:\\\\path\\to\\file.ext", matcher: undefined, component: undefined, redirectTo: "https://api.telegram.org/", outlet: "Refined Frozen Pizza", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "9876", runGuardsAndResolvers: "paramsChange" }]
+        inst22 = new router.Router(null, inst16, inst17, inst19, injector.Injector.create(object,undefined), inst20, inst21, object2)
+        inst23 = new audits_component.AuditsComponent(inst3, inst12, inst13, inst14, inst15, inst22)
+    })
+
+    test("0", () => {
+        let result: any = inst23.today()
+        expect(result).toMatchSnapshot()
+    })
+})

@@ -50,3 +50,25 @@ describe("resolve", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("canActivate", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+        inst5 = new user_management_route.UserResolve(inst4)
+    })
+
+    test("0", () => {
+        let result: any = inst5.canActivate()
+        expect(result).toMatchSnapshot()
+    })
+})

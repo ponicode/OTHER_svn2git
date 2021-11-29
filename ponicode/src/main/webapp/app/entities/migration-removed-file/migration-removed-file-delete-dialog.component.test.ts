@@ -70,3 +70,27 @@ describe("confirmDelete", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("clear", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_removed_file_service.MigrationRemovedFileService(inst2)
+        inst4 = new ng_bootstrap.NgbActiveModal()
+        inst5 = new ng_jhipster.JhiEventManager()
+        inst6 = new migration_removed_file_delete_dialog_component.MigrationRemovedFileDeleteDialogComponent(inst3, inst4, inst5)
+    })
+
+    test("0", () => {
+        let result: any = inst6.clear()
+        expect(result).toMatchSnapshot()
+    })
+})

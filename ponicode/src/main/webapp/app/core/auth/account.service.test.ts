@@ -60,3 +60,21 @@ describe("save", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("get", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.get()
+        expect(result).toMatchSnapshot()
+    })
+})

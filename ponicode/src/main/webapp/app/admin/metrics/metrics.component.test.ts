@@ -141,3 +141,74 @@ describe("filterNaN", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+describe("ngOnInit", () => {
+    let inst: any
+    let object: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+
+    beforeEach(() => {
+        inst = new component_factory_resolver.ComponentFactoryResolver()
+        object = { 0: { provide: true, multi: false, useFactory: () => "Marketing", deps: undefined }, 1: { provide: false, multi: false, useFactory: () => "Sales", deps: undefined }, 2: { provide: true, multi: false, useFactory: () => "Data Scientist", deps: undefined }, 3: { provide: false, multi: false, useFactory: () => true, deps: undefined } }
+        inst2 = new application_ref.ApplicationRef()
+        inst3 = new scrollbar.ScrollBar(987650)
+        inst4 = new core.RendererFactory2()
+        inst5 = new modal_stack.NgbModalStack(inst2, null, "bc23a9d531064583ace8f67dad60f6bb", inst3, inst4)
+        inst6 = new modal_config.NgbModalConfig()
+        inst7 = new ng_bootstrap.NgbModal(inst, injector.Injector.create({ providers: object, parent: undefined, name: "Jean-Philippe" }), inst5, inst6)
+        inst8 = new backend.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new metrics_service.JhiMetricsService(inst9)
+        inst11 = new metrics_component.JhiMetricsMonitoringComponent(inst7, inst10)
+    })
+
+    test("0", () => {
+        let result: any = inst11.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("refresh", () => {
+    let inst: any
+    let object: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+
+    beforeEach(() => {
+        inst = new component_factory_resolver.ComponentFactoryResolver()
+        object = [{ provide: false, multi: false, useExisting: "12345" }, { provide: false, multi: false, useExisting: "bc23a9d531064583ace8f67dad60f6bb" }, { provide: false, multi: false, useExisting: "12345" }, { provide: true, multi: false, useExisting: "da7588892" }, { provide: false, multi: false, useExisting: "bc23a9d531064583ace8f67dad60f6bb" }]
+        inst2 = new application_ref.ApplicationRef()
+        inst3 = new scrollbar.ScrollBar("bc23a9d531064583ace8f67dad60f6bb")
+        inst4 = new core.RendererFactory2()
+        inst5 = new modal_stack.NgbModalStack(inst2, null, 987650, inst3, inst4)
+        inst6 = new modal_config.NgbModalConfig()
+        inst7 = new ng_bootstrap.NgbModal(inst, injector.Injector.create(object,undefined), inst5, inst6)
+        inst8 = new backend.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new metrics_service.JhiMetricsService(inst9)
+        inst11 = new metrics_component.JhiMetricsMonitoringComponent(inst7, inst10)
+    })
+
+    test("0", () => {
+        let result: any = inst11.refresh()
+        expect(result).toMatchSnapshot()
+    })
+})

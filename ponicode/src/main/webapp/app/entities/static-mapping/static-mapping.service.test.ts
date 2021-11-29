@@ -206,3 +206,132 @@ describe("delete", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("create", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.create({ id: undefined, svnDirectory: undefined, regex: undefined, gitDirectory: undefined, svnDirectoryDelete: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.create({ id: undefined, svnDirectory: undefined, regex: undefined, gitDirectory: "/usr/sbin", svnDirectoryDelete: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.create({ id: 1, svnDirectory: undefined, regex: "(?P<ip>[^%]+)%(?P<route_domain>[0-9]+)", gitDirectory: undefined, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.create({ id: 100, svnDirectory: undefined, regex: "(?P<first_group_name>.*)-(?P=first_group_name)", gitDirectory: undefined, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.create({ id: 0, svnDirectory: undefined, regex: "^(?P<key>(Product|Build|Sequence|BaseBuild|Edition|Date|Built|Changelist|JobID))\\:(?P<value>.*)", gitDirectory: undefined, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.create({ id: NaN, svnDirectory: undefined, regex: undefined, gitDirectory: undefined, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("find", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.find(100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.find(-100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.find(1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.find(-5.48)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.find(0)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.find(Infinity)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("query", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.query(429)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.query(400)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.query(200)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.query(404)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.query(500)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.query(-Infinity)
+        expect(result).toMatchSnapshot()
+    })
+})

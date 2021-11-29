@@ -194,3 +194,120 @@ describe("addErrorAlert", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("ngOnDestroy", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+
+    beforeEach(() => {
+        inst = new security.Sanitizer()
+        inst2 = new config_service.JhiConfigService(undefined)
+        inst3 = new translate_store.TranslateStore()
+        inst4 = new translate_loader.TranslateLoader()
+        inst5 = new translate_compiler.TranslateCompiler()
+        inst6 = new translate_parser.TranslateParser()
+        inst7 = new missing_translation_handler.MissingTranslationHandler()
+        inst8 = new core.TranslateService(inst3, inst4, inst5, inst6, inst7, true, undefined)
+        inst9 = new ng_jhipster.JhiAlertService(inst, inst2, inst8)
+        inst10 = new ng_jhipster.JhiEventManager()
+        inst11 = new translate_store.TranslateStore()
+        inst12 = new translate_loader.TranslateLoader()
+        inst13 = new translate_compiler.TranslateCompiler()
+        inst14 = new translate_parser.TranslateParser()
+        inst15 = new missing_translation_handler.MissingTranslationHandler()
+        inst16 = new core.TranslateService(inst11, inst12, inst13, inst14, inst15, false, undefined)
+        inst17 = new alert_error_component.JhiAlertErrorComponent(inst9, inst10, inst16)
+    })
+
+    test("0", () => {
+        let result: any = inst17.ngOnDestroy()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("setClasses", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+
+    beforeEach(() => {
+        inst = new security.Sanitizer()
+        inst2 = new config_service.JhiConfigService(undefined)
+        inst3 = new translate_store.TranslateStore()
+        inst4 = new translate_loader.TranslateLoader()
+        inst5 = new translate_compiler.TranslateCompiler()
+        inst6 = new translate_parser.TranslateParser()
+        inst7 = new missing_translation_handler.MissingTranslationHandler()
+        inst8 = new core.TranslateService(inst3, inst4, inst5, inst6, inst7, false, false)
+        inst9 = new ng_jhipster.JhiAlertService(inst, inst2, inst8)
+        inst10 = new ng_jhipster.JhiEventManager()
+        inst11 = new translate_store.TranslateStore()
+        inst12 = new translate_loader.TranslateLoader()
+        inst13 = new translate_compiler.TranslateCompiler()
+        inst14 = new translate_parser.TranslateParser()
+        inst15 = new missing_translation_handler.MissingTranslationHandler()
+        inst16 = new core.TranslateService(inst11, inst12, inst13, inst14, inst15, true, undefined)
+        inst17 = new alert_error_component.JhiAlertErrorComponent(inst9, inst10, inst16)
+    })
+
+    test("0", () => {
+        let result: any = inst17.setClasses({ toast: "c466a48309794261b64a4f02cfcc3d64", position: 31040 })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst17.setClasses({ toast: "c466a48309794261b64a4f02cfcc3d64", position: 320 })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst17.setClasses({ toast: "da7588892", position: 0.0 })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst17.setClasses({ toast: "9876", position: 3600 })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst17.setClasses({ toast: "da7588892", position: 0 })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst17.setClasses({ toast: "", position: Infinity })
+        expect(result).toMatchSnapshot()
+    })
+})

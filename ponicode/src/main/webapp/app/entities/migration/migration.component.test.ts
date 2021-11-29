@@ -679,3 +679,598 @@ describe("paginateMigrations", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("loadAll", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.loadAll()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("reset", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.reset()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("loadPage", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.loadPage(0)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst19.loadPage(10)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst19.loadPage(64)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst19.loadPage(32)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst19.loadPage(256)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst19.loadPage(NaN)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("ngOnDestroy", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, true)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.ngOnDestroy()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("sort", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.sort()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("registerChangeInMigrations", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, true, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.registerChangeInMigrations()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("cssClass", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.cssClass(migration_model.StatusEnum.DONE_WITH_WARNINGS)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst19.cssClass(migration_model.StatusEnum.RUNNING)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst19.cssClass(migration_model.StatusEnum.IGNORED)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst19.cssClass(migration_model.StatusEnum.FAILED)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst19.cssClass(null)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("onError", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, false, undefined)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.onError("Sorry, The video you are looking for does not exist.")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst19.onError("Uploaded file was not added to the resource. ")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst19.onError("Message originator is not the grader, or the person being graded")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst19.onError("Connection is closed")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst19.onError("Exception not raised: %s")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst19.onError("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("trackId", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new security.Sanitizer()
+        inst5 = new config_service.JhiConfigService(undefined)
+        inst6 = new translate_store.TranslateStore()
+        inst7 = new translate_loader.TranslateLoader()
+        inst8 = new translate_compiler.TranslateCompiler()
+        inst9 = new translate_parser.TranslateParser()
+        inst10 = new missing_translation_handler.MissingTranslationHandler()
+        inst11 = new core.TranslateService(inst6, inst7, inst8, inst9, inst10, undefined, false)
+        inst12 = new ng_jhipster.JhiAlertService(inst4, inst5, inst11)
+        inst13 = new ng_jhipster.JhiEventManager()
+        inst14 = new ng_jhipster.JhiParseLinks()
+        inst15 = new http.HttpHandler()
+        inst16 = new http.HttpClient(inst15)
+        inst17 = new account_service.AccountService(inst16)
+        inst18 = new principal_service.Principal(inst17)
+        inst19 = new migration_component.MigrationComponent(inst3, inst12, inst13, inst14, inst18)
+    })
+
+    test("0", () => {
+        let result: any = inst19.trackId(0, { id: -5.48, svnGroup: "12345", svnProject: "./path/to/file", user: undefined, date: undefined, gitlabGroup: undefined, gitlabProject: undefined, status: undefined, maxFileSize: "43083", forbiddenFileExtensions: undefined, gitlabUrl: "https://twitter.com/path?abc", gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: "v4.0.0-rc.4", svnRevision: "Lq8wLspXaJraZSs3CwiCTF85mkvp", trunk: "pdf", branches: undefined, tags: "Beryl Coves", svnHistory: undefined, tagsToMigrate: "4.0.0-beta1\t", branchesToMigrate: undefined, createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: false, histories: undefined, mappings: undefined, flat: false, uploadType: "Producer" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst19.trackId(0, { id: 1, svnGroup: "12345", svnProject: "C:\\\\path\\to\\folder\\", user: "Jean-Philippe", date: undefined, gitlabGroup: undefined, gitlabProject: ".", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: undefined, gitlabToken: undefined, svnUrl: undefined, svnUser: "Michael", svnPassword: undefined, svnRevision: "LKinAN1FRfbjJXYAEWCbx1H443wbjHip", trunk: undefined, branches: "sensor-copy", tags: undefined, svnHistory: undefined, tagsToMigrate: "1.0.0", branchesToMigrate: "v1.2.4", createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: undefined, histories: undefined, mappings: undefined, flat: undefined, uploadType: "Developer" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst19.trackId(-100, { id: undefined, svnGroup: "12345", svnProject: "./path/to/file", user: "George", date: undefined, gitlabGroup: undefined, gitlabProject: undefined, status: undefined, maxFileSize: "43083", forbiddenFileExtensions: "pdf", gitlabUrl: "http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg", gitlabToken: "oAuthToken", svnUrl: undefined, svnUser: "George", svnPassword: "v1.2.4", svnRevision: undefined, trunk: "mpe", branches: undefined, tags: undefined, svnHistory: undefined, tagsToMigrate: "4.0.0-beta1\t", branchesToMigrate: "v4.0.0-rc.4", createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: undefined, histories: undefined, mappings: undefined, flat: false, uploadType: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst19.trackId(100, { id: 1, svnGroup: "da7588892", svnProject: "path/to/folder/", user: undefined, date: undefined, gitlabGroup: undefined, gitlabProject: undefined, status: undefined, maxFileSize: "44074", forbiddenFileExtensions: undefined, gitlabUrl: "https://api.telegram.org/bot", gitlabToken: undefined, svnUrl: undefined, svnUser: undefined, svnPassword: "v1.2.4", svnRevision: "LKinAN1FRfbjJXYAEWCbx1H443wbjHip", trunk: "jpeg", branches: undefined, tags: "Kailey Bypass", svnHistory: undefined, tagsToMigrate: "^5.0.0", branchesToMigrate: undefined, createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: false, histories: undefined, mappings: undefined, flat: false, uploadType: "Manager" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst19.trackId(-1, { id: 1, svnGroup: "c466a48309794261b64a4f02cfcc3d64", svnProject: "C:\\\\path\\to\\file.ext", user: "Jean-Philippe", date: undefined, gitlabGroup: "9876", gitlabProject: undefined, status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: undefined, gitlabToken: "oAuthToken", svnUrl: undefined, svnUser: "Anas", svnPassword: "^5.0.0", svnRevision: undefined, trunk: undefined, branches: "port-generate", tags: "Corrine Square", svnHistory: undefined, tagsToMigrate: undefined, branchesToMigrate: undefined, createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: false, histories: undefined, mappings: undefined, flat: true, uploadType: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst19.trackId(Infinity, { id: Infinity, svnGroup: "", svnProject: "", user: "", date: undefined, gitlabGroup: undefined, gitlabProject: "", status: undefined, maxFileSize: undefined, forbiddenFileExtensions: undefined, gitlabUrl: undefined, gitlabToken: undefined, svnUrl: undefined, svnUser: "", svnPassword: undefined, svnRevision: "", trunk: undefined, branches: "", tags: undefined, svnHistory: undefined, tagsToMigrate: "", branchesToMigrate: "", createdTimestamp: undefined, workingDirectory: undefined, emptyDirs: undefined, histories: undefined, mappings: undefined, flat: undefined, uploadType: "" })
+        expect(result).toMatchSnapshot()
+    })
+})

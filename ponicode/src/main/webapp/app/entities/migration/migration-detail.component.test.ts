@@ -635,3 +635,191 @@ describe("renameMigration", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("initProject", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.initProject("Checking Account")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst8.initProject("Credit Card Account")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst8.initProject("Home Loan Account")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst8.initProject("Investment Account")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst8.initProject("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("checkProject", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.checkProject("Credit Card Account", "")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst8.checkProject("Checking Account", "")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst8.checkProject("Home Loan Account", "")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst8.checkProject("Credit Card Account", "Edmond")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst8.checkProject("Home Loan Account", "Michael")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst8.checkProject("", "")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("getProjectName", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let param1: any = new migration_detail_component.InnerProject("Gail Hoppe", "Maurice Purdy", migration_model.StatusEnum.DONE_WITH_WARNINGS, "Ronald Keeling")
+        let result: any = inst8.getProjectName(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let param1: any = new migration_detail_component.InnerProject("Gail Hoppe", "Gail Hoppe", migration_model.StatusEnum.WAITING, "Ronald Keeling")
+        let result: any = inst8.getProjectName(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let param1: any = new migration_detail_component.InnerProject("Becky Bednar", "Ronald Keeling", migration_model.StatusEnum.WAITING, "Janet Homenick")
+        let result: any = inst8.getProjectName(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let param1: any = new migration_detail_component.InnerProject("Becky Bednar", "Gail Hoppe", migration_model.StatusEnum.DONE_WITH_WARNINGS, "Janet Homenick")
+        let result: any = inst8.getProjectName(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let param1: any = new migration_detail_component.InnerProject("Gail Hoppe", "Ronald Keeling", migration_model.StatusEnum.DONE_WITH_WARNINGS, "Becky Bednar")
+        let result: any = inst8.getProjectName(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let param1: any = new migration_detail_component.InnerProject("", "", migration_model.StatusEnum.RUNNING, "")
+        let result: any = inst8.getProjectName(param1)
+        expect(result).toMatchSnapshot()
+    })
+})

@@ -128,3 +128,88 @@ describe("toggle", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new summary_mappings_component.SummaryMappingsComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("sort", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new summary_mappings_component.SummaryMappingsComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.sort()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("delete", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new summary_mappings_component.SummaryMappingsComponent(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.delete({ id: undefined, svnDirectory: "1.0.0", regex: undefined, gitDirectory: undefined, migration: undefined, isStatic: undefined, svnDirectoryDelete: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst4.delete({ id: undefined, svnDirectory: undefined, regex: "(.*)-(.+)", gitDirectory: undefined, migration: undefined, isStatic: undefined, svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst4.delete({ id: -100, svnDirectory: "v4.0.0-rc.4", regex: undefined, gitDirectory: "/selinux", migration: undefined, isStatic: false, svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst4.delete({ id: -5.48, svnDirectory: "v4.0.0-rc.4", regex: undefined, gitDirectory: "/usr/share", migration: undefined, isStatic: false, svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst4.delete({ id: undefined, svnDirectory: undefined, regex: undefined, gitDirectory: "/selinux", migration: undefined, isStatic: true, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst4.delete({ id: undefined, svnDirectory: "", regex: undefined, gitDirectory: undefined, migration: undefined, isStatic: undefined, svnDirectoryDelete: undefined })
+        expect(result).toMatchSnapshot()
+    })
+})

@@ -1310,7 +1310,6 @@ describe("containsFlatRepo", () => {
     })
 })
 
-// @ponicode
 describe("svnFontStyle", () => {
     let inst: any
     let inst2: any
@@ -1483,6 +1482,1738 @@ describe("svnFontStyle", () => {
     test("5", () => {
         let param1: any = new migration_process_service.SvnModule([], "", "", [], true)
         let result: any = inst63.svnFontStyle(param1)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("ngOnInit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let object2: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let inst59: any
+    let inst60: any
+    let object3: any
+    let inst61: any
+    let inst62: any
+    let object4: any
+    let inst63: any
+    let inst64: any
+    let inst65: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: false })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, 12)
+        inst16 = new overlay_container.OverlayContainer("a1969970175")
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 12345, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("bc23a9d531064583ace8f67dad60f6bb")
+        object = [{ provide: true, multi: false, useValue: false }]
+        inst20 = new directionality.Directionality(12345)
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create({ providers: object, parent: undefined, name: "Pierre Edouard" }), null, 12, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, null, inst23, inst24, 12, null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new viewport_ruler.ViewportRuler(null, null)
+        inst31 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst30, null, 56784)
+        inst32 = new overlay_container.OverlayContainer(987650)
+        inst33 = new component_factory_resolver.ComponentFactoryResolver()
+        inst34 = new overlay_position_builder.OverlayPositionBuilder(null, 56784, undefined, undefined)
+        inst35 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("a1969970175")
+        object2 = [["Sales", "Software Engineer", "Chief Product Officer"], ["Software Engineer", "Data Scientist", "Data Scientist"], ["Sales", "Data Scientist", "Software Engineer"]]
+        inst36 = new directionality.Directionality(56784)
+        inst37 = new overlay.Overlay(inst31, inst32, inst33, inst34, inst35, core.Injector.create({ providers: object2, parent: undefined, name: "George" }), null, "bc23a9d531064583ace8f67dad60f6bb", inst36, undefined)
+        inst38 = new live_announcer.LiveAnnouncer(12, null, 12)
+        inst39 = new media_matcher.MediaMatcher(null)
+        inst40 = new breakpoints_observer.BreakpointObserver(inst39, null)
+        inst41 = new material.MatSnackBarConfig()
+        inst42 = new material.MatSnackBar(null, null, core.Injector.create({ providers: [], parent: undefined, name: "Pierre Edouard" }), null, null, inst41)
+        inst43 = new material.MatSnackBarConfig()
+        inst44 = new material.MatSnackBar(inst37, inst38, null, inst40, inst42, inst43)
+        inst45 = new translate_store.TranslateStore()
+        inst46 = new translate_loader.TranslateLoader()
+        inst47 = new translate_compiler.TranslateCompiler()
+        inst48 = new translate_parser.TranslateParser()
+        inst49 = new missing_translation_handler.MissingTranslationHandler()
+        inst50 = new core.TranslateService(inst45, inst46, inst47, inst48, inst49, undefined, false)
+        inst51 = new http.HttpHandler()
+        inst52 = new http.HttpClient(inst51)
+        inst53 = new static_extension_service.StaticExtensionService(inst52)
+        inst54 = new http.HttpHandler()
+        inst55 = new http.HttpClient(inst54)
+        inst56 = new configuration_service.ConfigurationService(inst55)
+        inst57 = new url_tree.UrlSerializer()
+        inst58 = new router_outlet_context.ChildrenOutletContexts()
+        inst59 = new location_strategy.LocationStrategy()
+        inst60 = new location.Location(inst59)
+        object3 = [{ provide: true, multi: false, useExisting: "9876" }, { provide: false, multi: false, useExisting: "bc23a9d531064583ace8f67dad60f6bb" }, { provide: true, multi: false, useExisting: "12345" }, { provide: false, multi: false, useExisting: "12345" }]
+        inst61 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst62 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: "http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg", outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "pathParamsChange" }, { path: undefined, pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: "Www.GooGle.com", outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "pathParamsChange" }]
+        inst63 = new router.Router(null, inst57, inst58, inst60, core.Injector.create({ providers: object3, parent: undefined, name: "Michael" }), inst61, inst62, object4)
+        inst64 = new router.ActivatedRoute()
+        inst65 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst44, inst50, inst53, inst56, inst63, inst64)
+    })
+
+    test("0", () => {
+        let result: any = inst65.ngOnInit()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("getGitlabUser", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let object2: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let inst59: any
+    let inst60: any
+    let inst61: any
+    let inst62: any
+    let object3: any
+    let inst63: any
+    let inst64: any
+    let object4: any
+    let inst65: any
+    let inst66: any
+    let inst67: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, 12)
+        inst16 = new overlay_container.OverlayContainer(12)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 56784, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12345)
+        object = [{ provide: true, multi: true, useValue: false }, { provide: false, multi: true, useValue: false }, { provide: true, multi: true, useValue: true }, { provide: true, multi: true, useValue: false }]
+        inst20 = new directionality.Directionality(12)
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create(object,undefined), null, 56784, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new overlay_container.OverlayContainer(12)
+        inst26 = new material.MatDialog(null, null, null, null, 987650, null, inst25)
+        inst27 = new material.MatDialog(null, null, null, null, 12345, inst26, null)
+        inst28 = new material.MatDialog(inst21, core.Injector.create({ providers: [], parent: undefined, name: undefined }), inst23, inst24, "bc23a9d531064583ace8f67dad60f6bb", inst27, null)
+        inst29 = new core.ChangeDetectorRef()
+        inst30 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst31 = new platform.Platform(undefined)
+        inst32 = new scroll_dispatcher.ScrollDispatcher(inst30, inst31)
+        inst33 = new viewport_ruler.ViewportRuler(null, null)
+        inst34 = new scroll_strategy_options.ScrollStrategyOptions(inst32, inst33, null, "a1969970175")
+        inst35 = new overlay_container.OverlayContainer("a1969970175")
+        inst36 = new component_factory_resolver.ComponentFactoryResolver()
+        inst37 = new viewport_ruler.ViewportRuler(null, null)
+        inst38 = new overlay_position_builder.OverlayPositionBuilder(inst37, 56784, undefined, undefined)
+        inst39 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12345)
+        object2 = { 0: { provide: true, multi: true, useFactory: () => "Marketing", deps: undefined } }
+        inst40 = new directionality.Directionality("bc23a9d531064583ace8f67dad60f6bb")
+        inst41 = new overlay.Overlay(inst34, inst35, inst36, inst38, inst39, core.Injector.create({ providers: object2, parent: undefined, name: undefined }), null, 12, inst40, undefined)
+        inst42 = new live_announcer.LiveAnnouncer("a1969970175", null, 12345)
+        inst43 = new media_matcher.MediaMatcher(null)
+        inst44 = new breakpoints_observer.BreakpointObserver(inst43, null)
+        inst45 = new material.MatSnackBarConfig()
+        inst46 = new material.MatSnackBar(inst41, inst42, null, inst44, null, inst45)
+        inst47 = new translate_store.TranslateStore()
+        inst48 = new translate_loader.TranslateLoader()
+        inst49 = new translate_compiler.TranslateCompiler()
+        inst50 = new translate_parser.TranslateParser()
+        inst51 = new missing_translation_handler.MissingTranslationHandler()
+        inst52 = new core.TranslateService(inst47, inst48, inst49, inst50, inst51, true, undefined)
+        inst53 = new http.HttpHandler()
+        inst54 = new http.HttpClient(inst53)
+        inst55 = new static_extension_service.StaticExtensionService(inst54)
+        inst56 = new http.HttpHandler()
+        inst57 = new http.HttpClient(inst56)
+        inst58 = new configuration_service.ConfigurationService(inst57)
+        inst59 = new url_tree.UrlSerializer()
+        inst60 = new router_outlet_context.ChildrenOutletContexts()
+        inst61 = new location_strategy.LocationStrategy()
+        inst62 = new location.Location(inst61)
+        object3 = { 0: { provide: false, multi: false, useFactory: () => "Data Scientist", deps: undefined }, 1: { provide: true, multi: false, useFactory: () => "Marketing", deps: undefined }, 2: { provide: true, multi: false, useFactory: () => "Chief Product Officer", deps: undefined } }
+        inst63 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst64 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: "./path/to/file", matcher: undefined, component: undefined, redirectTo: undefined, outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: ".", matcher: undefined, component: undefined, redirectTo: undefined, outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: "path/to/folder/", matcher: undefined, component: undefined, redirectTo: undefined, outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }]
+        inst65 = new router.Router(null, inst59, inst60, inst62, core.Injector.create(object3,undefined), inst63, inst64, object4)
+        inst66 = new router.ActivatedRoute()
+        inst67 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst28, inst29, inst46, inst52, inst55, inst58, inst65, inst66)
+    })
+
+    test("0", () => {
+        let result: any = inst67.getGitlabUser()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("checkSvnRepository", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let object2: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let object3: any
+    let inst59: any
+    let inst60: any
+    let object4: any
+    let inst61: any
+    let inst62: any
+    let inst63: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, 56784)
+        inst16 = new overlay_container.OverlayContainer(12345)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 12, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("bc23a9d531064583ace8f67dad60f6bb")
+        object = [["[\"a\", \"b\", \"043\", \"holasenior\"]", "[-1, 0.5, 1, 2, 3, 4, 5]", "[\"foo bar\",  -0.353, \"**text**\", 4653]"], ["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[-1, 0.5, 1, 2, 3, 4, 5]", "[10, -45.9, 103.5, 0.955674]"], ["[10, -45.9, 103.5, 0.955674]", "[-1, 0.5, 1, 2, 3, 4, 5]", "[-1, 0.5, 1, 2, 3, 4, 5]"], ["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[\"a\", \"b\", \"043\", \"holasenior\"]", "[\"foo bar\",  -0.353, \"**text**\", 4653]"], ["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[10, -45.9, 103.5, 0.955674]", "[\"foo bar\",  -0.353, \"**text**\", 4653]"]]
+        inst20 = new directionality.Directionality(12345)
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create(object,undefined), null, "bc23a9d531064583ace8f67dad60f6bb", inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, core.Injector.create([],undefined), inst23, inst24, "a1969970175", null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: false })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new viewport_ruler.ViewportRuler(null, null)
+        inst31 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst30, null, "a1969970175")
+        inst32 = new overlay_container.OverlayContainer("bc23a9d531064583ace8f67dad60f6bb")
+        inst33 = new component_factory_resolver.ComponentFactoryResolver()
+        inst34 = new overlay_position_builder.OverlayPositionBuilder(null, 12345, undefined, undefined)
+        inst35 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("a1969970175")
+        object2 = { 0: { provide: false, multi: true, useFactory: () => "Software Engineer", deps: undefined }, 1: { provide: true, multi: true, useFactory: () => "Marketing", deps: undefined }, 2: { provide: false, multi: true, useFactory: () => "Sales", deps: undefined }, 3: { provide: false, multi: true, useFactory: () => "Data Scientist", deps: undefined } }
+        inst36 = new directionality.Directionality(12345)
+        inst37 = new overlay.Overlay(inst31, inst32, inst33, inst34, inst35, core.Injector.create(object2,undefined), null, "bc23a9d531064583ace8f67dad60f6bb", inst36, undefined)
+        inst38 = new live_announcer.LiveAnnouncer(12345, null, 56784)
+        inst39 = new media_matcher.MediaMatcher(null)
+        inst40 = new breakpoints_observer.BreakpointObserver(inst39, null)
+        inst41 = new material.MatSnackBarConfig()
+        inst42 = new material.MatSnackBar(inst37, inst38, null, inst40, null, inst41)
+        inst43 = new translate_store.TranslateStore()
+        inst44 = new translate_loader.TranslateLoader()
+        inst45 = new translate_compiler.TranslateCompiler()
+        inst46 = new translate_parser.TranslateParser()
+        inst47 = new missing_translation_handler.MissingTranslationHandler()
+        inst48 = new core.TranslateService(inst43, inst44, inst45, inst46, inst47, false, true)
+        inst49 = new http.HttpHandler()
+        inst50 = new http.HttpClient(inst49)
+        inst51 = new static_extension_service.StaticExtensionService(inst50)
+        inst52 = new http.HttpHandler()
+        inst53 = new http.HttpClient(inst52)
+        inst54 = new configuration_service.ConfigurationService(inst53)
+        inst55 = new url_tree.UrlSerializer()
+        inst56 = new router_outlet_context.ChildrenOutletContexts()
+        inst57 = new location_strategy.LocationStrategy()
+        inst58 = new location.Location(inst57)
+        object3 = { 0: { provide: true, multi: true, useFactory: () => "Chief Product Officer", deps: undefined }, 1: { provide: false, multi: true, useFactory: () => "Chief Product Officer", deps: undefined }, 2: { provide: false, multi: true, useFactory: () => "Marketing", deps: undefined } }
+        inst59 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst60 = new compiler.Compiler()
+        object4 = [{ path: "path/to/file.ext", pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Awesome Frozen Computer", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "c466a48309794261b64a4f02cfcc3d64", runGuardsAndResolvers: "paramsChange" }, { path: "C:\\\\path\\to\\folder\\", pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Small Cotton Chips", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "bc23a9d531064583ace8f67dad60f6bb", runGuardsAndResolvers: "paramsChange" }, { path: "/path/to/file", pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Small Cotton Chips", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "12345", runGuardsAndResolvers: "paramsChange" }, { path: "./path/to/file", pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Refined Frozen Pizza", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "9876", runGuardsAndResolvers: "paramsChange" }]
+        inst61 = new router.Router(null, inst55, inst56, inst58, core.Injector.create(object3,undefined), inst59, inst60, object4)
+        inst62 = new router.ActivatedRoute()
+        inst63 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst42, inst48, inst51, inst54, inst61, inst62)
+    })
+
+    test("0", () => {
+        let result: any = inst63.checkSvnRepository()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("loadExtensions", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let object2: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let object3: any
+    let inst59: any
+    let inst60: any
+    let object4: any
+    let inst61: any
+    let inst62: any
+    let inst63: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: false })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, "bc23a9d531064583ace8f67dad60f6bb")
+        inst16 = new overlay_container.OverlayContainer(987650)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 56784, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12)
+        object = [{ provide: false, multi: undefined, useValue: true }, { provide: false, multi: undefined, useValue: false }, { provide: false, multi: undefined, useValue: true }, { provide: false, multi: undefined, useValue: true }, { provide: false, multi: undefined, useValue: true }]
+        inst20 = new directionality.Directionality(12)
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create({ providers: object, parent: undefined, name: "Anas" }), null, 12345, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, null, inst23, inst24, 56784, null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new viewport_ruler.ViewportRuler(null, null)
+        inst31 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst30, null, 12)
+        inst32 = new overlay_container.OverlayContainer(56784)
+        inst33 = new component_factory_resolver.ComponentFactoryResolver()
+        inst34 = new overlay_position_builder.OverlayPositionBuilder(null, "bc23a9d531064583ace8f67dad60f6bb", undefined, undefined)
+        inst35 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("a1969970175")
+        object2 = [{ provide: true, multi: undefined, useExisting: "bc23a9d531064583ace8f67dad60f6bb" }, { provide: true, multi: undefined, useExisting: "da7588892" }, { provide: false, multi: undefined, useExisting: "c466a48309794261b64a4f02cfcc3d64" }, { provide: false, multi: undefined, useExisting: "9876" }, { provide: false, multi: undefined, useExisting: "9876" }]
+        inst36 = new directionality.Directionality("bc23a9d531064583ace8f67dad60f6bb")
+        inst37 = new overlay.Overlay(inst31, inst32, inst33, inst34, inst35, core.Injector.create(object2,undefined), null, 12, inst36, undefined)
+        inst38 = new live_announcer.LiveAnnouncer(56784, null, 12345)
+        inst39 = new media_matcher.MediaMatcher(null)
+        inst40 = new breakpoints_observer.BreakpointObserver(inst39, null)
+        inst41 = new material.MatSnackBarConfig()
+        inst42 = new material.MatSnackBar(inst37, inst38, null, inst40, null, inst41)
+        inst43 = new translate_store.TranslateStore()
+        inst44 = new translate_loader.TranslateLoader()
+        inst45 = new translate_compiler.TranslateCompiler()
+        inst46 = new translate_parser.TranslateParser()
+        inst47 = new missing_translation_handler.MissingTranslationHandler()
+        inst48 = new core.TranslateService(inst43, inst44, inst45, inst46, inst47, false, false)
+        inst49 = new http.HttpHandler()
+        inst50 = new http.HttpClient(inst49)
+        inst51 = new static_extension_service.StaticExtensionService(inst50)
+        inst52 = new http.HttpHandler()
+        inst53 = new http.HttpClient(inst52)
+        inst54 = new configuration_service.ConfigurationService(inst53)
+        inst55 = new url_tree.UrlSerializer()
+        inst56 = new router_outlet_context.ChildrenOutletContexts()
+        inst57 = new location_strategy.LocationStrategy()
+        inst58 = new location.Location(inst57)
+        object3 = [{ provide: false, multi: undefined, useValue: true }, { provide: false, multi: undefined, useValue: false }, { provide: false, multi: undefined, useValue: false }, { provide: false, multi: undefined, useValue: false }, { provide: false, multi: undefined, useValue: true }]
+        inst59 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst60 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: "./path/to/file", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Awesome Frozen Computer", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: "path/to/folder/", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Ergonomic Rubber Bike", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }]
+        inst61 = new router.Router(null, inst55, inst56, inst58, core.Injector.create(object3,undefined), inst59, inst60, object4)
+        inst62 = new router.ActivatedRoute()
+        inst63 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst42, inst48, inst51, inst54, inst61, inst62)
+    })
+
+    test("0", () => {
+        let result: any = inst63.loadExtensions()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("deleteMapping", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let object2: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let object3: any
+    let inst59: any
+    let inst60: any
+    let object4: any
+    let inst61: any
+    let inst62: any
+    let inst63: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: false })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, 56784)
+        inst16 = new overlay_container.OverlayContainer(987650)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 56784, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(56784)
+        object = [["Software Engineer"], ["Chief Product Officer"]]
+        inst20 = new directionality.Directionality(12345)
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create({ providers: object, parent: undefined, name: undefined }), null, 56784, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, null, inst23, inst24, "a1969970175", null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new viewport_ruler.ViewportRuler(null, null)
+        inst31 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst30, null, "bc23a9d531064583ace8f67dad60f6bb")
+        inst32 = new overlay_container.OverlayContainer(12)
+        inst33 = new component_factory_resolver.ComponentFactoryResolver()
+        inst34 = new overlay_position_builder.OverlayPositionBuilder(null, 56784, undefined, undefined)
+        inst35 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12345)
+        object2 = [{ provide: false, multi: false, useValue: false }, { provide: true, multi: false, useValue: true }, { provide: true, multi: false, useValue: true }, { provide: true, multi: false, useValue: false }]
+        inst36 = new directionality.Directionality(12)
+        inst37 = new overlay.Overlay(inst31, inst32, inst33, inst34, inst35, core.Injector.create({ providers: object2, parent: undefined, name: undefined }), null, 56784, inst36, undefined)
+        inst38 = new live_announcer.LiveAnnouncer(12345, null, 56784)
+        inst39 = new media_matcher.MediaMatcher(null)
+        inst40 = new breakpoints_observer.BreakpointObserver(inst39, null)
+        inst41 = new material.MatSnackBarConfig()
+        inst42 = new material.MatSnackBar(inst37, inst38, null, inst40, null, inst41)
+        inst43 = new translate_store.TranslateStore()
+        inst44 = new translate_loader.TranslateLoader()
+        inst45 = new translate_compiler.TranslateCompiler()
+        inst46 = new translate_parser.TranslateParser()
+        inst47 = new missing_translation_handler.MissingTranslationHandler()
+        inst48 = new core.TranslateService(inst43, inst44, inst45, inst46, inst47, true, true)
+        inst49 = new http.HttpHandler()
+        inst50 = new http.HttpClient(inst49)
+        inst51 = new static_extension_service.StaticExtensionService(inst50)
+        inst52 = new http.HttpHandler()
+        inst53 = new http.HttpClient(inst52)
+        inst54 = new configuration_service.ConfigurationService(inst53)
+        inst55 = new url_tree.UrlSerializer()
+        inst56 = new router_outlet_context.ChildrenOutletContexts()
+        inst57 = new location_strategy.LocationStrategy()
+        inst58 = new location.Location(inst57)
+        object3 = [{ provide: false, multi: false, useExisting: "bc23a9d531064583ace8f67dad60f6bb" }, { provide: true, multi: false, useExisting: "12345" }, { provide: false, multi: false, useExisting: "9876" }]
+        inst59 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst60 = new compiler.Compiler()
+        object4 = [{ path: ".", pathMatch: "./path/to/file", matcher: undefined, component: undefined, redirectTo: "https://", outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "always" }, { path: "C:\\\\path\\to\\file.ext", pathMatch: "C:\\\\path\\to\\file.ext", matcher: undefined, component: undefined, redirectTo: "http://www.example.com/route/123?foo=bar", outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "always" }, { path: "path/to/folder/", pathMatch: "/path/to/file", matcher: undefined, component: undefined, redirectTo: "https://twitter.com/path?abc", outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "always" }, { path: "./path/to/file", pathMatch: ".", matcher: undefined, component: undefined, redirectTo: "https://croplands.org/app/a/confirm?t=", outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "always" }]
+        inst61 = new router.Router(null, inst55, inst56, inst58, core.Injector.create({ providers: object3, parent: undefined, name: undefined }), inst59, inst60, object4)
+        inst62 = new router.ActivatedRoute()
+        inst63 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst42, inst48, inst51, inst54, inst61, inst62)
+    })
+
+    test("0", () => {
+        let result: any = inst63.deleteMapping("https://croplands.org/app/a/reset?token=")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst63.deleteMapping("http://www.croplands.org/account/confirm?t=")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst63.deleteMapping("https://api.telegram.org/bot")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst63.deleteMapping("ponicode.com")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst63.deleteMapping("https://")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst63.deleteMapping("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("toggleMapping", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let object2: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let inst59: any
+    let inst60: any
+    let inst61: any
+    let object3: any
+    let inst62: any
+    let inst63: any
+    let object4: any
+    let inst64: any
+    let inst65: any
+    let inst66: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, 987650)
+        inst16 = new overlay_container.OverlayContainer(987650)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 987650, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12345)
+        object = [["[-1, 0.5, 1, 2, 3, 4, 5]", "[-1, 0.5, 1, 2, 3, 4, 5]"], ["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[\"a\", \"b\", \"043\", \"holasenior\"]"], ["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[-1, 0.5, 1, 2, 3, 4, 5]"], ["[-1, 0.5, 1, 2, 3, 4, 5]", "[\"foo bar\",  -0.353, \"**text**\", 4653]"], ["[10, -45.9, 103.5, 0.955674]", "[10, -45.9, 103.5, 0.955674]"]]
+        inst20 = new ng_zone.NgZone({ enableLongStackTrace: false })
+        inst21 = new directionality.Directionality(56784)
+        inst22 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create(object,undefined), inst20, 56784, inst21, undefined)
+        inst23 = new location_strategy.LocationStrategy()
+        inst24 = new location.Location(inst23)
+        inst25 = new dialog_config.MatDialogConfig()
+        inst26 = new material.MatDialog(inst22, null, inst24, inst25, 56784, null, null)
+        inst27 = new core.ChangeDetectorRef()
+        inst28 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst29 = new platform.Platform(undefined)
+        inst30 = new scroll_dispatcher.ScrollDispatcher(inst28, inst29)
+        inst31 = new viewport_ruler.ViewportRuler(null, null)
+        inst32 = new scroll_strategy_options.ScrollStrategyOptions(inst30, inst31, null, 56784)
+        inst33 = new overlay_container.OverlayContainer(12)
+        inst34 = new component_factory_resolver.ComponentFactoryResolver()
+        inst35 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst36 = new viewport_ruler.ViewportRuler(null, inst35)
+        inst37 = new overlay_position_builder.OverlayPositionBuilder(inst36, "a1969970175", undefined, undefined)
+        inst38 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12345)
+        object2 = [["Marketing", "Sales"], ["Chief Product Officer", "Chief Product Officer"], ["Data Scientist", "Marketing"]]
+        inst39 = new directionality.Directionality(12345)
+        inst40 = new overlay.Overlay(inst32, inst33, inst34, inst37, inst38, core.Injector.create({ providers: object2, parent: undefined, name: undefined }), null, "bc23a9d531064583ace8f67dad60f6bb", inst39, undefined)
+        inst41 = new live_announcer.LiveAnnouncer(987650, null, 12)
+        inst42 = new media_matcher.MediaMatcher(null)
+        inst43 = new breakpoints_observer.BreakpointObserver(inst42, null)
+        inst44 = new material.MatSnackBarConfig()
+        inst45 = new material.MatSnackBar(inst40, inst41, core.Injector.create({ providers: [], parent: undefined, name: "Michael" }), inst43, null, inst44)
+        inst46 = new translate_store.TranslateStore()
+        inst47 = new translate_loader.TranslateLoader()
+        inst48 = new translate_compiler.TranslateCompiler()
+        inst49 = new translate_parser.TranslateParser()
+        inst50 = new missing_translation_handler.MissingTranslationHandler()
+        inst51 = new core.TranslateService(inst46, inst47, inst48, inst49, inst50, false, false)
+        inst52 = new http.HttpHandler()
+        inst53 = new http.HttpClient(inst52)
+        inst54 = new static_extension_service.StaticExtensionService(inst53)
+        inst55 = new http.HttpHandler()
+        inst56 = new http.HttpClient(inst55)
+        inst57 = new configuration_service.ConfigurationService(inst56)
+        inst58 = new url_tree.UrlSerializer()
+        inst59 = new router_outlet_context.ChildrenOutletContexts()
+        inst60 = new location_strategy.LocationStrategy()
+        inst61 = new location.Location(inst60)
+        object3 = { 0: { provide: true, multi: false, useFactory: () => "Data Scientist", deps: undefined } }
+        inst62 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst63 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: "http://base.com", outlet: "Awesome Frozen Computer", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: "https://api.telegram.org/bot", outlet: "Refined Frozen Pizza", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: "ponicode.com", outlet: "Handmade Fresh Chicken", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: "https://accounts.google.com/o/oauth2/revoke?token=%s", outlet: "Handmade Fresh Chicken", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: undefined }]
+        inst64 = new router.Router(null, inst58, inst59, inst61, core.Injector.create(object3,undefined), inst62, inst63, object4)
+        inst65 = new router.ActivatedRoute()
+        inst66 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst26, inst27, inst45, inst51, inst54, inst57, inst64, inst65)
+    })
+
+    test("0", () => {
+        let result: any = inst66.toggleMapping({ checked: false, mapping: "https://" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst66.toggleMapping({ checked: false, mapping: "http://www.example.com/route/123?foo=bar" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst66.toggleMapping({ checked: true, mapping: "Www.GooGle.com" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst66.toggleMapping({ checked: true, mapping: "http://example.com/showcalendar.html?token=CKF50YzIHxCTKMAg" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst66.toggleMapping({ checked: false, mapping: "ponicode.com" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst66.toggleMapping({ checked: true, mapping: "" })
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("toggleSvnDirectoryDeleteType", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let object2: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let object3: any
+    let inst59: any
+    let inst60: any
+    let object4: any
+    let inst61: any
+    let inst62: any
+    let inst63: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, 987650)
+        inst16 = new overlay_container.OverlayContainer(12)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 987650, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12)
+        object = { 0: { provide: true, multi: true, useFactory: () => "Marketing", deps: undefined }, 1: { provide: false, multi: true, useFactory: () => "Sales", deps: undefined }, 2: { provide: false, multi: true, useFactory: () => "Chief Product Officer", deps: undefined }, 3: { provide: true, multi: true, useFactory: () => "Data Scientist", deps: undefined } }
+        inst20 = new directionality.Directionality("a1969970175")
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create({ providers: object, parent: undefined, name: undefined }), null, 12345, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, null, inst23, inst24, "a1969970175", null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new viewport_ruler.ViewportRuler(null, null)
+        inst31 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst30, null, 12)
+        inst32 = new overlay_container.OverlayContainer(12345)
+        inst33 = new component_factory_resolver.ComponentFactoryResolver()
+        inst34 = new overlay_position_builder.OverlayPositionBuilder(null, 56784, undefined, undefined)
+        inst35 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12345)
+        object2 = [{ provide: true, multi: undefined, useValue: false }, { provide: true, multi: undefined, useValue: true }, { provide: true, multi: undefined, useValue: false }, { provide: false, multi: undefined, useValue: true }, { provide: false, multi: undefined, useValue: false }]
+        inst36 = new directionality.Directionality(12345)
+        inst37 = new overlay.Overlay(inst31, inst32, inst33, inst34, inst35, core.Injector.create({ providers: object2, parent: undefined, name: undefined }), null, 12, inst36, undefined)
+        inst38 = new live_announcer.LiveAnnouncer(56784, null, "a1969970175")
+        inst39 = new media_matcher.MediaMatcher(null)
+        inst40 = new breakpoints_observer.BreakpointObserver(inst39, null)
+        inst41 = new material.MatSnackBarConfig()
+        inst42 = new material.MatSnackBar(inst37, inst38, null, inst40, null, inst41)
+        inst43 = new translate_store.TranslateStore()
+        inst44 = new translate_loader.TranslateLoader()
+        inst45 = new translate_compiler.TranslateCompiler()
+        inst46 = new translate_parser.TranslateParser()
+        inst47 = new missing_translation_handler.MissingTranslationHandler()
+        inst48 = new core.TranslateService(inst43, inst44, inst45, inst46, inst47, false, false)
+        inst49 = new http.HttpHandler()
+        inst50 = new http.HttpClient(inst49)
+        inst51 = new static_extension_service.StaticExtensionService(inst50)
+        inst52 = new http.HttpHandler()
+        inst53 = new http.HttpClient(inst52)
+        inst54 = new configuration_service.ConfigurationService(inst53)
+        inst55 = new url_tree.UrlSerializer()
+        inst56 = new router_outlet_context.ChildrenOutletContexts()
+        inst57 = new location_strategy.LocationStrategy()
+        inst58 = new location.Location(inst57)
+        object3 = [{ provide: false, multi: false, useExisting: "da7588892" }, { provide: false, multi: false, useExisting: "da7588892" }, { provide: false, multi: false, useExisting: "c466a48309794261b64a4f02cfcc3d64" }, { provide: false, multi: false, useExisting: "9876" }, { provide: true, multi: false, useExisting: "9876" }]
+        inst59 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst60 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: ".", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Awesome Frozen Computer", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "da7588892", runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: "path/to/file.ext", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Ergonomic Rubber Bike", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "da7588892", runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: "C:\\\\path\\to\\file.ext", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Small Cotton Chips", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "9876", runGuardsAndResolvers: undefined }, { path: undefined, pathMatch: "C:\\\\path\\to\\file.ext", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Refined Frozen Pizza", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "bc23a9d531064583ace8f67dad60f6bb", runGuardsAndResolvers: undefined }]
+        inst61 = new router.Router(null, inst55, inst56, inst58, core.Injector.create(object3,undefined), inst59, inst60, object4)
+        inst62 = new router.ActivatedRoute()
+        inst63 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst42, inst48, inst51, inst54, inst61, inst62)
+    })
+
+    test("0", () => {
+        let result: any = inst63.toggleSvnDirectoryDeleteType({ id: undefined, svnDirectory: undefined, regex: "definition-signature\\s(?P<signature>[\\w=\\/+]+)", gitDirectory: "/usr/share", migration: undefined, isStatic: undefined, svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst63.toggleSvnDirectoryDeleteType({ id: undefined, svnDirectory: undefined, regex: "(?i)(?L)(?m)(?s)(?u)(?#)", gitDirectory: "/usr/ports", migration: undefined, isStatic: undefined, svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst63.toggleSvnDirectoryDeleteType({ id: undefined, svnDirectory: "^5.0.0", regex: undefined, gitDirectory: "/opt/share", migration: 5, isStatic: undefined, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst63.toggleSvnDirectoryDeleteType({ id: undefined, svnDirectory: "4.0.0-beta1\t", regex: undefined, gitDirectory: "/usr/share", migration: 75, isStatic: undefined, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst63.toggleSvnDirectoryDeleteType({ id: undefined, svnDirectory: "4.0.0-beta1\t", regex: undefined, gitDirectory: "/usr/ports", migration: undefined, isStatic: true, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst63.toggleSvnDirectoryDeleteType({ id: undefined, svnDirectory: undefined, regex: "", gitDirectory: "", migration: undefined, isStatic: undefined, svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("getSvnRepoKo", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let object2: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let object3: any
+    let inst59: any
+    let inst60: any
+    let object4: any
+    let inst61: any
+    let inst62: any
+    let inst63: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, "bc23a9d531064583ace8f67dad60f6bb")
+        inst16 = new overlay_container.OverlayContainer(12345)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, 12345, undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("bc23a9d531064583ace8f67dad60f6bb")
+        object = [["Sales", "Sales", "Marketing", "Marketing"]]
+        inst20 = new directionality.Directionality(12345)
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create({ providers: object, parent: undefined, name: "Pierre Edouard" }), null, 56784, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, null, inst23, inst24, 12, null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new viewport_ruler.ViewportRuler(null, null)
+        inst31 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst30, null, 12)
+        inst32 = new overlay_container.OverlayContainer(987650)
+        inst33 = new component_factory_resolver.ComponentFactoryResolver()
+        inst34 = new overlay_position_builder.OverlayPositionBuilder(null, "a1969970175", undefined, undefined)
+        inst35 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12345)
+        object2 = [{ provide: false, multi: false, useValue: true }]
+        inst36 = new directionality.Directionality("a1969970175")
+        inst37 = new overlay.Overlay(inst31, inst32, inst33, inst34, inst35, core.Injector.create({ providers: object2, parent: undefined, name: undefined }), null, 56784, inst36, undefined)
+        inst38 = new live_announcer.LiveAnnouncer("a1969970175", null, 12345)
+        inst39 = new media_matcher.MediaMatcher(null)
+        inst40 = new breakpoints_observer.BreakpointObserver(inst39, null)
+        inst41 = new material.MatSnackBarConfig()
+        inst42 = new material.MatSnackBar(inst37, inst38, null, inst40, null, inst41)
+        inst43 = new translate_store.TranslateStore()
+        inst44 = new translate_loader.TranslateLoader()
+        inst45 = new translate_compiler.TranslateCompiler()
+        inst46 = new translate_parser.TranslateParser()
+        inst47 = new missing_translation_handler.MissingTranslationHandler()
+        inst48 = new core.TranslateService(inst43, inst44, inst45, inst46, inst47, undefined, true)
+        inst49 = new http.HttpHandler()
+        inst50 = new http.HttpClient(inst49)
+        inst51 = new static_extension_service.StaticExtensionService(inst50)
+        inst52 = new http.HttpHandler()
+        inst53 = new http.HttpClient(inst52)
+        inst54 = new configuration_service.ConfigurationService(inst53)
+        inst55 = new url_tree.UrlSerializer()
+        inst56 = new router_outlet_context.ChildrenOutletContexts()
+        inst57 = new location_strategy.LocationStrategy()
+        inst58 = new location.Location(inst57)
+        object3 = [{ provide: false, multi: undefined, useValue: false }]
+        inst59 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst60 = new compiler.Compiler()
+        object4 = [{ path: "C:\\\\path\\to\\folder\\", pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "always" }, { path: ".", pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "always" }, { path: "C:\\\\path\\to\\file.ext", pathMatch: undefined, matcher: undefined, component: undefined, redirectTo: undefined, outlet: undefined, canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "always" }]
+        inst61 = new router.Router(null, inst55, inst56, inst58, core.Injector.create({ providers: object3, parent: undefined, name: "Edmond" }), inst59, inst60, object4)
+        inst62 = new router.ActivatedRoute()
+        inst63 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst42, inst48, inst51, inst54, inst61, inst62)
+    })
+
+    test("0", () => {
+        let result: any = inst63.getSvnRepoKo()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("isContainsTrunkBranchesTags", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let inst36: any
+    let object2: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let inst59: any
+    let inst60: any
+    let object3: any
+    let inst61: any
+    let inst62: any
+    let object4: any
+    let inst63: any
+    let inst64: any
+    let inst65: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, "bc23a9d531064583ace8f67dad60f6bb")
+        inst16 = new overlay_container.OverlayContainer(12345)
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, "bc23a9d531064583ace8f67dad60f6bb", undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(987650)
+        object = [{ provide: false, multi: true, useExisting: "c466a48309794261b64a4f02cfcc3d64" }, { provide: true, multi: true, useExisting: "bc23a9d531064583ace8f67dad60f6bb" }, { provide: true, multi: true, useExisting: "12345" }]
+        inst20 = new directionality.Directionality("bc23a9d531064583ace8f67dad60f6bb")
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create(object,undefined), null, 12, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, null, inst23, inst24, "bc23a9d531064583ace8f67dad60f6bb", null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: false })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst31 = new viewport_ruler.ViewportRuler(null, inst30)
+        inst32 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst31, null, 12345)
+        inst33 = new overlay_container.OverlayContainer(12345)
+        inst34 = new component_factory_resolver.ComponentFactoryResolver()
+        inst35 = new overlay_position_builder.OverlayPositionBuilder(null, 12345, undefined, undefined)
+        inst36 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("a1969970175")
+        object2 = [["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[\"foo bar\",  -0.353, \"**text**\", 4653]", "[10, -45.9, 103.5, 0.955674]", "[10, -45.9, 103.5, 0.955674]"], ["[\"foo bar\",  -0.353, \"**text**\", 4653]", "[10, -45.9, 103.5, 0.955674]", "[10, -45.9, 103.5, 0.955674]", "[\"a\", \"b\", \"043\", \"holasenior\"]"]]
+        inst37 = new directionality.Directionality(987650)
+        inst38 = new overlay.Overlay(inst32, inst33, inst34, inst35, inst36, core.Injector.create(object2,undefined), null, "bc23a9d531064583ace8f67dad60f6bb", inst37, undefined)
+        inst39 = new live_announcer.LiveAnnouncer("bc23a9d531064583ace8f67dad60f6bb", null, "bc23a9d531064583ace8f67dad60f6bb")
+        inst40 = new media_matcher.MediaMatcher(null)
+        inst41 = new breakpoints_observer.BreakpointObserver(inst40, null)
+        inst42 = new material.MatSnackBarConfig()
+        inst43 = new material.MatSnackBar(null, null, null, null, null, inst42)
+        inst44 = new material.MatSnackBar(inst38, inst39, null, inst41, inst43, null)
+        inst45 = new translate_store.TranslateStore()
+        inst46 = new translate_loader.TranslateLoader()
+        inst47 = new translate_compiler.TranslateCompiler()
+        inst48 = new translate_parser.TranslateParser()
+        inst49 = new missing_translation_handler.MissingTranslationHandler()
+        inst50 = new core.TranslateService(inst45, inst46, inst47, inst48, inst49, undefined, undefined)
+        inst51 = new http.HttpHandler()
+        inst52 = new http.HttpClient(inst51)
+        inst53 = new static_extension_service.StaticExtensionService(inst52)
+        inst54 = new http.HttpHandler()
+        inst55 = new http.HttpClient(inst54)
+        inst56 = new configuration_service.ConfigurationService(inst55)
+        inst57 = new url_tree.UrlSerializer()
+        inst58 = new router_outlet_context.ChildrenOutletContexts()
+        inst59 = new location_strategy.LocationStrategy()
+        inst60 = new location.Location(inst59)
+        object3 = { 0: { provide: false, multi: undefined, useFactory: () => "Software Engineer", deps: undefined }, 1: { provide: true, multi: undefined, useFactory: () => "Marketing", deps: undefined }, 2: { provide: false, multi: undefined, useFactory: () => false, deps: undefined }, 3: { provide: false, multi: undefined, useFactory: () => "Software Engineer", deps: undefined }, 4: { provide: false, multi: undefined, useFactory: () => "Data Scientist", deps: undefined } }
+        inst61 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst62 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: "./path/to/file", matcher: undefined, component: undefined, redirectTo: "https://api.telegram.org/", outlet: "Handmade Fresh Chicken", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "12345", runGuardsAndResolvers: "paramsChange" }, { path: undefined, pathMatch: "path/to/folder/", matcher: undefined, component: undefined, redirectTo: "https://twitter.com/path?abc", outlet: "Ergonomic Rubber Bike", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "9876", runGuardsAndResolvers: "paramsChange" }]
+        inst63 = new router.Router(null, inst57, inst58, inst60, core.Injector.create({ providers: object3, parent: undefined, name: "Michael" }), inst61, inst62, object4)
+        inst64 = new router.ActivatedRoute()
+        inst65 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst44, inst50, inst53, inst56, inst63, inst64)
+    })
+
+    test("0", () => {
+        let param1: any = new migration_process_service.SvnModule(["Ronald Keeling", "Gail Hoppe", "Gail Hoppe", "Janet Homenick", "Janet Homenick"], "Ronald Keeling", "Janet Homenick", [], true)
+        let result: any = inst65.isContainsTrunkBranchesTags(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let param1: any = new migration_process_service.SvnModule(["Janet Homenick", "Gail Hoppe", "Gail Hoppe"], "Becky Bednar", "Ronald Keeling", [], false)
+        let result: any = inst65.isContainsTrunkBranchesTags(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let param1: any = new migration_process_service.SvnModule(["Becky Bednar", "Gail Hoppe", "Gail Hoppe"], "Maurice Purdy", "Maurice Purdy", [], false)
+        let result: any = inst65.isContainsTrunkBranchesTags(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let param1: any = new migration_process_service.SvnModule(["Maurice Purdy", "Becky Bednar", "Ronald Keeling", "Janet Homenick", "Janet Homenick"], "Maurice Purdy", "Becky Bednar", [], false)
+        let result: any = inst65.isContainsTrunkBranchesTags(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let param1: any = new migration_process_service.SvnModule(["Maurice Purdy", "Janet Homenick", "Janet Homenick"], "Gail Hoppe", "Gail Hoppe", [], true)
+        let result: any = inst65.isContainsTrunkBranchesTags(param1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let param1: any = new migration_process_service.SvnModule([], "", "", [], true)
+        let result: any = inst65.isContainsTrunkBranchesTags(param1)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+describe("isTrunkBranchesTagsEverywhere", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let object: any
+    let inst20: any
+    let inst21: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let object2: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let object3: any
+    let inst59: any
+    let inst60: any
+    let object4: any
+    let inst61: any
+    let inst62: any
+    let inst63: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new viewport_ruler.ViewportRuler(null, null)
+        inst15 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst14, null, "a1969970175")
+        inst16 = new overlay_container.OverlayContainer("bc23a9d531064583ace8f67dad60f6bb")
+        inst17 = new component_factory_resolver.ComponentFactoryResolver()
+        inst18 = new overlay_position_builder.OverlayPositionBuilder(null, "a1969970175", undefined, undefined)
+        inst19 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("a1969970175")
+        object = [["Data Scientist", "Data Scientist", "Sales"], ["Data Scientist", "Software Engineer", "Marketing"], ["Marketing", "Sales", "Sales"], ["Chief Product Officer", "Marketing", "Software Engineer"]]
+        inst20 = new directionality.Directionality(12345)
+        inst21 = new overlay.Overlay(inst15, inst16, inst17, inst18, inst19, core.Injector.create({ providers: object, parent: undefined, name: undefined }), null, 12345, inst20, undefined)
+        inst22 = new location_strategy.LocationStrategy()
+        inst23 = new location.Location(inst22)
+        inst24 = new dialog_config.MatDialogConfig()
+        inst25 = new material.MatDialog(inst21, null, inst23, inst24, "a1969970175", null, null)
+        inst26 = new core.ChangeDetectorRef()
+        inst27 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst28 = new platform.Platform(undefined)
+        inst29 = new scroll_dispatcher.ScrollDispatcher(inst27, inst28)
+        inst30 = new viewport_ruler.ViewportRuler(null, null)
+        inst31 = new scroll_strategy_options.ScrollStrategyOptions(inst29, inst30, null, "bc23a9d531064583ace8f67dad60f6bb")
+        inst32 = new overlay_container.OverlayContainer(56784)
+        inst33 = new component_factory_resolver.ComponentFactoryResolver()
+        inst34 = new overlay_position_builder.OverlayPositionBuilder(null, 987650, undefined, undefined)
+        inst35 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12)
+        object2 = { 0: { provide: false, multi: true, useFactory: () => "Chief Product Officer", deps: undefined }, 1: { provide: false, multi: true, useFactory: () => "Sales", deps: undefined }, 2: { provide: true, multi: true, useFactory: () => "Chief Product Officer", deps: undefined } }
+        inst36 = new directionality.Directionality("bc23a9d531064583ace8f67dad60f6bb")
+        inst37 = new overlay.Overlay(inst31, inst32, inst33, inst34, inst35, core.Injector.create({ providers: object2, parent: undefined, name: "Anas" }), null, "a1969970175", inst36, undefined)
+        inst38 = new live_announcer.LiveAnnouncer("bc23a9d531064583ace8f67dad60f6bb", null, "bc23a9d531064583ace8f67dad60f6bb")
+        inst39 = new media_matcher.MediaMatcher(null)
+        inst40 = new breakpoints_observer.BreakpointObserver(inst39, null)
+        inst41 = new material.MatSnackBarConfig()
+        inst42 = new material.MatSnackBar(inst37, inst38, core.Injector.create([],undefined), inst40, null, inst41)
+        inst43 = new translate_store.TranslateStore()
+        inst44 = new translate_loader.TranslateLoader()
+        inst45 = new translate_compiler.TranslateCompiler()
+        inst46 = new translate_parser.TranslateParser()
+        inst47 = new missing_translation_handler.MissingTranslationHandler()
+        inst48 = new core.TranslateService(inst43, inst44, inst45, inst46, inst47, undefined, undefined)
+        inst49 = new http.HttpHandler()
+        inst50 = new http.HttpClient(inst49)
+        inst51 = new static_extension_service.StaticExtensionService(inst50)
+        inst52 = new http.HttpHandler()
+        inst53 = new http.HttpClient(inst52)
+        inst54 = new configuration_service.ConfigurationService(inst53)
+        inst55 = new url_tree.UrlSerializer()
+        inst56 = new router_outlet_context.ChildrenOutletContexts()
+        inst57 = new location_strategy.LocationStrategy()
+        inst58 = new location.Location(inst57)
+        object3 = [{ provide: false, multi: false, useValue: false }]
+        inst59 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst60 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: "path/to/folder/", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Small Cotton Chips", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "pathParamsOrQueryParamsChange" }, { path: undefined, pathMatch: "C:\\\\path\\to\\file.ext", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Awesome Frozen Computer", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "pathParamsOrQueryParamsChange" }, { path: undefined, pathMatch: "/path/to/file", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Handmade Fresh Chicken", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: undefined, runGuardsAndResolvers: "pathParamsOrQueryParamsChange" }]
+        inst61 = new router.Router(null, inst55, inst56, inst58, core.Injector.create(object3,undefined), inst59, inst60, object4)
+        inst62 = new router.ActivatedRoute()
+        inst63 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst25, inst26, inst42, inst48, inst51, inst54, inst61, inst62)
+    })
+
+    test("0", () => {
+        let result: any = inst63.isTrunkBranchesTagsEverywhere()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("containsFlatRepo", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+    let inst9: any
+    let inst10: any
+    let inst11: any
+    let inst12: any
+    let inst13: any
+    let inst14: any
+    let inst15: any
+    let inst16: any
+    let inst17: any
+    let inst18: any
+    let inst19: any
+    let inst20: any
+    let inst21: any
+    let object: any
+    let inst22: any
+    let inst23: any
+    let inst24: any
+    let inst25: any
+    let inst26: any
+    let inst27: any
+    let inst28: any
+    let inst29: any
+    let inst30: any
+    let inst31: any
+    let inst32: any
+    let inst33: any
+    let inst34: any
+    let inst35: any
+    let inst36: any
+    let inst37: any
+    let inst38: any
+    let inst39: any
+    let object2: any
+    let inst40: any
+    let inst41: any
+    let inst42: any
+    let inst43: any
+    let inst44: any
+    let inst45: any
+    let inst46: any
+    let inst47: any
+    let inst48: any
+    let inst49: any
+    let inst50: any
+    let inst51: any
+    let inst52: any
+    let inst53: any
+    let inst54: any
+    let inst55: any
+    let inst56: any
+    let inst57: any
+    let inst58: any
+    let inst59: any
+    let inst60: any
+    let inst61: any
+    let inst62: any
+    let object3: any
+    let inst63: any
+    let inst64: any
+    let object4: any
+    let inst65: any
+    let inst66: any
+    let inst67: any
+
+    beforeEach(() => {
+        inst = new forms.FormBuilder()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_process_service.MigrationProcessService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_service.MigrationService(inst6)
+        inst8 = new http.HttpHandler()
+        inst9 = new http.HttpClient(inst8)
+        inst10 = new static_mapping_service.StaticMappingService(inst9)
+        inst11 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst12 = new platform.Platform(undefined)
+        inst13 = new scroll_dispatcher.ScrollDispatcher(inst11, inst12)
+        inst14 = new platform.Platform(undefined)
+        inst15 = new ng_zone.NgZone({ enableLongStackTrace: undefined })
+        inst16 = new viewport_ruler.ViewportRuler(inst14, inst15)
+        inst17 = new scroll_strategy_options.ScrollStrategyOptions(inst13, inst16, null, 987650)
+        inst18 = new overlay_container.OverlayContainer("a1969970175")
+        inst19 = new component_factory_resolver.ComponentFactoryResolver()
+        inst20 = new overlay_position_builder.OverlayPositionBuilder(null, "a1969970175", undefined, undefined)
+        inst21 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher(12)
+        object = [{ provide: false, multi: false, useExisting: "da7588892" }, { provide: false, multi: false, useExisting: "12345" }, { provide: true, multi: false, useExisting: "da7588892" }, { provide: false, multi: false, useExisting: "9876" }]
+        inst22 = new directionality.Directionality("bc23a9d531064583ace8f67dad60f6bb")
+        inst23 = new overlay.Overlay(inst17, inst18, inst19, inst20, inst21, core.Injector.create(object,undefined), null, 56784, inst22, undefined)
+        inst24 = new location_strategy.LocationStrategy()
+        inst25 = new location.Location(inst24)
+        inst26 = new dialog_config.MatDialogConfig()
+        inst27 = new material.MatDialog(inst23, null, inst25, inst26, "bc23a9d531064583ace8f67dad60f6bb", null, null)
+        inst28 = new core.ChangeDetectorRef()
+        inst29 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst30 = new platform.Platform(undefined)
+        inst31 = new scroll_dispatcher.ScrollDispatcher(inst29, inst30)
+        inst32 = new platform.Platform(undefined)
+        inst33 = new ng_zone.NgZone({ enableLongStackTrace: true })
+        inst34 = new viewport_ruler.ViewportRuler(inst32, inst33)
+        inst35 = new scroll_strategy_options.ScrollStrategyOptions(inst31, inst34, null, 12345)
+        inst36 = new overlay_container.OverlayContainer("a1969970175")
+        inst37 = new component_factory_resolver.ComponentFactoryResolver()
+        inst38 = new overlay_position_builder.OverlayPositionBuilder(null, "a1969970175", undefined, undefined)
+        inst39 = new overlay_keyboard_dispatcher.OverlayKeyboardDispatcher("bc23a9d531064583ace8f67dad60f6bb")
+        object2 = { 0: { provide: false, multi: false, useFactory: () => "Software Engineer", deps: undefined }, 1: { provide: true, multi: false, useFactory: () => "Data Scientist", deps: undefined }, 2: { provide: false, multi: false, useFactory: () => "Sales", deps: undefined }, 3: { provide: true, multi: false, useFactory: () => false, deps: undefined } }
+        inst40 = new directionality.Directionality(12)
+        inst41 = new overlay.Overlay(inst35, inst36, inst37, inst38, inst39, core.Injector.create(object2,undefined), null, 12345, inst40, undefined)
+        inst42 = new live_announcer.LiveAnnouncer(987650, null, 12)
+        inst43 = new media_matcher.MediaMatcher(null)
+        inst44 = new breakpoints_observer.BreakpointObserver(inst43, null)
+        inst45 = new material.MatSnackBarConfig()
+        inst46 = new material.MatSnackBar(inst41, inst42, null, inst44, null, inst45)
+        inst47 = new translate_store.TranslateStore()
+        inst48 = new translate_loader.TranslateLoader()
+        inst49 = new translate_compiler.TranslateCompiler()
+        inst50 = new translate_parser.TranslateParser()
+        inst51 = new missing_translation_handler.MissingTranslationHandler()
+        inst52 = new core.TranslateService(inst47, inst48, inst49, inst50, inst51, true, undefined)
+        inst53 = new http.HttpHandler()
+        inst54 = new http.HttpClient(inst53)
+        inst55 = new static_extension_service.StaticExtensionService(inst54)
+        inst56 = new http.HttpHandler()
+        inst57 = new http.HttpClient(inst56)
+        inst58 = new configuration_service.ConfigurationService(inst57)
+        inst59 = new url_tree.UrlSerializer()
+        inst60 = new router_outlet_context.ChildrenOutletContexts()
+        inst61 = new location_strategy.LocationStrategy()
+        inst62 = new location.Location(inst61)
+        object3 = [{ provide: false, multi: undefined, useValue: true }, { provide: true, multi: undefined, useValue: false }, { provide: true, multi: undefined, useValue: true }, { provide: false, multi: undefined, useValue: false }]
+        inst63 = new ng_module_factory_loader.NgModuleFactoryLoader()
+        inst64 = new compiler.Compiler()
+        object4 = [{ path: undefined, pathMatch: ".", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Ergonomic Rubber Bike", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "c466a48309794261b64a4f02cfcc3d64", runGuardsAndResolvers: "paramsOrQueryParamsChange" }, { path: undefined, pathMatch: "C:\\\\path\\to\\file.ext", matcher: undefined, component: undefined, redirectTo: undefined, outlet: "Small Cotton Chips", canActivate: undefined, canActivateChild: undefined, canDeactivate: undefined, canLoad: undefined, data: undefined, resolve: undefined, children: undefined, loadChildren: "c466a48309794261b64a4f02cfcc3d64", runGuardsAndResolvers: "paramsOrQueryParamsChange" }]
+        inst65 = new router.Router(null, inst59, inst60, inst62, core.Injector.create({ providers: object3, parent: undefined, name: undefined }), inst63, inst64, object4)
+        inst66 = new router.ActivatedRoute()
+        inst67 = new migration_stepper_component.MigrationStepperComponent(inst, inst4, inst7, inst10, inst27, inst28, inst46, inst52, inst55, inst58, inst65, inst66)
+    })
+
+    test("0", () => {
+        let result: any = inst67.containsFlatRepo()
         expect(result).toMatchSnapshot()
     })
 })

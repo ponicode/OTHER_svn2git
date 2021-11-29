@@ -137,3 +137,92 @@ describe("readableValue", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("baseName", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new health_service.JhiHealthService(inst2)
+        inst4 = new ng_bootstrap.NgbActiveModal()
+        inst5 = new health_modal_component.JhiHealthModalComponent(inst3, inst4)
+    })
+
+    test("0", () => {
+        let result: any = inst5.baseName("Anas")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst5.baseName("Michael")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst5.baseName("Pierre Edouard")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst5.baseName("George")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst5.baseName("Jean-Philippe")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst5.baseName("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("subSystemName", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new health_service.JhiHealthService(inst2)
+        inst4 = new ng_bootstrap.NgbActiveModal()
+        inst5 = new health_modal_component.JhiHealthModalComponent(inst3, inst4)
+    })
+
+    test("0", () => {
+        let result: any = inst5.subSystemName("Edmond")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst5.subSystemName("Pierre Edouard")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst5.subSystemName("Anas")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst5.subSystemName("George")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst5.subSystemName("")
+        expect(result).toMatchSnapshot()
+    })
+})
