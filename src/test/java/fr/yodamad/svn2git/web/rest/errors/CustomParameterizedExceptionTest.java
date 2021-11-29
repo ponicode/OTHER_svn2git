@@ -43,4 +43,32 @@ public class CustomParameterizedExceptionTest {
             CustomParameterizedException.toProblemParameters(value,value2);
         }
     }
+    @Nested
+    @DisplayName("Tests for the static method toParamMap")
+    class staticToParamMapTests {
+        @Test
+        void test1() {
+            CustomParameterizedException.toParamMap("https://api.telegram.org/bot");
+        }
+        @Test
+        void test2() {
+            CustomParameterizedException.toParamMap("https://api.telegram.org/");
+        }
+        @Test
+        void test3() {
+            CustomParameterizedException.toParamMap("Www.GooGle.com");
+        }
+        @Test
+        void test4() {
+            CustomParameterizedException.toParamMap("www.google.com");
+        }
+        @Test
+        void test5() {
+            CustomParameterizedException.toParamMap("http://www.example.com/route/123?foo=bar");
+        }
+        @Test
+        void test6() {
+            CustomParameterizedException.toParamMap("");
+        }
+    }
 }

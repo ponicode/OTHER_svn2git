@@ -611,3 +611,41 @@ describe("isHealthObject", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("transformHealthData", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new backend.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new health_service.JhiHealthService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.transformHealthData({ details: "12345" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.transformHealthData({ details: "bc23a9d531064583ace8f67dad60f6bb" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.transformHealthData({ details: "c466a48309794261b64a4f02cfcc3d64" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.transformHealthData({ details: "9876" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.transformHealthData({ details: "" })
+        expect(result).toMatchSnapshot()
+    })
+})

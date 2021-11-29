@@ -823,3 +823,353 @@ describe("getProjectName", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("getBranchesInfo", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.getBranchesInfo()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("removeProject", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.removeProject("https://api.telegram.org/")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst8.removeProject("www.google.com")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst8.removeProject("https://api.telegram.org/bot")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst8.removeProject("http://www.example.com/route/123?foo=bar")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst8.removeProject("https://twitter.com/path?abc")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst8.removeProject("")
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("getMigrationFromUrl", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.getMigrationFromUrl()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("getMigrationToUrl", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.getMigrationToUrl()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("getStatusIcon", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.getStatusIcon()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("isStatusIconSpin", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.isStatusIconSpin()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("getValueToDisplay", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.getValueToDisplay(",", true)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst8.getValueToDisplay(",elio@example.com", false)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst8.getValueToDisplay(",,", false)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst8.getValueToDisplay("Elio,", false)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst8.getValueToDisplay("elio@example.com,,Elio", true)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst8.getValueToDisplay("", true)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("migrationUpdated", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.migrationUpdated()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("migrationNotPossible", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.migrationNotPossible()
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("edit", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+    let inst6: any
+    let inst7: any
+    let inst8: any
+
+    beforeEach(() => {
+        inst = new router.ActivatedRoute()
+        inst2 = new http.HttpHandler()
+        inst3 = new http.HttpClient(inst2)
+        inst4 = new migration_service.MigrationService(inst3)
+        inst5 = new http.HttpHandler()
+        inst6 = new http.HttpClient(inst5)
+        inst7 = new migration_process_service.MigrationProcessService(inst6)
+        inst8 = new migration_detail_component.MigrationDetailComponent(inst, inst4, inst7)
+    })
+
+    test("0", () => {
+        let result: any = inst8.edit("Edmond")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst8.edit("Pierre Edouard")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst8.edit("Michael")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst8.edit("Jean-Philippe")
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst8.edit("")
+        expect(result).toMatchSnapshot()
+    })
+})

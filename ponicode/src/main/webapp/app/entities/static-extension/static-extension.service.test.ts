@@ -335,3 +335,46 @@ describe("query", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("update", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_extension_service.StaticExtensionService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.update({ id: 100, value: undefined, description: undefined, enabled: false, name: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.update({ id: 1, value: undefined, description: "(no description available)", enabled: true, name: "Jean-Philippe" })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.update({ id: -100, value: undefined, description: undefined, enabled: false, name: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.update({ id: undefined, value: undefined, description: undefined, enabled: true, name: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.update({ id: 0, value: undefined, description: undefined, enabled: false, name: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.update({ id: -Infinity, value: undefined, description: "", enabled: true, name: "" })
+        expect(result).toMatchSnapshot()
+    })
+})

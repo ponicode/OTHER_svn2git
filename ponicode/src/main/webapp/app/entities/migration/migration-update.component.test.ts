@@ -224,3 +224,25 @@ describe("onSaveError", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("previousState", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+    let inst5: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+        inst4 = new router.ActivatedRoute()
+        inst5 = new migration_update_component.MigrationUpdateComponent(inst3, inst4)
+    })
+
+    test("0", () => {
+        let result: any = inst5.previousState()
+        expect(result).toMatchSnapshot()
+    })
+})

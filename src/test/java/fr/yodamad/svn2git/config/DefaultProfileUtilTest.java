@@ -37,4 +37,12 @@ public class DefaultProfileUtilTest {
             DefaultProfileUtil.addDefaultProfile(value);
         }
     }
+    @Nested
+    @DisplayName("Tests for the static method getActiveProfiles")
+    class staticGetActiveProfilesTests {
+        @Test
+        void test1() {
+            DefaultProfileUtil.getActiveProfiles(null);
+        }
+    }
 }

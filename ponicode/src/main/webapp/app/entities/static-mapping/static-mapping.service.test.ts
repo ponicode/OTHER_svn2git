@@ -335,3 +335,46 @@ describe("query", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("update", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new static_mapping_service.StaticMappingService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.update({ id: undefined, svnDirectory: "1.0.0", regex: "(?P<first_group_name>.*)-(?P<second_group_name>.*)", gitDirectory: "/usr/share", svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.update({ id: 100, svnDirectory: "1.0.0", regex: "(file format) ([a-zA-Z0-9_\\-]+)", gitDirectory: undefined, svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.update({ id: -5.48, svnDirectory: "v1.2.4", regex: "(definition-(checksum|signature)\\s[\\w=\\/+]+)", gitDirectory: "/usr/ports", svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.update({ id: 100, svnDirectory: "4.0.0-beta1\t", regex: undefined, gitDirectory: "/usr/share", svnDirectoryDelete: undefined })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.update({ id: undefined, svnDirectory: "1.0.0", regex: "(.*)-(.+)", gitDirectory: "/selinux", svnDirectoryDelete: true })
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.update({ id: Infinity, svnDirectory: "", regex: "", gitDirectory: "", svnDirectoryDelete: false })
+        expect(result).toMatchSnapshot()
+    })
+})

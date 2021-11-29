@@ -463,3 +463,98 @@ describe("getImageUrl", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("hasAnyAuthorityDirect", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.hasAnyAuthorityDirect(["da7588892", "da7588892", "9876", "c466a48309794261b64a4f02cfcc3d64"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst4.hasAnyAuthorityDirect(["bc23a9d531064583ace8f67dad60f6bb", "9876", "c466a48309794261b64a4f02cfcc3d64", "bc23a9d531064583ace8f67dad60f6bb"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst4.hasAnyAuthorityDirect(["9876", "9876", "12345", "da7588892", "c466a48309794261b64a4f02cfcc3d64"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst4.hasAnyAuthorityDirect(["bc23a9d531064583ace8f67dad60f6bb", "da7588892", "bc23a9d531064583ace8f67dad60f6bb"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst4.hasAnyAuthorityDirect(["12345", "bc23a9d531064583ace8f67dad60f6bb", "bc23a9d531064583ace8f67dad60f6bb"])
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst4.hasAnyAuthorityDirect([])
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("identity", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.identity(undefined)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst4.identity(false)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst4.identity(null)
+        expect(result).toMatchSnapshot()
+    })
+})
+
+// @ponicode
+describe("isAuthenticated", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+    let inst4: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new account_service.AccountService(inst2)
+        inst4 = new principal_service.Principal(inst3)
+    })
+
+    test("0", () => {
+        let result: any = inst4.isAuthenticated()
+        expect(result).toMatchSnapshot()
+    })
+})

@@ -765,3 +765,46 @@ describe("convertDateFromClient", () => {
         expect(result).toMatchSnapshot()
     })
 })
+
+// @ponicode
+describe("findHistories", () => {
+    let inst: any
+    let inst2: any
+    let inst3: any
+
+    beforeEach(() => {
+        inst = new http.HttpHandler()
+        inst2 = new http.HttpClient(inst)
+        inst3 = new migration_service.MigrationService(inst2)
+    })
+
+    test("0", () => {
+        let result: any = inst3.findHistories(100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("1", () => {
+        let result: any = inst3.findHistories(1)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("2", () => {
+        let result: any = inst3.findHistories(-100)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("3", () => {
+        let result: any = inst3.findHistories(-5.48)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("4", () => {
+        let result: any = inst3.findHistories(0)
+        expect(result).toMatchSnapshot()
+    })
+
+    test("5", () => {
+        let result: any = inst3.findHistories(-Infinity)
+        expect(result).toMatchSnapshot()
+    })
+})
